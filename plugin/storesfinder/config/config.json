@@ -1,0 +1,4 @@
+{
+  "name": "stores.finder.plugin",
+  "storesDataFile": "./plugin/storesfinder/config/storesdata.csv"
+}

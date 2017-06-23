@@ -1,0 +1,24 @@
+{
+  "dbsets": "./test/mockserver/dbsets/",
+  "mappings": {
+    "default": {
+      "request": {
+        "method": "GET"
+      },
+      "response": {
+        "strategy": "first-found",
+        "latency": 0,
+        "status": 200
+      }
+    },
+    "requests": ["./test/mockserver/mappings/mockresponses.yaml"]
+  },
+  "server": {
+    "port": 7777
+  },
+  "stubs": "./test/mockserver/stubs/",
+  "logs": {
+    "path": "./test/mockserver/logs/"
+  },
+  "dumps": "./test/mockserver/dumps/"
+}

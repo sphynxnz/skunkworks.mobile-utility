@@ -1,0 +1,9 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://nzlotteries.co.nz/value/v1">
+   <soap:Header/>
+   <soap:Body>
+      <v1:validationInquiryOnlineOutput>
+         <v1:resultText>ok, pay the winner</v1:resultText>
+         <v1:freeTicketsNumber>7</v1:freeTicketsNumber>
+      </v1:validationInquiryOnlineOutput>
+   </soap:Body>
+</soap:Envelope>

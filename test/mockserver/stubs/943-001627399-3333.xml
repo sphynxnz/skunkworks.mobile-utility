@@ -1,0 +1,8 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://nzlotteries.co.nz/value/v1">
+   <soap:Header/>
+      <soap:Body>
+         <validationInquiryOnlineOutput xmlns="http://nzlotteries.co.nz/value/v1" xmlns:ns2="http://nzlotteries.co.nz/exception/v1">
+            <resultText>Ticket Serial Number Incorrect.</resultText>
+         </validationInquiryOnlineOutput>
+      </soap:Body>
+</soap:Envelope>

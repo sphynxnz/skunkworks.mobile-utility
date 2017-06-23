@@ -1,0 +1,6 @@
+{
+  "name": "ticket.checker.plugin",
+  "scenarios": "./config/resultscenarios.json",
+  "messages": "./config/communitymessages.json",
+  "misc": "./config/misc.json"
+}

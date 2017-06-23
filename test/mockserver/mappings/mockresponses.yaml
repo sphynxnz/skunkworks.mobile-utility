@@ -1,0 +1,27 @@
+- request:
+    method: GET
+    url: /info
+  response:
+    files: ["response.txt", {"name":"fault.txt","status":500}]
+    headers:
+      custom: info
+      Content-Type: txt/xml
+
+- request:
+    method: POST
+    url: /esiwebservice
+    post: <.+:ticketSerialNumber>(.+)<.+:ticketSerialNumber>
+  response:
+    status: 200
+    file: <% post.1 %>.xml
+    headers:
+      Content-Type: application/xml
+
+- request:
+    method: GET
+    url: /esiwebservice
+  response:
+    status: 200
+    file: esiws.wsdl
+    headers:
+      Content-Type: application/xml

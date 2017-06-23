@@ -1,0 +1,61 @@
+{
+  "name": "mobileutility",
+  "version": "1.0.0",
+  "description": "mobile utility",
+  "main": "index.js",
+  "scripts": {
+    "build:clean": "rm -rf node_modules",
+    "build:test": "npm install && npm run test:mock",
+    "build:prod": "npm install --production",
+    "test": "cucumberjs --require ./test/lib ./test/ticketchecker.feature",
+    "start:mock": "forever start ./node_modules/.bin/stubmatic -v -c ./test/mockserver/mockconfig.json",
+    "stop:mock": "forever stop ./node_modules/.bin/stubmatic",
+    "start:util:mock": "npm run start:mock && forever start index.js --env mock",
+    "start:util:cat": "forever start index.js --env cat1",
+    "start:util:prod": "forever start index.js --env production",
+    "stop:util": "forever stop index.js && if [ `ps -ef | grep -v grep | grep stubmatic | wc -l` -gt 0 ]; then npm run stop:mock ; fi;",
+    "test:mock": "npm run start:util:mock && npm run -s pause && npm run test && npm run -s pause && npm run stop:util",
+    "pause": "echo '\n===' && sleep 3s"
+  },
+  "keywords": [
+    "ticket",
+    "checker",
+    "stores",
+    "finder"
+  ],
+  "author": "flpcontreras",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.8.10",
+    "csvdata": "^1.4.0",
+    "fast-xml-parser": "^2.4.1",
+    "forever": "^0.15.3",
+    "glue": "^4.1.0",
+    "hapi": "^16.1.1",
+    "hapi-bunyan": "^0.7.0",
+    "hapi-swagger": "^7.7.0",
+    "haversine": "^1.0.2",
+    "inert": "^4.2.0",
+    "joi": "^10.5.0",
+    "lodash": "^4.17.4",
+    "path": "^0.12.7",
+    "soap": "^0.19.0",
+    "traverse": "^0.6.6",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "cucumber": "^2.3.1",
+    "eslint": "^4.0.0",
+    "eslint-config-google": "^0.8.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "moment": "^2.18.1",
+    "random-words": "0.0.1",
+    "request-promise": "^4.2.1",
+    "stubmatic": "^5.0.4"
+  }
+}

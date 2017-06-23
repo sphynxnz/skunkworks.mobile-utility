@@ -1,0 +1,14 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <soap:Fault>
+      <faultcode>soap:Server</faultcode>
+      <faultstring>nz.co.nzlotteries.exception.ESTEException</faultstring>
+      <detail>
+        <ns2:faultInfo xmlns="http://nzlotteries.co.nz/value/v1" xmlns:ns2="http://nzlotteries.co.nz/exception/v1">
+          <ns2:exceptionClassName>nz.co.nzlotteries.exception.ESTEException</ns2:exceptionClassName>
+          <ns2:exceptionMessage>Ticket sent to host is invalid. Error type : HostErrorType[INVALID_LOCATION_TRANSFER]</ns2:exceptionMessage>
+        </ns2:faultInfo>
+      </detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>

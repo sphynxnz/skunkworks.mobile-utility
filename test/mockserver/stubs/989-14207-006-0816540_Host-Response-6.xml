@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://nzlotteries.co.nz/value/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:validationInquiryInstantOutput>       
+         <v1:resultText>ok, Previously claimed by other</v1:resultText>
+      </v1:validationInquiryInstantOutput>
+   </soapenv:Body>
+</soapenv:Envelope>

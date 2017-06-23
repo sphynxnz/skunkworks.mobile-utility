@@ -1,0 +1,7 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <validationInquiryInstantOutput xmlns="http://nzlotteries.co.nz/value/v1" xmlns:ns2="http://nzlotteries.co.nz/exception/v1">
+         <resultText>ok, Rejected- Game not active</resultText>
+      </validationInquiryInstantOutput>
+   </soap:Body>
+</soap:Envelope>

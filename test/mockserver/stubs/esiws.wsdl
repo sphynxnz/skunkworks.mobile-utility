@@ -1,0 +1,115 @@
+<definitions
+	xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:e="http://nzlotteries.co.nz/exception/v1"
+	xmlns:v="http://nzlotteries.co.nz/value/v1"
+	xmlns:tns="http://nzlotteries.co.nz/service/v1"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="PlayerService" targetNamespace="http://nzlotteries.co.nz/service/v1">
+	<types>
+		<xsd:schema elementFormDefault="qualified" targetNamespace="http://nzlotteries.co.nz/value/v1">
+			<xsd:complexType name="VoidOutput"/>
+			<xsd:element name="validationInquiryInstantInput" type="v:ValidationInquiryInstantInput"/>
+			<xsd:element name="validationInquiryInstantOutput" type="v:ValidationInquiryInstantOutput"/>
+			<xsd:complexType name="ValidationInquiryInstantInput">
+				<xsd:sequence>
+					<xsd:element minOccurs="0" name="ticketSerialNumber" type="xsd:string"/>
+					<xsd:element minOccurs="0" name="checkDigits" type="xsd:string"/>
+					<xsd:element minOccurs="0" name="channelId" type="xsd:int"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ValidationInquiryInstantOutput">
+				<xsd:sequence>
+					<xsd:element minOccurs="0" name="amount" type="xsd:double"/>
+					<xsd:element minOccurs="0" name="resultText" type="xsd:string"/>
+					<xsd:element minOccurs="0" name="freeTicketsNumber" type="xsd:int"/>
+					<xsd:element minOccurs="0" name="prizeLevel" type="xsd:int"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="validationInquiryOnlineInput" type="v:ValidationInquiryOnlineInput"/>
+			<xsd:element name="validationInquiryOnlineOutput" type="v:ValidationInquiryOnlineOutput"/>
+			<xsd:complexType name="ValidationInquiryOnlineInput">
+				<xsd:sequence>
+					<xsd:element minOccurs="0" name="ticketSerialNumber" type="xsd:string"/>
+					<xsd:element minOccurs="0" name="channelId" type="xsd:int"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ValidationInquiryOnlineOutput">
+				<xsd:sequence>
+					<xsd:element minOccurs="0" name="cashAmount" type="xsd:double"/>
+					<xsd:element minOccurs="0" name="claimAmount" type="xsd:double"/>
+					<xsd:element minOccurs="0" name="resultText" type="xsd:string"/>
+					<xsd:element minOccurs="0" name="freeTicketsNumber" type="xsd:int"/>
+					<xsd:element minOccurs="0" name="refundAmount" type="xsd:double"/>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+		<xsd:schema elementFormDefault="qualified" targetNamespace="http://nzlotteries.co.nz/exception/v1">
+			<xsd:element name="faultInfo" type="e:FaultInfo"/>
+			<xsd:complexType name="FaultInfo">
+				<xsd:sequence>
+					<xsd:element minOccurs="0" name="exceptionClassName" type="xsd:string"/>
+					<xsd:element minOccurs="0" name="exceptionMessage" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+	</types>
+	<message name="validationInquiryOnlineCmdOutput">
+		<part name="output" element="v:validationInquiryOnlineOutput"></part>
+	</message>
+	<message name="validationInquiryInstantCmdInput">
+		<part name="input" element="v:validationInquiryInstantInput"></part>
+	</message>
+	<message name="validationInquiryInstantCmdOutput">
+		<part name="output" element="v:validationInquiryInstantOutput"></part>
+	</message>
+	<message name="validationInquiryOnlineCmdInput">
+		<part name="input" element="v:validationInquiryOnlineInput"></part>
+	</message>
+	<message name="fault">
+		<part name="faultInfo" element="e:faultInfo"></part>
+	</message>
+	<portType name="PlayerPortType">
+		<operation name="validationInquiryInstantCmd">
+			<input name="validationInquiryInstantCmdInput" message="tns:validationInquiryInstantCmdInput"></input>
+			<output name="validationInquiryInstantCmdOutput" message="tns:validationInquiryInstantCmdOutput"></output>
+			<fault name="fault" message="tns:fault"></fault>
+		</operation>
+		<operation name="validationInquiryOnlineCmd">
+			<input name="validationInquiryOnlineCmdInput" message="tns:validationInquiryOnlineCmdInput"></input>
+			<output name="validationInquiryOnlineCmdOutput" message="tns:validationInquiryOnlineCmdOutput"></output>
+			<fault name="fault" message="tns:fault"></fault>
+		</operation>
+	</portType>
+	<binding name="PlayerSoapBinding" type="tns:PlayerPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="validationInquiryInstantCmd">
+			<soap:operation soapAction="validationInquiryInstantCmd" style="document"/>
+			<input name="validationInquiryInstantCmdInput">
+				<soap:body parts="input" use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output name="validationInquiryInstantCmdOutput">
+				<soap:body parts="output" use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+			<fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</fault>
+		</operation>
+		<operation name="validationInquiryOnlineCmd">
+			<soap:operation soapAction="validationInquiryOnlineCmd" style="document"/>
+			<input name="validationInquiryOnlineCmdInput">
+				<soap:body parts="input" use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output name="validationInquiryOnlineCmdOutput">
+				<soap:body parts="output" use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+			<fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</fault>
+		</operation>
+	</binding>
+	<service name="PlayerService">
+		<port name="PlayerSoapPort" binding="tns:PlayerSoapBinding">
+			<soap:address location="http://localhost:7777/esiwebservice"/>
+		</port>
+	</service>
+</definitions>

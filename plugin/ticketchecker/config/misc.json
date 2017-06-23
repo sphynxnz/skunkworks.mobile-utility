@@ -1,0 +1,46 @@
+{
+	"missing": {
+		"name": "MISSING_SCENARIO",
+		"mobile": "Unable to determine ticket outcome. Please take your ticket to the nearest Lotto store",
+		"result": "OTHER",
+		"code": 8001
+	},
+	"esiError": {
+		"name": "ESI_ERROR",
+		"mobile": "Service is unavailable at the moment. Please try again later",
+		"result": "OTHER",
+		"code": 9003
+	},
+	"linkText": "Tell me more",
+	"linkUrl": "/winning-happens",
+	"currency": "$",
+	"winningMessage": "Win",
+	"nonWinningMessage": "Not a winning ticket",
+	"merchandiseText": "Merchandise:",
+	"IKMerchandiseText": "IKMerchandise:",
+	"IKFreeTicketAmountIgnored": true,
+	"cashaAdOrBonusMessage": "Winning ticket - ${0} {1}",
+	"redemptionClaimAmount": 1000.01,
+	"bonusLinesPerPage": {
+		"Strike": 20,
+		"Bullseye": 3
+	},		
+	"products": {
+	  "Strike": {
+	    "code": 12,
+	    "name": "Strike"
+	  },
+	  "Lotto": {
+	    "code": 20,
+	    "name": "Lotto"
+	  },
+	  "Keno": {
+	    "code": 22,
+	    "name": "Keno"
+	  },
+	  "Bullseye": {
+	    "code": 25,
+	    "name": "Bullseye"
+	  }
+	}	  
+}
