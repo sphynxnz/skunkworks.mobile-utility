@@ -93,7 +93,6 @@ defineSupportCode(function ({Given, When, Then}) {
   })
 
   Then(/^The response property "([^"]*)" should be (\d+)$/, function (path, expectedValue, callback) {
-    // Write code here that turns the phrase above into concrete actions
     const actualValue = this.getValue(path)
     assert.equal(actualValue, expectedValue, this.prettyPrintError(actualValue, expectedValue))
     callback()
@@ -103,4 +102,46 @@ defineSupportCode(function ({Given, When, Then}) {
     assert.equal(this.statusCode, expectedValue, this.prettyPrintError(this.statusCode, expectedValue))
     callback()
   })
+
+  /**
+   * ===================================
+   * Steps definitions for stores finder
+   * ===================================
+   */
+  Given(/^latitude set to (.*)$/, function(latitude) {
+    this.setLatitude(latitude);
+  })
+
+  Given(/^longitude set to (.*)$/, function(longitude) {
+    this.setLongitude(longitude);
+  })
+
+  Given(/^radius set to (.*)$/, function(radius) {
+    this.setRadius(radius);
+  })
+
+  Then(/^The response number of stores should be (\d+)$/, function (expectedValue, callback) {
+    const actualValue = this.getValue('stores').length
+    assert.equal(actualValue, expectedValue, this.prettyPrintError(actualValue, expectedValue))
+    callback()
+  })
+
+  Then(/^The closest store is "(.*)"$/, function (expectedValue, callback) {
+    const actualValue = this.getValue('stores[0].name')
+    assert.equal(actualValue, expectedValue, this.prettyPrintError(actualValue, expectedValue))
+    callback()
+  })
+
+  When(/^I fetch store locations$/, function () {
+    const uri = '/stores?channelid=1' + '&longitude=' + this.longitude + '&latitude=' + this.latitude + 
+      (this.radius ? '&radius=' + this.radius : '')
+    return this.httpGet(uri)
+  })
+
+  Then(/^There are (\d+) stores within (.+) km of the given location$/, function (expectedValue, distance, callback) {
+    const actualValue = this.getValue('stores').length
+    assert.equal(actualValue, expectedValue, this.prettyPrintError(actualValue, expectedValue))
+    assert.equal(this.radius, distance, this.prettyPrintError(this.radius, distance))
+    callback()
+  }); 
 })

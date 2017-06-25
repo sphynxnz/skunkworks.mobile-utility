@@ -14,8 +14,36 @@ function CustomWorld () {
   const self = this
 
   /**
-     * Performs an HTTP GET request to the given uri
-     */
+   * Sets latitude
+   */
+  this.setLatitude = function (latitude) {
+    this.latitude = parseFloat(latitude)
+  }
+
+  /**
+   * Sets longitude
+   */
+  this.setLongitude = function (longitude) {
+    this.longitude = parseFloat(longitude)
+  }
+
+  /**
+   * Sets radius
+   */
+  this.setRadius = function (radius) {
+    this.radius = parseFloat(radius)
+  }
+
+  /**
+   * Sets maxcount
+   */
+  this.setMaxcount = function (maxcount) {
+    this.maxcount = parseInt(maxcount)
+  }
+
+  /**
+   * Performs an HTTP GET request to the given uri
+   */
   this.httpGet = function (uri) {
     return _httpRequest({ method: 'GET', uri: uri })
   }
@@ -84,6 +112,7 @@ function CustomWorld () {
       // parse the message for a json body
       // the message has the following format
       // XXX - { ...json... }
+      console.log(response)
       const bodyString = response.message.slice(6)
       const body = JSON.parse(bodyString)
 
