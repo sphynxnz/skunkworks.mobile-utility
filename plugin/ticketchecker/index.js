@@ -57,13 +57,13 @@ const uuidFormat = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}
 /**
  * Validation rules for ticket check input parameters
  */
-const serialNumber = joi.string().required().regex(serialNumberFormat).description('Online or IK ticket serial number')
-const channelId = joi.number().integer().required().min(1).max(3).description('Channel identifier. Value is 1, 2 or 3')
-const checkDigits = joi.string().optional().regex(checkDigitsFormat).description('Check digits for IK ticket only')
-const source = joi.string().optional().ip().description('IP address where request originated from')
-const format = joi.string().optional().description('Barcode format. 1=i2of5, 2=PDF417')
-const emailAddress = joi.string().optional().email().description('Player email address')
-const deviceId = joi.string().optional().regex(uuidFormat).description('Device ID in uuid v4.0 format')
+const serialNumber = joi.string().required().regex(serialNumberFormat).description('Online or IK ticket serial number').example('9891420700187937509924')
+const channelId = joi.number().integer().required().min(1).max(3).description('Channel identifier. Value is 1, 2 or 3').example(1)
+const checkDigits = joi.string().optional().regex(checkDigitsFormat).description('Check digits for IK ticket only').example('9924')
+const source = joi.string().optional().ip().description('IP address where request originated from').example('192.168.8.8')
+const format = joi.string().optional().description('Barcode format. 1=i2of5, 2=PDF417').example('2')
+const emailAddress = joi.string().optional().email().description('Player email address').example('joe.bloggs@gmail.com')
+const deviceId = joi.string().optional().regex(uuidFormat).description('Device ID in uuid v4.0 format').example('457b2a18-c856-495a-a41b-4b8207d3224d')
 
 /**
  * Validation schema for serial number provided as URI parameter using the GET method

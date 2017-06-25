@@ -2,7 +2,7 @@
     method: GET
     url: /info
   response:
-    files: ["response.txt", {"name":"fault.txt","status":500}]
+    files: [ "response.txt", { "name": "fault.txt", "status":500} ]
     headers:
       custom: info
       Content-Type: txt/xml
@@ -13,7 +13,7 @@
     post: <.+:ticketSerialNumber>(.+)<.+:ticketSerialNumber>
   response:
     status: 200
-    file: <% post.1 %>.xml
+    files: [ <% post.1 %>.xml, { "name": "NOT_FOUND.xml", "status": 200} ]
     headers:
       Content-Type: application/xml
 

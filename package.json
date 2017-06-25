@@ -8,6 +8,7 @@
     "build:test": "npm install && npm run test:mock",
     "build:prod": "npm install --production",
     "test": "cucumberjs --require ./test/lib ./test/ticketchecker.feature",
+    "test:gcp": "cucumberjs --require ./test/lib ./test/ticketchecker_gcp.feature",
     "start:mock": "forever start ./node_modules/.bin/stubmatic -v -c ./test/mockserver/mockconfig.json",
     "stop:mock": "forever stop ./node_modules/.bin/stubmatic",
     "start:util:mock": "npm run start:mock && forever start index.js --env mock",
@@ -15,7 +16,8 @@
     "start:util:prod": "forever start index.js --env production",
     "stop:util": "forever stop index.js && if [ `ps -ef | grep -v grep | grep stubmatic | wc -l` -gt 0 ]; then npm run stop:mock ; fi;",
     "test:mock": "npm run start:util:mock && npm run -s pause && npm run test && npm run -s pause && npm run stop:util",
-    "pause": "echo '\n===' && sleep 3s"
+    "pause": "echo '\n===' && sleep 3s",
+    "start:docker": "forever ./node_modules/.bin/stubmatic -v -c ./test/mockserver/mockconfig.json & forever index.js"
   },
   "keywords": [
     "ticket",

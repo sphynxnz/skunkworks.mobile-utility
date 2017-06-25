@@ -36,6 +36,7 @@ module.exports = {
   },
   connections: [
     {
+      host: '0.0.0.0',
       port: envconfig.port,
       labels: ['API']
     },
