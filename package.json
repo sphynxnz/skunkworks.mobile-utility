@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:clean": "rm -rf node_modules",
-    "build:test": "npm install && npm run test:mock",
+    "build:test": "npm install && npm run test:util",
     "build:prod": "npm install --production",
     "test:checker": "cucumberjs --require ./test/lib ./test/ticketchecker.feature",
     "test:finder": "cucumberjs --require ./test/lib ./test/storesfinder.feature",
@@ -17,7 +17,7 @@
     "start:util:cat": "forever start index.js --env cat1",
     "start:util:prod": "forever start index.js --env production",
     "stop:util": "forever stop index.js && if [ `ps -ef | grep -v grep | grep stubmatic | wc -l` -gt 0 ]; then npm run stop:mock ; fi;",
-    "test:mock": "npm run start:util:mock && npm run -s pause && npm run test && npm run -s pause && npm run stop:util",
+    "test:util": "npm run start:util:mock && npm run -s pause && npm run test:checker && npm run -s pause && npm run test:finder && npm run -s pause && npm run stop:util",
     "pause": "echo '\n===' && sleep 3s",
     "start:docker": "forever ./node_modules/.bin/stubmatic -v -c ./test/mockserver/mockconfig.json & forever index.js"
   },

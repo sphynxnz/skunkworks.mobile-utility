@@ -10,7 +10,7 @@
 - request:
     method: POST
     url: /esiwebservice
-    post: <.+:ticketSerialNumber>(.+)<.+:ticketSerialNumber>
+    post: ticketSerialNumber>(.+)<.+ticketSerialNumber
   response:
     status: 200
     files: [ <% post.1 %>.xml, { "name": "NOT_FOUND.xml", "status": 200} ]

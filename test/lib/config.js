@@ -12,6 +12,7 @@
 module.exports = {
   baseUrl: {
     ticketchecker: 'http://localhost:8000/api/util/v1',
-    ticketchecker_gcp: 'http://104.154.255.202:8000/api/util/v1'
+    // ticketchecker_gcp: 'http://130.211.213.53/api/util/v1'
+    ticketchecker_gcp: 'http://35.192.45.72/api/util/v1'
   }
 }

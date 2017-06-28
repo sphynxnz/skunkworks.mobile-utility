@@ -108,16 +108,16 @@ defineSupportCode(function ({Given, When, Then}) {
    * Steps definitions for stores finder
    * ===================================
    */
-  Given(/^latitude set to (.*)$/, function(latitude) {
-    this.setLatitude(latitude);
+  Given(/^latitude set to (.*)$/, function (latitude) {
+    this.setLatitude(latitude)
   })
 
-  Given(/^longitude set to (.*)$/, function(longitude) {
-    this.setLongitude(longitude);
+  Given(/^longitude set to (.*)$/, function (longitude) {
+    this.setLongitude(longitude)
   })
 
-  Given(/^radius set to (.*)$/, function(radius) {
-    this.setRadius(radius);
+  Given(/^radius set to (.*)$/, function (radius) {
+    this.setRadius(radius)
   })
 
   Then(/^The response number of stores should be (\d+)$/, function (expectedValue, callback) {
