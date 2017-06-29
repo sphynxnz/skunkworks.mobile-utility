@@ -143,5 +143,20 @@ defineSupportCode(function ({Given, When, Then}) {
     assert.equal(actualValue, expectedValue, this.prettyPrintError(actualValue, expectedValue))
     assert.equal(this.radius, distance, this.prettyPrintError(this.radius, distance))
     callback()
-  }); 
+  })
+
+  /**
+   * ======================================
+   * Steps definitions for mule mobile util
+   * ======================================
+   */
+  When(/^I check the ticket$/, function () {
+    return this.checkTicket(this.requestBody)
+  })
+
+  Then(/^The soap response property "(.*)" should be "(.*)"$/i, function (path, expectedValue, callback) {
+    const actualValue = this.getValueSoap(path)
+    assert.equal(actualValue, expectedValue, this.prettyPrintErrorSoap(actualValue, expectedValue))
+    callback()
+  })
 })

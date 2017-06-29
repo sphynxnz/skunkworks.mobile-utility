@@ -19,10 +19,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3101"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3101"
 
   Scenario: OL TICKET - NOT_WINNING_TICKET
     Given The json request data
@@ -36,10 +36,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "LOSER"
-    And The response property "validationResult.resultCode" should be "2101"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "LOSER"
+    And The soap response property "validationResult.resultCode" should be "2101"
 
   Scenario: OL TICKET - PRIOR_DRAW
     Given The json request data
@@ -53,10 +53,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3102"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3102"
 
   Scenario: OL TICKET - TICKET_CANCELLED
     Given The json request data
@@ -70,10 +70,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3103"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3103"
 
   Scenario: OL TICKET - NEED_CONFIRMATION>
     Given The json request data
@@ -87,10 +87,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3104"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3104"
 
   Scenario: OL TICKET - PAID_ALREADY
     Given The json request data
@@ -104,10 +104,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3105"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3105"
 
   Scenario: OL TICKET - COMPLETELY_EXPIRED
     Given The json request data
@@ -121,10 +121,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3106"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3106"
 
   Scenario: OL TICKET - AMOUNT_TOO_LARGE_SMALL
     Given The json request data
@@ -138,10 +138,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "1101"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "1101"
 
   Scenario: OL TICKET - NOT_ABLE_TO_PAY
     Given The json request data
@@ -155,10 +155,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "1102"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "1102"
 
   Scenario: OL TICKET - ALREADY_CLAIMED
     Given The json request data
@@ -172,10 +172,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3107"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3107"
 
   Scenario: OL TICKET - REJECTED_CALL_HOTLINE
     Given The json request data
@@ -189,10 +189,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3108"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3108"
 
   Scenario: OL TICKET - PAYMENT_DEFERRED
     Given The json request data
@@ -206,10 +206,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3109"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3109"
 
   Scenario: OL TICKET - TERMINAL_IN_TRAINING_MODE
     Given The json request data
@@ -223,10 +223,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3111"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3111"
 
   Scenario: OL TICKET - PRIZE_EXCEEDED
     Given The json request data
@@ -240,10 +240,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "1103"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "1103"
 
   Scenario: OL TICKET - TICKET_TOO_OLD
     Given The json request data
@@ -257,10 +257,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3112"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3112"
 
   Scenario: OL TICKET - EXPIRED
     Given The json request data
@@ -274,10 +274,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3113"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3113"
 
   Scenario: OL TICKET - DRAW_NOT_CLOSED
     Given The json request data
@@ -291,10 +291,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3114"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3114"
 
   Scenario: OL TICKET - VALIDATE_MANUALLY
     Given The json request data
@@ -308,10 +308,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3115"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3115"
 
   Scenario: OL TICKET - HIGH_TIER_WINNER
     Given The json request data
@@ -325,10 +325,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "1104"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "WINNER"
+    And The soap response property "validationResult.resultCode" should be "1104"
 
   Scenario: OL TICKET - MID_TIER_WINNER
     Given The json request data
@@ -342,10 +342,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "1105"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "WINNER"
+    And The soap response property "validationResult.resultCode" should be "1105"
 
   Scenario: OL TICKET - HIGH_WITH_NO_EXCHANGE
     Given The json request data
@@ -359,10 +359,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "1106"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "1106"
 
   Scenario: OL TICKET - REJECTED_FREE_TICKETS_STILL
     Given The json request data
@@ -376,10 +376,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "1107"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "1107"
 
   Scenario: OL TICKET - DEVICE_UNABLE_TO_PAY
     Given The json request data
@@ -393,10 +393,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "1108"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "WINNER"
+    And The soap response property "validationResult.resultCode" should be "1108"
 
   Scenario: OL TICKET - DIVISION_WINNER
     Given The json request data
@@ -410,10 +410,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "1109"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "WINNER"
+    And The soap response property "validationResult.resultCode" should be "1109"
 
   Scenario: OL TICKET - WINNING_CASH_BONUS
     Given The json request data
@@ -427,10 +427,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "1110"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "WINNER"
+    And The soap response property "validationResult.resultCode" should be "1110"
 
   Scenario: OL TICKET - NOT_WINNING_MULTIDRAW
     Given The json request data
@@ -444,10 +444,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "LOSER"
-    And The response property "validationResult.resultCode" should be "2102"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "LOSER"
+    And The soap response property "validationResult.resultCode" should be "2102"
 
   Scenario: OL TICKET - WINNING_ALREADY_PAID
     Given The json request data
@@ -461,10 +461,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "1111"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "1111"
 
   Scenario: OL TICKET - PLEASE_SEE_RETAILER
     Given The json request data
@@ -478,10 +478,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3116"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3116"
 
   Scenario: OL TICKET - WINNING_MAJOR
     Given The json request data
@@ -495,10 +495,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "1112"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "WINNER"
+    And The soap response property "validationResult.resultCode" should be "1112"
 
   Scenario: OL TICKET - WINNING_FREE_TICKET
     Given The json request data
@@ -512,10 +512,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "1113"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "WINNER"
+    And The soap response property "validationResult.resultCode" should be "1113"
 
   Scenario: OL TICKET - VALIDATION_OK
     Given The json request data
@@ -529,10 +529,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3118"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3118"
 
   Scenario: OL TICKET - HIGH_TIER_WINNER
     Given The json request data
@@ -546,10 +546,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "1104"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "WINNER"
+    And The soap response property "validationResult.resultCode" should be "1104"
 
   Scenario: OL TICKET - ERROR_NOT_WINNER
     Given The json request data
@@ -563,10 +563,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "LOSER"
-    And The response property "validationResult.resultCode" should be "2103"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "LOSER"
+    And The soap response property "validationResult.resultCode" should be "2103"
 
   Scenario: OL TICKET - PAID_BY_EFT
     Given The json request data
@@ -580,10 +580,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3117"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3117"
 #------------------------
 # IK TICKET SCENARIOS
 #------------------------
@@ -603,10 +603,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "1201"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "WINNER"
+    And The soap response property "validationResult.resultCode" should be "1201"
 
   Scenario: IK TICKET - Host Response 2
     Given The json request data
@@ -621,10 +621,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "1202"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "WINNER"
+    And The soap response property "validationResult.resultCode" should be "1202"
 
   Scenario: IK TICKET - Host Response 3
     Given The json request data
@@ -639,10 +639,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "LOSER"
-    And The response property "validationResult.resultCode" should be "2201"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "LOSER"
+    And The soap response property "validationResult.resultCode" should be "2201"
 
   Scenario: IK TICKET - Host Response 4
     Given The json request data
@@ -657,10 +657,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "1203"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "1203"
 
   Scenario: IK TICKET - Host Response 5
     Given The json request data
@@ -675,10 +675,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "1204"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "1204"
 
   Scenario: IK TICKET - Host Response 6
     Given The json request data
@@ -693,10 +693,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "1205"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "1205"
 
   Scenario: IK TICKET - Host Response 7
     Given The json request data
@@ -711,10 +711,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "1206"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "1206"
 
   Scenario: IK TICKET - Host Response 16
     Given The json request data
@@ -729,10 +729,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3201"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3201"
 
   Scenario: IK TICKET - Host Response 17
     Given The json request data
@@ -747,10 +747,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3202"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3202"
 
   Scenario: IK TICKET - Host response 18
     Given The json request data
@@ -765,10 +765,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3203"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3203"
 
   Scenario: IK TICKET - Host Response 19
     Given The json request data
@@ -783,10 +783,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3204"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3204"
 
   Scenario: IK TICKET - Host Response 20
     Given The json request data
@@ -801,10 +801,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3205"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3205"
 
   Scenario: IK TICKET - Host Response 21
     Given The json request data
@@ -819,10 +819,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3206"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3206"
 
   Scenario: IK TICKET - Host Response 22
     Given The json request data
@@ -837,10 +837,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3207"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3207"
 
   Scenario: IK TICKET - Host Response 23
     Given The json request data
@@ -855,10 +855,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3208"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3208"
 
   Scenario: IK TICKET - Host Response 24
     Given The json request data
@@ -873,10 +873,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3209"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3209"
 
   Scenario: IK TICKET - Host response 25
     Given The json request data
@@ -891,10 +891,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3210"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3210"
 
   Scenario: IK TICKET - Host Response 32
     Given The json request data
@@ -909,10 +909,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "1207"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "WINNER"
+    And The soap response property "validationResult.resultCode" should be "1207"
 
   Scenario: IK TICKET - Host Response 33
     Given The json request data
@@ -927,10 +927,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3211"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3211"
 
   Scenario: IK TICKET - Host Response 34
     Given The json request data
@@ -945,10 +945,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3212"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3212"
 
   Scenario: IK TICKET - Host Response 35
     Given The json request data
@@ -963,10 +963,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3210"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3210"
 
   Scenario: IK TICKET - Host Response 36
     Given The json request data
@@ -981,10 +981,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3214"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3214"
 
   Scenario: IK TICKET - Host Response 41
     Given The json request data
@@ -999,10 +999,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3216"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3216"
 
   Scenario: IK TICKET - Host Response 42
     Given The json request data
@@ -1017,10 +1017,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3217"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3217"
 
   Scenario: IK TICKET - Free Ticket Winner
     Given The json request data
@@ -1035,10 +1035,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "3242"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "WINNER"
+    And The soap response property "validationResult.resultCode" should be "3242"
 
   Scenario: IK TICKET - INVALID_TICKET_NUMBER
     Given The json request data
@@ -1053,10 +1053,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "9001"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "9001"
 
   Scenario: IK TICKET - INVALID_TICKET_NUMBER
     Given The json request data
@@ -1071,10 +1071,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "9001"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "9001"
 
   Scenario: IK TICKET - INVALID_TICKET_NUMBER
     Given The json request data
@@ -1089,10 +1089,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "9001"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "9001"
 
   Scenario: IK TICKET - INVALID_TICKET_NUMBER
     Given The json request data
@@ -1107,10 +1107,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "9001"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "9001"
 
   Scenario: IK TICKET - INVALID_TICKET_NUMBER
     Given The json request data
@@ -1125,10 +1125,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "9001"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "9001"
 
   Scenario: IK TICKET - FUNCTION_SUPRESSED
     Given The json request data
@@ -1143,10 +1143,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3218"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3218"
 
   Scenario: IK TICKET - NOT_ALLOWED_THIS_FUNCTION
     Given The json request data
@@ -1161,10 +1161,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3219"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3219"
 
   Scenario: IK TICKET - BAD_PASS_NUMBER
     Given The json request data
@@ -1179,10 +1179,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3220"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3220"
 
   Scenario: IK TICKET - INCORRECT_TERM_AGENT
     Given The json request data
@@ -1197,10 +1197,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3221"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3221"
 
   Scenario: IK TICKET - INVALID_ATTEMPT
     Given The json request data
@@ -1215,10 +1215,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3222"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3222"
 
   Scenario: IK TICKET - DB_TRANSACTION_FAILURE
     Given The json request data
@@ -1233,10 +1233,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3223"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3223"
 
   Scenario: IK TICKET - LOCATION_CHANGE_NOT_ALLOWED
     Given The json request data
@@ -1251,10 +1251,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3224"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3224"
 
   Scenario: IK TICKET - UNIT_NOT_AT_LOCATION
     Given The json request data
@@ -1269,10 +1269,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3225"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3225"
 
   Scenario: IK TICKET - INVALID_LOCATION_TRANSFER
     Given The json request data
@@ -1287,10 +1287,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3226"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3226"
 
   Scenario: IK TICKET - NOT_ENOUGH_INVENTORY_AVAILABLE
     Given The json request data
@@ -1305,10 +1305,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3227"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3227"
 
   Scenario: IK TICKET - DESTINATION_LOC_NOT_ACTIVE
     Given The json request data
@@ -1323,10 +1323,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3228"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3228"
 
   Scenario: IK TICKET - FROM_LOC_NOT_ACTIVE
     Given The json request data
@@ -1341,10 +1341,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3229"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3229"
 
   Scenario: IK TICKET - SPLITS_NOT_ALLOWED
     Given The json request data
@@ -1359,10 +1359,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3230"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3230"
 
   Scenario: IK TICKET - INVALID_TEST_CONDITION_FOR_TRANS
     Given The json request data
@@ -1377,10 +1377,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3231"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3231"
 
   Scenario: IK TICKET - INVALID_SIDE_EFFECT_FOR_TRANS
     Given The json request data
@@ -1395,10 +1395,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3232"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3232"
 
   Scenario: IK TICKET - NO_UNITS_FOUND
     Given The json request data
@@ -1413,10 +1413,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3233"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3233"
 
   Scenario: IK TICKET - NO_AVAILABLE_UNITS
     Given The json request data
@@ -1431,10 +1431,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3234"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3234"
 
   Scenario: IK TICKET - INVALID_REFERENCE_NUMBER
     Given The json request data
@@ -1449,10 +1449,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3235"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3235"
 
   Scenario: IK TICKET - MESSES_TO_IDIS_FAILED
     Given The json request data
@@ -1467,10 +1467,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3236"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3236"
 
   Scenario: IK TICKET - INVALID_PRODUCT_NUMBER
     Given The json request data
@@ -1485,10 +1485,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3237"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3237"
 
   Scenario: IK TICKET - BAD_UNIT_CHECK_DIGIT
     Given The json request data
@@ -1503,10 +1503,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "9001"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "9001"
 
   Scenario: IK TICKET - GAME_NOT_ACTIVE
     Given The json request data
@@ -1521,10 +1521,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3239"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3239"
 
   Scenario: IK TICKET - INVALID_ATTEMPT
     Given The json request data
@@ -1539,10 +1539,10 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3222"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3222"
 
   Scenario: IK TICKET - PACK_ALREADY_HAS_STATUS
     Given The json request data
@@ -1557,7 +1557,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
-    Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
-    And The response property "validationResult.resultCode" should be "3241"
+    When I check the ticket
+    Then The soap response property "response.Status" should be "success"
+    And The soap response property "validationResult.resultType" should be "OTHER"
+    And The soap response property "validationResult.resultCode" should be "3241"

@@ -9,6 +9,7 @@
 const _ = require('lodash')
 const http = require('request-promise')
 const {defineSupportCode} = require('cucumber')
+const soap = require('soap')
 
 function CustomWorld () {
   const self = this
@@ -49,43 +50,43 @@ function CustomWorld () {
   }
 
   /**
-     * Performs an HTTP DELETE request to the given uri
-     */
+   * Performs an HTTP DELETE request to the given uri
+   */
   this.httpDelete = function (uri) {
     return _httpRequest({ method: 'DELETE', uri: uri })
   }
 
   /**
-     * Performs an HTTP POST request to the given uri
-     */
+   * Performs an HTTP POST request to the given uri
+   */
   this.httpPost = function (uri) {
     return _httpRequest({ method: 'POST', uri: uri })
   }
 
   /**
-     * Gets the value of a property by its path
-     */
+   * Gets the value of a property by its path
+   */
   this.getValue = function (path) {
     return _.get(self.actualResponse, path)
   }
 
   /**
-     * Return console formatted json for humanz
-     */
+   * Return console formatted json for humanz
+   */
   this.prettyPrintJSON = function (json) {
-    return JSON.stringify(json, null, '  ')
+    return JSON.stringify(json, null, 2)
   }
 
   /**
-     * Formats the assertion in a humanz readable way
-     */
+   * Formats the assertion in a humanz readable way
+   */
   this.prettyPrintError = function (actualValue, expectedValue) {
     return `\r\nExpected: ${expectedValue}\r\nActual: ${actualValue}\r\nRequest Body:\r\n${self.prettyPrintJSON(self.requestBody)}\r\nResponse Status Code: ${self.statusCode}\r\nResponse Body:\r\n${self.prettyPrintJSON(self.actualResponse)}`
   }
 
   /**
-     * Internal http request generator
-     */
+   * Internal http request generator
+   */
   function _httpRequest (options) {
     if (self.baseUrl) {
       options.uri = self.baseUrl + options.uri
@@ -119,6 +120,82 @@ function CustomWorld () {
       self.actualResponse = body
       self.statusCode = response.statusCode
     })
+  }
+
+  /**
+   * Create soap ws client
+   * @param {*} url 
+   */
+  const createSoapClient = (pObj) => {
+    return new Promise((resolve, reject) => {
+      let c = soap.createClient(pObj.wsdl, (err, client) => {
+        if (err) {
+          return (reject(err))
+        } else {
+          pObj.client = client
+          return (resolve(pObj))
+        }
+      })
+    })
+  }
+
+  /**
+   * API call to MobileUtilityService.validateSerialNumber
+   * @param {*} args 
+   * @param {*} callback 
+   */
+  const validateSerialNumber = (pObj, callback) => {
+    pObj.client.validateSerialNumber(pObj.args, (err, result) => {
+      if (!err) {
+        return (callback(null, result))
+      }
+      return (callback(err, null))
+    })
+  }
+
+  /**
+   * validate serial number promise
+   * @param {*} pObj 
+   */
+  const validateSerialNumberPromise = (pObj) => {
+    return new Promise((resolve, reject) => {
+      try {
+        validateSerialNumber(pObj, (err, data) => {
+          if (err != null) {
+            return (reject(err))
+          }
+          pObj.data = data
+          return (resolve(pObj))
+        })
+      } catch (error) {
+        return (reject(error))
+      }
+    })
+  }
+
+  /**
+   * Invoke ticket validation
+   */
+  this.checkTicket = (args) => {
+    return createSoapClient({ args: args, wsdl: self.wsdl })
+      .then(validateSerialNumberPromise)
+      .then((pObj) => {
+        self.soapResponse = pObj.data
+      })
+  }
+
+  /**
+   * Gets the value of a property by its path
+   */
+  this.getValueSoap = function (path) {
+    return _.get(self.soapResponse, path)
+  }
+
+  /**
+   * Formats the assertion in a humanz readable way
+   */
+  this.prettyPrintErrorSoap = function (actualValue, expectedValue) {
+    return `\r\nExpected: ${expectedValue}\r\nActual: ${actualValue}\r\nRequest Body:\r\n${self.prettyPrintJSON(self.requestBody)}\r\nResponse Body:\r\n${self.prettyPrintJSON(self.soapResponse)}`
   }
 }
 
