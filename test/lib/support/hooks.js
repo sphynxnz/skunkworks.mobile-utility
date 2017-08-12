@@ -8,7 +8,7 @@
 
 const {defineSupportCode} = require('cucumber')
 const config = require('../config.js')
-const soap = require('soap')
+// const soap = require('soap')
 
 defineSupportCode(function ({ Before }) {
   /**

@@ -1,4 +1,4 @@
-@baseUrl @baseUrl-ticketchecker
+@baseUrl @baseUrl-mobileutility
 Feature: Stores finder examples
   The following are test scenarios againts the stores finder service
 

@@ -1,4 +1,4 @@
-@baseUrl @baseUrl-ticketchecker @wsdl @wsdl-mule_mobutil
+@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil
 Feature: Ticket checker examples
   The following are test scenarios againts the ESI ticket validation mock service
 

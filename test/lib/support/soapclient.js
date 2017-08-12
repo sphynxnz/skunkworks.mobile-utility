@@ -43,8 +43,14 @@ function createSoapClient (url) {
 }
 
 (async () => {
+  // Skip init of soap client if no url passed in command line
+  // It means the test is not for ESI mock
+  if (!argv.url) {
+    return
+  }
   try {
-    mobclient = await createSoapClient(argv.url || 'http://localhost:8081/MobileUtilityService/v1?wsdl')
+    // mobclient = await createSoapClient(argv.url || 'http://localhost:8081/MobileUtilityService/v1?wsdl')
+    mobclient = await createSoapClient(argv.url)
     console.log(mobclient.describe())
     let pObj = {
       args: {

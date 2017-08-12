@@ -1,4 +1,4 @@
-@baseUrl @baseUrl-ticketchecker_gcp
+@baseUrl @baseUrl-mobileutility_gcp
 Feature: Stores finder examples
   The following are test scenarios againts the stores finder service
 
