@@ -3,9 +3,9 @@ module.exports = {
   appName: 'mobile-utility',
   version: '0.0.1',
   esiWsUrl: 'http://localhost:7777/esiwebservice?wsdl',
-  basePath: '/api/util/v1',
-  getCheckerPath: '/tickets/{serialnumber}',
-  postCheckerPath: '/tickets',
+  basePath: '/api/mobileutility/v1',
+  getCheckerPath: '/validations/{serialnumber}',
+  postCheckerPath: '/validations',
   getStoresPath: '/stores',
   heartbeatPath: '/heartbeat',
   loggerConfig: {

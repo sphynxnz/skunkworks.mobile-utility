@@ -3,9 +3,9 @@ module.exports = {
   appName: 'mobileutility',
   version: '0.0.1',
   esiWsUrl: 'http://192.168.100.202/nzl-ws/services/PlayerService/v1?wsdl',
-  basePath: '/api/util/v1',
-  getCheckerPath: '/tickets/{serialnumber}',
-  postCheckerPath: '/tickets',
+  basePath: '/api/mobileutility/v1',
+  getCheckerPath: '/validations/{serialnumber}',
+  postCheckerPath: '/validations',
   getStoresPath: '/stores',
   heartbeatPath: '/heartbeat',
   loggerConfig: {

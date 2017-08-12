@@ -19,7 +19,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3101"
@@ -36,7 +36,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "LOSER"
     And The response property "validationResult.resultCode" should be "2101"
@@ -53,7 +53,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3102"
@@ -70,7 +70,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3103"
@@ -87,7 +87,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3104"
@@ -104,7 +104,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3105"
@@ -121,7 +121,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3106"
@@ -138,7 +138,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1101"
@@ -155,7 +155,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1102"
@@ -172,7 +172,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3107"
@@ -189,7 +189,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3108"
@@ -206,7 +206,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3109"
@@ -223,7 +223,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3111"
@@ -240,7 +240,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1103"
@@ -257,7 +257,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3112"
@@ -274,7 +274,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3113"
@@ -291,7 +291,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3114"
@@ -308,7 +308,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3115"
@@ -325,7 +325,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1104"
@@ -342,7 +342,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1105"
@@ -359,7 +359,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1106"
@@ -376,7 +376,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1107"
@@ -393,7 +393,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1108"
@@ -410,7 +410,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1109"
@@ -427,7 +427,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1110"
@@ -444,7 +444,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "LOSER"
     And The response property "validationResult.resultCode" should be "2102"
@@ -461,7 +461,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1111"
@@ -478,7 +478,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3116"
@@ -495,7 +495,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1112"
@@ -512,7 +512,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1113"
@@ -529,7 +529,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3118"
@@ -546,7 +546,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1104"
@@ -563,7 +563,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "LOSER"
     And The response property "validationResult.resultCode" should be "2103"
@@ -580,7 +580,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3117"
@@ -603,7 +603,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1201"
@@ -621,7 +621,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1202"
@@ -639,7 +639,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "LOSER"
     And The response property "validationResult.resultCode" should be "2201"
@@ -657,7 +657,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1203"
@@ -675,7 +675,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1204"
@@ -693,7 +693,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1205"
@@ -711,7 +711,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1206"
@@ -729,7 +729,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3201"
@@ -747,7 +747,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3202"
@@ -765,7 +765,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3203"
@@ -783,7 +783,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3204"
@@ -801,7 +801,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3205"
@@ -819,7 +819,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3206"
@@ -837,7 +837,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3207"
@@ -855,7 +855,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3208"
@@ -873,7 +873,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3209"
@@ -891,7 +891,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3210"
@@ -909,7 +909,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1207"
@@ -927,7 +927,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3211"
@@ -945,7 +945,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3212"
@@ -963,7 +963,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3210"
@@ -981,7 +981,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3214"
@@ -999,7 +999,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3216"
@@ -1017,7 +1017,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3217"
@@ -1035,7 +1035,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "3242"
@@ -1053,7 +1053,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "9001"
@@ -1071,7 +1071,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "9001"
@@ -1089,7 +1089,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "9001"
@@ -1107,7 +1107,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "9001"
@@ -1125,7 +1125,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "9001"
@@ -1143,7 +1143,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3218"
@@ -1161,7 +1161,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3219"
@@ -1179,7 +1179,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3220"
@@ -1197,7 +1197,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3221"
@@ -1215,7 +1215,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3222"
@@ -1233,7 +1233,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3223"
@@ -1251,7 +1251,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3224"
@@ -1269,7 +1269,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3225"
@@ -1287,7 +1287,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3226"
@@ -1305,7 +1305,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3227"
@@ -1323,7 +1323,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3228"
@@ -1341,7 +1341,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3229"
@@ -1359,7 +1359,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3230"
@@ -1377,7 +1377,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3231"
@@ -1395,7 +1395,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3232"
@@ -1413,7 +1413,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3233"
@@ -1431,7 +1431,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3234"
@@ -1449,7 +1449,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3235"
@@ -1467,7 +1467,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3236"
@@ -1485,7 +1485,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3237"
@@ -1503,7 +1503,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "9001"
@@ -1521,7 +1521,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3239"
@@ -1539,7 +1539,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3222"
@@ -1557,7 +1557,7 @@ Feature: Ticket checker examples
       "emailAddress": "userid08@dummy.co.nz"
     }    
     """
-    When I make a POST request to "/tickets"
+    When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3241"
