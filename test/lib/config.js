@@ -13,8 +13,5 @@ module.exports = {
   baseUrl: {
     mobileutility: 'http://localhost:8000/api/mobileutility/v1',
     mobileutility_gcp: 'http://35.192.45.72/api/mobileutility/v1'
-  },
-  wsdl: {
-    mule_mobutil: 'http://localhost:8081/MobileUtilityService/v1?wsdl'
   }
 }

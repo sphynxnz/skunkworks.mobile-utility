@@ -30,24 +30,4 @@ defineSupportCode(function ({ Before }) {
       }
     }
   })
-
-  /**
-   * Sets up a hook to configure the wsdl for a scenario.
-   * The key of which is a configuration value in the config.wsdl section.
-   *
-   * Example
-   * @wsdl @wsdl-mule_mobutil
-   * Scenario: An example scenario name
-   */
-  Before({tags: '@wsdl'}, function (scenarioResult) {
-    let tags = scenarioResult.scenario.feature.tags
-    for (let i = 0; i < tags.length; i++) {
-      const name = tags[i].name
-      if (name.includes('wsdl-')) {
-        const value = name.split('-')[1]
-        this.wsdl = config.wsdl[value]
-        return
-      }
-    }
-  })
 })

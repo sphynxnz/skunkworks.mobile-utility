@@ -9,7 +9,6 @@
 const _ = require('lodash')
 const http = require('request-promise')
 const {defineSupportCode} = require('cucumber')
-const soap = require('soap')
 
 function CustomWorld () {
   const self = this
@@ -120,82 +119,6 @@ function CustomWorld () {
       self.actualResponse = body
       self.statusCode = response.statusCode
     })
-  }
-
-  /**
-   * Create soap ws client
-   * @param {*} url 
-   */
-  const createSoapClient = (pObj) => {
-    return new Promise((resolve, reject) => {
-      let c = soap.createClient(pObj.wsdl, (err, client) => {
-        if (err) {
-          return (reject(err))
-        } else {
-          pObj.client = client
-          return (resolve(pObj))
-        }
-      })
-    })
-  }
-
-  /**
-   * API call to MobileUtilityService.validateSerialNumber
-   * @param {*} args 
-   * @param {*} callback 
-   */
-  const validateSerialNumber = (pObj, callback) => {
-    pObj.client.validateSerialNumber(pObj.args, (err, result) => {
-      if (!err) {
-        return (callback(null, result))
-      }
-      return (callback(err, null))
-    })
-  }
-
-  /**
-   * validate serial number promise
-   * @param {*} pObj 
-   */
-  const validateSerialNumberPromise = (pObj) => {
-    return new Promise((resolve, reject) => {
-      try {
-        validateSerialNumber(pObj, (err, data) => {
-          if (err != null) {
-            return (reject(err))
-          }
-          pObj.data = data
-          return (resolve(pObj))
-        })
-      } catch (error) {
-        return (reject(error))
-      }
-    })
-  }
-
-  /**
-   * Invoke ticket validation
-   */
-  this.checkTicket = (args) => {
-    return createSoapClient({ args: args, wsdl: self.wsdl })
-      .then(validateSerialNumberPromise)
-      .then((pObj) => {
-        self.soapResponse = pObj.data
-      })
-  }
-
-  /**
-   * Gets the value of a property by its path
-   */
-  this.getValueSoap = function (path) {
-    return _.get(self.soapResponse, path)
-  }
-
-  /**
-   * Formats the assertion in a humanz readable way
-   */
-  this.prettyPrintErrorSoap = function (actualValue, expectedValue) {
-    return `\r\nExpected: ${expectedValue}\r\nActual: ${actualValue}\r\nRequest Body:\r\n${self.prettyPrintJSON(self.requestBody)}\r\nResponse Body:\r\n${self.prettyPrintJSON(self.soapResponse)}`
   }
 }
 
