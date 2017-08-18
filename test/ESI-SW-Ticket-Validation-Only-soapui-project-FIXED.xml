@@ -122,9 +122,9 @@
    <soapenv:Body>\r
       <v1:validationInquiryInstantInput>\r
          <!--Optional:-->\r
-         <v1:ticketSerialNumber>989-14198-002-9835000</v1:ticketSerialNumber>\r
+         <v1:ticketSerialNumber>943-00162-739-91111</v1:ticketSerialNumber>\r
          <!--Optional:-->\r
-         <v1:checkDigits>4675</v1:checkDigits>\r
+         <v1:checkDigits>7580</v1:checkDigits>\r
          <!--Optional:-->\r
          <v1:channelId>1</v1:channelId>\r
       </v1:validationInquiryInstantInput>\r
@@ -1175,7 +1175,7 @@ declare namespace v1 = 'http://api.lottonz.co.nz/MobileUtilityService/v1';
   
   <con:query><con:name>Invalid Pack Status</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>989-14207-027-2694170</con:match><con:response>Invalid Pack Status</con:response></con:query>
 
-<con:query><con:name>Free Ticket Winner Dup</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>989-14198-002-9835000</con:match><con:response>Free Ticket Winner</con:response></con:query></con:dispatchConfig>
+<con:query><con:name>Free Ticket Winner Dup</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>989-14198-002-9835000</con:match><con:response>Free Ticket Winner</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-1111</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-91111</con:match><con:response>BAD_UNIT_CHECK_DIGIT</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-2222</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-92222</con:match><con:response>BAD_UNIT_CHECK_DIGIT</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-3333</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-93333</con:match><con:response>BAD_UNIT_CHECK_DIGIT</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-4444</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-94444</con:match><con:response>BAD_UNIT_CHECK_DIGIT</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-5555</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-95555</con:match><con:response>BAD_UNIT_CHECK_DIGIT</con:response></con:query></con:dispatchConfig>
 </con:mockOperation><con:mockOperation name="validationInquiryOnlineCmd" interface="PlayerSoapBinding" operation="validationInquiryOnlineCmd" id="f6f5368e-0650-4c51-945f-c04b79e1c962">
 <con:settings/>
 <con:dispatchPath>declare namespace soap = 'http://schemas.xmlsoap.org/soap/envelope/';
