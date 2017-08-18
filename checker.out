@@ -1,0 +1,1646 @@
+[36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+Feature: Ticket checker examples
+
+    The following are test scenarios againts the ESI ticket validation mock service
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - TICKET_ON_HOLD
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660089034281259",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3101"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - NOT_WINNING_TICKET
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660177579522026",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "LOSER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "2101"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - PRIOR_DRAW
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660036605441264",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3102"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - TICKET_CANCELLED
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660345710082082",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3103"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - NEED_CONFIRMATION>
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660423697961229",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3104"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - PAID_ALREADY
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660100391042004",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3105"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - COMPLETELY_EXPIRED
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660539153921201",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3106"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - AMOUNT_TOO_LARGE_SMALL
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660432217652064",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1101"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - NOT_ABLE_TO_PAY
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660358817292008",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1102"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - ALREADY_CLAIMED
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660096898612083",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3107"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - REJECTED_CALL_HOTLINE
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660023498252027",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3108"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - PAYMENT_DEFERRED
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660073303052574",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3109"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - TERMINAL_IN_TRAINING_MODE
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660431562292053",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3111"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - PRIZE_EXCEEDED
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660358161932094",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1103"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - TICKET_TOO_OLD
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660256222761281",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3112"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - EXPIRED
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660022842892016",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3113"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - DRAW_NOT_CLOSED
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660607308852542",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3114"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - VALIDATE_MANUALLY
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660533908492583",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3115"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - HIGH_TIER_WINNER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660271948852530",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1104"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - MID_TIER_WINNER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660088378921347",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1105"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - HIGH_WITH_NO_EXCHANGE
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660424353321339",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1106"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - REJECTED_FREE_TICKETS_STILL
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660371924481344",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1107"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - DEVICE_UNABLE_TO_PAY
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660089034261358",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1108"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - DIVISION_WINNER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660670881322058",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1109"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - WINNING_CASH_BONUS
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660555537922074",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1110"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - NOT_WINNING_MULTIDRAW
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660335521322046",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "LOSER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "2102"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - WINNING_ALREADY_PAID
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660220177922062",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1111"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - PLEASE_SEE_RETAILER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660670225962047",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3116"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - WINNING_MAJOR
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660554882562063",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1112"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - WINNING_FREE_TICKET
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660607964212553",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1113"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - VALIDATION_OK
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660534563852594",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3118"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - HIGH_TIER_WINNER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660271948852530",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1104"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - ERROR_NOT_WINNER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660562744331394",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "LOSER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "2103"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: OL TICKET - PAID_BY_EFT
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "0660051678722018",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3117"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 1
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420700187937509924",
+        "checkDigits": "9924",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1201"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 2
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420700229002409815",
+        "checkDigits": "9815",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1202"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 3
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420700322291700780",
+        "checkDigits": "0780",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "LOSER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "2201"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 4
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420700442424501859",
+        "checkDigits": "1859",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1203"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 5
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420700576905905689",
+        "checkDigits": "5689",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1204"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 6
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420700608165400118",
+        "checkDigits": "0118",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1205"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 7
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420700793273209906",
+        "checkDigits": "9906",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1206"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 16
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420700894098204143",
+        "checkDigits": "4143",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3201"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 17
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420700920101400090",
+        "checkDigits": "0090",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3202"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host response 18
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420701031841204610",
+        "checkDigits": "4610",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3203"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 19
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420701127098302337",
+        "checkDigits": "2337",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3204"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 20
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420701251118606056",
+        "checkDigits": "6056",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3205"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 21
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420701344467106945",
+        "checkDigits": "6945",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3206"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 22
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420701430391603248",
+        "checkDigits": "3248",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3207"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 23
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420701517020802241",
+        "checkDigits": "2241",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3208"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 24
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420701695194909734",
+        "checkDigits": "9734",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3209"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host response 25
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420701764109705177",
+        "checkDigits": "5177",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3210"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 32
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420701811088009649",
+        "checkDigits": "9649",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1207"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 33
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420701945593409592",
+        "checkDigits": "9592",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3211"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 34
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420702033290403334",
+        "checkDigits": "3334",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3212"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 35
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420702189626307580",
+        "checkDigits": "7580",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3210"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 36
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420702232381500786",
+        "checkDigits": "0786",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3214"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 41
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420702410853508724",
+        "checkDigits": "8724",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3216"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Host Response 42
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420702560198406065",
+        "checkDigits": "6065",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3217"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - Free Ticket Winner
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420702694435600051",
+        "checkDigits": "0051",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3242"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - INVALID_TICKET_NUMBER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9430016273991111",
+        "checkDigits": "1111",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "9001"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - INVALID_TICKET_NUMBER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9430016273992222",
+        "checkDigits": "2222",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "9001"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - INVALID_TICKET_NUMBER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9430016273993333",
+        "checkDigits": "3333",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "9001"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - INVALID_TICKET_NUMBER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9430016273994444",
+        "checkDigits": "4444",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "9001"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - INVALID_TICKET_NUMBER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9430016273995555",
+        "checkDigits": "5555",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "9001"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - FUNCTION_SUPRESSED
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420702889747900451",
+        "checkDigits": "0451",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3218"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - NOT_ALLOWED_THIS_FUNCTION
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420702985434407609",
+        "checkDigits": "7609",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3219"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - BAD_PASS_NUMBER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420703042003803563",
+        "checkDigits": "3563",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3220"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - INCORRECT_TERM_AGENT
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420703137793402907",
+        "checkDigits": "2907",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3221"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - INVALID_ATTEMPT
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420703258778409238",
+        "checkDigits": "9238",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3222"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - DB_TRANSACTION_FAILURE
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420703394656202867",
+        "checkDigits": "2867",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3223"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - LOCATION_CHANGE_NOT_ALLOWED
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420703400324702756",
+        "checkDigits": "2756",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3224"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - UNIT_NOT_AT_LOCATION
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420703524221700247",
+        "checkDigits": "0247",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3225"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - INVALID_LOCATION_TRANSFER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420703648373806222",
+        "checkDigits": "6222",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3226"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - NOT_ENOUGH_INVENTORY_AVAILABLE
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420703794396107128",
+        "checkDigits": "7128",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3227"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - DESTINATION_LOC_NOT_ACTIVE
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420703821044009361",
+        "checkDigits": "9361",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3228"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - FROM_LOC_NOT_ACTIVE
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420703976627308157",
+        "checkDigits": "8157",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3229"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - SPLITS_NOT_ALLOWED
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420704051499901980",
+        "checkDigits": "1980",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3230"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - INVALID_TEST_CONDITION_FOR_TRANS
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420704185349505669",
+        "checkDigits": "5669",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3231"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - INVALID_SIDE_EFFECT_FOR_TRANS
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420704269985008156",
+        "checkDigits": "8156",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3232"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - NO_UNITS_FOUND
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420704393507209560",
+        "checkDigits": "9560",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3233"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - NO_AVAILABLE_UNITS
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420704499441307888",
+        "checkDigits": "7888",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3234"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - INVALID_REFERENCE_NUMBER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420704559427208568",
+        "checkDigits": "8568",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3235"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - MESSES_TO_IDIS_FAILED
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420704673137406891",
+        "checkDigits": "6891",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3236"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - INVALID_PRODUCT_NUMBER
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420704735802609219",
+        "checkDigits": "9219",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3237"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - BAD_UNIT_CHECK_DIGIT
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420704811979306805",
+        "checkDigits": "6805",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "9001"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - GAME_NOT_ACTIVE
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420704914830707289",
+        "checkDigits": "7289",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3239"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - INVALID_ATTEMPT
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420705096601100694",
+        "checkDigits": "0694",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3222"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility @wsdl @wsdl-mule_mobutil[39m
+  Scenario: IK TICKET - PACK_ALREADY_HAS_STATUS
+  [32m✔ Given The json request data[39m
+      [32m"""
+      {
+        "serialNumber": "9891420705113164804969",
+        "checkDigits": "4969",
+        "channelId": 1,
+        "format": "1",
+        "source": "192.168.100.100",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+        "emailAddress": "userid08@dummy.co.nz"
+      }    
+      """[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3241"[39m
+
+88 scenarios ([32m88 passed[39m)
+440 steps ([32m440 passed[39m)
+0m00.858s

@@ -28,28 +28,28 @@
 				"name": "Host Response 4",
 				"mobile": "This ticket has already been claimed",
 				"esi": "ok, previously paid by other",
-				"result": "OTHER",
+				"result": "WINNER",
 				"code": "1203"
 			},
 			{
 				"name": "Host Response 5",
 				"mobile": "This ticket has already been claimed",
 				"esi": "ok, previously paid by you",
-				"result": "OTHER",
+				"result": "WINNER",
 				"code": "1204"
 			},
 			{
 				"name": "Host Response 6",
 				"mobile": "This ticket has already been claimed",
 				"esi": "ok, Previously claimed by other",
-				"result": "OTHER",
+				"result": "WINNER",
 				"code": "1205"
 			},
 			{
 				"name": "Host Response 7",
 				"mobile": "This ticket has already been claimed",
 				"esi": "Previously claimed by you",
-				"result": "OTHER",
+				"result": "WINNER",
 				"code": "1206"
 			},
 			{
@@ -126,7 +126,7 @@
 				"name": "Host Response 32",
 				"mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
 				"esi": "Rejected - Pay confirmation required",
-				"result": "WINNER",
+				"result": "OTHER",
 				"code": "1207"
 			},
 			{
@@ -421,7 +421,7 @@
 				"name": "PAID_ALREADY",
 				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[PAID_ALREADY]",
 				"mobile": "This ticket has already been claimed",
-				"result": "OTHER",
+				"result": "WINNER",
 				"code": "3105"
 			},
 			{
@@ -435,21 +435,21 @@
 				"name": "AMOUNT_TOO_LARGE_SMALL",
 				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[AMOUNT_TOO_LARGE_SMALL]",
 				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
+				"result": "WINNER",
 				"code": "1101"
 			},
 			{
 				"name": "NOT_ABLE_PAY",
 				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[NOT_ABLE_PAY]",
 				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
+				"result": "WINNER",
 				"code": "1102"
 			},
 			{
 				"name": "ALREADY_CLAIMED",
 				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[ALREADY_CLAIMED]",
 				"mobile": "This ticket has already been claimed",
-				"result": "OTHER",
+				"result": "WINNER",
 				"code": "3107"
 			},
 			{
@@ -477,7 +477,7 @@
 				"name": "PRIZE_EXCEEDED",
 				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[PRIZE_EXCEEDED]",
 				"mobile": "Please take yout ticket to the nearest Lotto store to collect your prize",
-				"result": "OTHER",
+				"result": "WINNER",
 				"code": "1103"
 			},
 			{
@@ -530,14 +530,14 @@
 				"name": "HIGH_WITH_NO_EXCHANGE",
 				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[HIGH_WITH_NO_EXCHANGE]",
 				"mobile": "Please take yout ticket to the nearest Lotto store to collect your prize",
-				"result": "OTHER",
+				"result": "WINNER",
 				"code": "1106"
 			},
 			{
 				"name": "REJECTED_FREE_TICKETS_STILL",
 				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[REJECTED_FREE_TICKETS_STILL]",
 				"mobile": "Please take yout ticket to the nearest Lotto store to collect your prize",
-				"result": "OTHER",
+				"result": "WINNER",
 				"code": "1107"
 			},
 			{
@@ -600,7 +600,7 @@
 				"name": "WINNING_ALREADY_PAID",
 				"esi": "null",
 				"mobile": "This ticket has already been claimed",
-				"result": "OTHER",
+				"result": "WINNER",
 				"code": "1111"
 			},
 			{

@@ -1,0 +1,1556 @@
+[36m@baseUrl @baseUrl-mobileutility[39m
+Feature: Ticket checker examples
+
+    The following are test scenarios againts the ESI ticket validation mock service
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660089034281259"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3101"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660177579522026"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "LOSER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "2101"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660036605441264"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3102"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660345710082082"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3103"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660423697961229"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3104"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660100391042004"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3105"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660539153921201"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3106"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660432217652064"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1101"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660358817292008"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1102"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660096898612083"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3107"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660023498252027"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3108"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660073303052574"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3109"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660371269121333"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [31m✖ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [36m- And The response property "validationResult.resultCode" should be "3107"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660431562292053"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3111"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660358161932094"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1103"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660256222761281"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3112"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660022842892016"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3113"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660607308852542"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3114"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660533908492583"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3115"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660271948852530"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1104"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660088378921347"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1105"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660424353321339"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1106"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660371924481344"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1107"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660089034261358"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1108"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "1170283747842001"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3247"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660670881322058"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1109"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0500610572852045"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1109"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660555537922074"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1110"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660335521322046"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "LOSER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "2102"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660220177922062"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1111"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660670225962047"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3116"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660554882562063"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1112"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0500552906251283"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1112"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660607964212553"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1113"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660534563852594"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3118"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660334865962035"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [31m✖ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [36m- And The response property "validationResult.resultCode" should be "1114"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660562744331394"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "LOSER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "2103"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0660051678722018"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3117"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "0500626298931317"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [31m✖ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [36m- And The response property "validationResult.resultCode" should be "3117"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420700187937509924"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1201"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420700229002409815"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "1202"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420700322291700780"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "LOSER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "2201"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420700442424501859"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [31m✖ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [36m- And The response property "validationResult.resultCode" should be "1203"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420700576905905689"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [31m✖ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [36m- And The response property "validationResult.resultCode" should be "1204"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420700608165400118"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [31m✖ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [36m- And The response property "validationResult.resultCode" should be "1205"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420700793273209906"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [31m✖ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [36m- And The response property "validationResult.resultCode" should be "1206"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420700894098204143"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3201"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420700920101400090"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3202"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420701031841204610"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3203"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420701127098302337"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3204"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420701251118606056"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3205"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420701344467106945"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3206"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420701430391603248"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3207"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420701517020802241"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3208"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420701695194909734"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3209"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420701764109705177"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3210"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420701811088009649"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [31m✖ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [36m- And The response property "validationResult.resultCode" should be "1207"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420701945593409592"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3211"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420702033290403334"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3212"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420702189626307580"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [31m✖ And The response property "validationResult.resultCode" should be "3213"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420702232381500786"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3214"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420702304052507048"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [31m✖ And The response property "validationResult.resultCode" should be "3215"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420702410853508724"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3216"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420702560198406065"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3217"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420704914830707289"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3239"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420702694435600051"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3242"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891419800298350004675"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [31m✖ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [36m- And The response property "validationResult.resultCode" should be "3242"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9971000100218322300477"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3242"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9971000200128526807891"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3242"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9971000100135167508506"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3242"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420702726941701693"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [31m✖ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [36m- And The response property "validationResult.resultCode" should be "3243"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420704811979306805"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "9001"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891419800145779204331"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3240"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420702726941701693"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3244"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9971000200287882201466"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3245"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9971000100399126400124"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3245"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9971000200301183409919"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3245"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9971000100460621600141"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "WINNER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3248"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420702889747900451"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3218"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420702985434407609"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3219"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420703042003803563"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3220"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420703137793402907"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3221"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420703258778409238"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3222"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420703394656202867"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3223"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420703400324702756"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3224"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420703524221700247"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3225"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420703648373806222"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3226"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420703794396107128"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3227"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420703821044009361"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3228"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420703976627308157"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3229"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420704051499901980"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3230"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420704185349505669"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3231"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420704269985008156"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3232"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420704393507209560"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3233"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420704499441307888"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3234"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420704559427208568"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3235"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420704673137406891"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3236"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420704735802609219"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3237"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420705096601100694"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3222"[39m
+
+  [36m@baseUrl @baseUrl-mobileutility[39m
+  Scenario: Check ticket scenarios
+  [32m✔ Given the property "serialNumber" is set to "9891420705113164804969"[39m
+  [32m✔ And the property "channelId" is set to "1"[39m
+  [32m✔ And the property "source" is set to "192.168.8.8"[39m
+  [32m✔ And the property "deviceId" is set to "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"[39m
+  [32m✔ When I make a POST request to "/validations"[39m
+  [32m✔ Then The response property "response.status" should be "success"[39m
+  [32m✔ And The response property "validationResult.resultType" should be "OTHER"[39m
+  [32m✔ And The response property "validationResult.resultCode" should be "3241"[39m
+
+Failures:
+
+1) Scenario: [1mCheck ticket scenarios[22m - [90mtest/ticketchecker2.feature:34[39m
+   Step: [1mAnd The response property "validationResult.resultType" should be "OTHER"[22m - [90mtest/ticketchecker2.feature:17[39m
+   Step Definition: [90mtest/lib/step_definitions/restapi.steps.js:89[39m
+   Message:
+     [31mAssertionError: 
+     Expected: OTHER
+     Actual: WINNER
+     Request Body:
+     {
+       "serialNumber": "0660371269121333",
+       "channelId": "1",
+       "source": "192.168.8.8",
+       "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"
+     }
+     Response Status Code: 200
+     Response Body:
+     {
+       "validationResult": {
+         "resultType": "WINNER",
+         "resultCode": "3107",
+         "currency": "$",
+         "message": "This ticket has already been claimed",
+         "linkText": "Tell me more",
+         "linkUrl": "/winning-happens"
+       },
+       "response": {
+         "status": "success",
+         "message": "System available"
+       }
+     }[39m
+         [31m+ expected[39m [32m- actual[39m
+
+         [32m-WINNER[39m
+         [31m+OTHER[39m
+     [90m
+         at CustomWorld.<anonymous> (/Users/fcontreras/GITREPO/sphynxnz/skunkworks.mobile-utility/test/lib/step_definitions/restapi.steps.js:91:12)[39m
+
+2) Scenario: [1mCheck ticket scenarios[22m - [90mtest/ticketchecker2.feature:57[39m
+   Step: [1mAnd The response property "validationResult.resultType" should be "WINNER"[22m - [90mtest/ticketchecker2.feature:17[39m
+   Step Definition: [90mtest/lib/step_definitions/restapi.steps.js:89[39m
+   Message:
+     [31mAssertionError: 
+     Expected: WINNER
+     Actual: LOSER
+     Request Body:
+     {
+       "serialNumber": "0660334865962035",
+       "channelId": "1",
+       "source": "192.168.8.8",
+       "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"
+     }
+     Response Status Code: 200
+     Response Body:
+     {
+       "validationResult": {
+         "resultType": "LOSER",
+         "resultCode": "2101",
+         "currency": "$",
+         "message": "Not a winning ticket",
+         "linkText": "Tell me more",
+         "linkUrl": "/winning-happens",
+         "commMessage": "Did you know that by playing Lotto you're helping fund grassroots sport in New Zealand?  Sport NZ is the largest recipient of Lotto funding, receiving over $40 million last year to support sport and recreation in New Zealand. "
+       },
+       "response": {
+         "status": "success",
+         "message": "System available"
+       }
+     }[39m
+         [31m+ expected[39m [32m- actual[39m
+
+         [32m-LOSER[39m
+         [31m+WINNER[39m
+     [90m
+         at CustomWorld.<anonymous> (/Users/fcontreras/GITREPO/sphynxnz/skunkworks.mobile-utility/test/lib/step_definitions/restapi.steps.js:91:12)[39m
+
+3) Scenario: [1mCheck ticket scenarios[22m - [90mtest/ticketchecker2.feature:60[39m
+   Step: [1mAnd The response property "validationResult.resultType" should be "OTHER"[22m - [90mtest/ticketchecker2.feature:17[39m
+   Step Definition: [90mtest/lib/step_definitions/restapi.steps.js:89[39m
+   Message:
+     [31mAssertionError: 
+     Expected: OTHER
+     Actual: LOSER
+     Request Body:
+     {
+       "serialNumber": "0500626298931317",
+       "channelId": "1",
+       "source": "192.168.8.8",
+       "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"
+     }
+     Response Status Code: 200
+     Response Body:
+     {
+       "validationResult": {
+         "resultType": "LOSER",
+         "resultCode": "2101",
+         "currency": "$",
+         "message": "Not a winning ticket",
+         "linkText": "Tell me more",
+         "linkUrl": "/winning-happens",
+         "commMessage": "Did you know that all Lotto profits go back into the community through community grants?  Last year that was approximately $200 million!  Now that's a reason to celebrate!"
+       },
+       "response": {
+         "status": "success",
+         "message": "System available"
+       }
+     }[39m
+         [31m+ expected[39m [32m- actual[39m
+
+         [32m-LOSER[39m
+         [31m+OTHER[39m
+     [90m
+         at CustomWorld.<anonymous> (/Users/fcontreras/GITREPO/sphynxnz/skunkworks.mobile-utility/test/lib/step_definitions/restapi.steps.js:91:12)[39m
+
+4) Scenario: [1mCheck ticket scenarios[22m - [90mtest/ticketchecker2.feature:64[39m
+   Step: [1mAnd The response property "validationResult.resultType" should be "WINNER"[22m - [90mtest/ticketchecker2.feature:17[39m
+   Step Definition: [90mtest/lib/step_definitions/restapi.steps.js:89[39m
+   Message:
+     [31mAssertionError: 
+     Expected: WINNER
+     Actual: OTHER
+     Request Body:
+     {
+       "serialNumber": "9891420700442424501859",
+       "channelId": "1",
+       "source": "192.168.8.8",
+       "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"
+     }
+     Response Status Code: 200
+     Response Body:
+     {
+       "validationResult": {
+         "resultType": "OTHER",
+         "resultCode": "1203",
+         "currency": "$",
+         "message": "This ticket has already been claimed",
+         "linkText": "Tell me more",
+         "linkUrl": "/winning-happens"
+       },
+       "response": {
+         "status": "success",
+         "message": "System available"
+       }
+     }[39m
+         [31m+ expected[39m [32m- actual[39m
+
+         [32m-OTHER[39m
+         [31m+WINNER[39m
+     [90m
+         at CustomWorld.<anonymous> (/Users/fcontreras/GITREPO/sphynxnz/skunkworks.mobile-utility/test/lib/step_definitions/restapi.steps.js:91:12)[39m
+
+5) Scenario: [1mCheck ticket scenarios[22m - [90mtest/ticketchecker2.feature:65[39m
+   Step: [1mAnd The response property "validationResult.resultType" should be "WINNER"[22m - [90mtest/ticketchecker2.feature:17[39m
+   Step Definition: [90mtest/lib/step_definitions/restapi.steps.js:89[39m
+   Message:
+     [31mAssertionError: 
+     Expected: WINNER
+     Actual: OTHER
+     Request Body:
+     {
+       "serialNumber": "9891420700576905905689",
+       "channelId": "1",
+       "source": "192.168.8.8",
+       "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"
+     }
+     Response Status Code: 200
+     Response Body:
+     {
+       "validationResult": {
+         "resultType": "OTHER",
+         "resultCode": "1204",
+         "currency": "$",
+         "message": "This ticket has already been claimed",
+         "linkText": "Tell me more",
+         "linkUrl": "/winning-happens"
+       },
+       "response": {
+         "status": "success",
+         "message": "System available"
+       }
+     }[39m
+         [31m+ expected[39m [32m- actual[39m
+
+         [32m-OTHER[39m
+         [31m+WINNER[39m
+     [90m
+         at CustomWorld.<anonymous> (/Users/fcontreras/GITREPO/sphynxnz/skunkworks.mobile-utility/test/lib/step_definitions/restapi.steps.js:91:12)[39m
+
+6) Scenario: [1mCheck ticket scenarios[22m - [90mtest/ticketchecker2.feature:66[39m
+   Step: [1mAnd The response property "validationResult.resultType" should be "WINNER"[22m - [90mtest/ticketchecker2.feature:17[39m
+   Step Definition: [90mtest/lib/step_definitions/restapi.steps.js:89[39m
+   Message:
+     [31mAssertionError: 
+     Expected: WINNER
+     Actual: OTHER
+     Request Body:
+     {
+       "serialNumber": "9891420700608165400118",
+       "channelId": "1",
+       "source": "192.168.8.8",
+       "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"
+     }
+     Response Status Code: 200
+     Response Body:
+     {
+       "validationResult": {
+         "resultType": "OTHER",
+         "resultCode": "1205",
+         "currency": "$",
+         "message": "This ticket has already been claimed",
+         "linkText": "Tell me more",
+         "linkUrl": "/winning-happens"
+       },
+       "response": {
+         "status": "success",
+         "message": "System available"
+       }
+     }[39m
+         [31m+ expected[39m [32m- actual[39m
+
+         [32m-OTHER[39m
+         [31m+WINNER[39m
+     [90m
+         at CustomWorld.<anonymous> (/Users/fcontreras/GITREPO/sphynxnz/skunkworks.mobile-utility/test/lib/step_definitions/restapi.steps.js:91:12)[39m
+
+7) Scenario: [1mCheck ticket scenarios[22m - [90mtest/ticketchecker2.feature:67[39m
+   Step: [1mAnd The response property "validationResult.resultType" should be "WINNER"[22m - [90mtest/ticketchecker2.feature:17[39m
+   Step Definition: [90mtest/lib/step_definitions/restapi.steps.js:89[39m
+   Message:
+     [31mAssertionError: 
+     Expected: WINNER
+     Actual: OTHER
+     Request Body:
+     {
+       "serialNumber": "9891420700793273209906",
+       "channelId": "1",
+       "source": "192.168.8.8",
+       "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"
+     }
+     Response Status Code: 200
+     Response Body:
+     {
+       "validationResult": {
+         "resultType": "OTHER",
+         "resultCode": "1206",
+         "currency": "$",
+         "message": "This ticket has already been claimed",
+         "linkText": "Tell me more",
+         "linkUrl": "/winning-happens"
+       },
+       "response": {
+         "status": "success",
+         "message": "System available"
+       }
+     }[39m
+         [31m+ expected[39m [32m- actual[39m
+
+         [32m-OTHER[39m
+         [31m+WINNER[39m
+     [90m
+         at CustomWorld.<anonymous> (/Users/fcontreras/GITREPO/sphynxnz/skunkworks.mobile-utility/test/lib/step_definitions/restapi.steps.js:91:12)[39m
+
+8) Scenario: [1mCheck ticket scenarios[22m - [90mtest/ticketchecker2.feature:78[39m
+   Step: [1mAnd The response property "validationResult.resultType" should be "OTHER"[22m - [90mtest/ticketchecker2.feature:17[39m
+   Step Definition: [90mtest/lib/step_definitions/restapi.steps.js:89[39m
+   Message:
+     [31mAssertionError: 
+     Expected: OTHER
+     Actual: WINNER
+     Request Body:
+     {
+       "serialNumber": "9891420701811088009649",
+       "channelId": "1",
+       "source": "192.168.8.8",
+       "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"
+     }
+     Response Status Code: 200
+     Response Body:
+     {
+       "validationResult": {
+         "resultType": "WINNER",
+         "resultCode": "1207",
+         "currency": "$",
+         "message": "Please take your ticket to the nearest Lotto store to collect your prize",
+         "linkText": "Tell me more",
+         "linkUrl": "/winning-happens"
+       },
+       "response": {
+         "status": "success",
+         "message": "System available"
+       }
+     }[39m
+         [31m+ expected[39m [32m- actual[39m
+
+         [32m-WINNER[39m
+         [31m+OTHER[39m
+     [90m
+         at CustomWorld.<anonymous> (/Users/fcontreras/GITREPO/sphynxnz/skunkworks.mobile-utility/test/lib/step_definitions/restapi.steps.js:91:12)[39m
+
+9) Scenario: [1mCheck ticket scenarios[22m - [90mtest/ticketchecker2.feature:81[39m
+   Step: [1mAnd The response property "validationResult.resultCode" should be "3213"[22m - [90mtest/ticketchecker2.feature:18[39m
+   Step Definition: [90mtest/lib/step_definitions/restapi.steps.js:89[39m
+   Message:
+     [31mAssertionError: 
+     Expected: 3213
+     Actual: 3210
+     Request Body:
+     {
+       "serialNumber": "9891420702189626307580",
+       "channelId": "1",
+       "source": "192.168.8.8",
+       "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"
+     }
+     Response Status Code: 200
+     Response Body:
+     {
+       "validationResult": {
+         "resultType": "OTHER",
+         "resultCode": "3210",
+         "currency": "$",
+         "message": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+         "linkText": "Tell me more",
+         "linkUrl": "/winning-happens"
+       },
+       "response": {
+         "status": "success",
+         "message": "System available"
+       }
+     }[39m
+         [31m+ expected[39m [32m- actual[39m
+
+         [32m-3210[39m
+         [31m+3213[39m
+     [90m
+         at CustomWorld.<anonymous> (/Users/fcontreras/GITREPO/sphynxnz/skunkworks.mobile-utility/test/lib/step_definitions/restapi.steps.js:91:12)[39m
+
+10) Scenario: [1mCheck ticket scenarios[22m - [90mtest/ticketchecker2.feature:83[39m
+    Step: [1mAnd The response property "validationResult.resultCode" should be "3215"[22m - [90mtest/ticketchecker2.feature:18[39m
+    Step Definition: [90mtest/lib/step_definitions/restapi.steps.js:89[39m
+    Message:
+      [31mAssertionError: 
+      Expected: 3215
+      Actual: 8001
+      Request Body:
+      {
+        "serialNumber": "9891420702304052507048",
+        "channelId": "1",
+        "source": "192.168.8.8",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"
+      }
+      Response Status Code: 200
+      Response Body:
+      {
+        "validationResult": {
+          "resultType": "OTHER",
+          "resultCode": "8001",
+          "currency": "$",
+          "message": "Unable to determine ticket outcome. Please take your ticket to the nearest Lotto store",
+          "linkText": "Tell me more",
+          "linkUrl": "/winning-happens"
+        },
+        "response": {
+          "status": "success",
+          "message": "System available"
+        }
+      }[39m
+          [31m+ expected[39m [32m- actual[39m
+
+          [32m-8001[39m
+          [31m+3215[39m
+      [90m
+          at CustomWorld.<anonymous> (/Users/fcontreras/GITREPO/sphynxnz/skunkworks.mobile-utility/test/lib/step_definitions/restapi.steps.js:91:12)[39m
+
+11) Scenario: [1mCheck ticket scenarios[22m - [90mtest/ticketchecker2.feature:88[39m
+    Step: [1mAnd The response property "validationResult.resultType" should be "WINNER"[22m - [90mtest/ticketchecker2.feature:17[39m
+    Step Definition: [90mtest/lib/step_definitions/restapi.steps.js:89[39m
+    Message:
+      [31mAssertionError: 
+      Expected: WINNER
+      Actual: OTHER
+      Request Body:
+      {
+        "serialNumber": "9891419800298350004675",
+        "channelId": "1",
+        "source": "192.168.8.8",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"
+      }
+      Response Status Code: 200
+      Response Body:
+      {
+        "validationResult": {
+          "resultType": "OTHER",
+          "resultCode": "8001",
+          "currency": "$",
+          "message": "Unable to determine ticket outcome. Please take your ticket to the nearest Lotto store",
+          "linkText": "Tell me more",
+          "linkUrl": "/winning-happens"
+        },
+        "response": {
+          "status": "success",
+          "message": "System available"
+        }
+      }[39m
+          [31m+ expected[39m [32m- actual[39m
+
+          [32m-OTHER[39m
+          [31m+WINNER[39m
+      [90m
+          at CustomWorld.<anonymous> (/Users/fcontreras/GITREPO/sphynxnz/skunkworks.mobile-utility/test/lib/step_definitions/restapi.steps.js:91:12)[39m
+
+12) Scenario: [1mCheck ticket scenarios[22m - [90mtest/ticketchecker2.feature:92[39m
+    Step: [1mAnd The response property "validationResult.resultType" should be "WINNER"[22m - [90mtest/ticketchecker2.feature:17[39m
+    Step Definition: [90mtest/lib/step_definitions/restapi.steps.js:89[39m
+    Message:
+      [31mAssertionError: 
+      Expected: WINNER
+      Actual: OTHER
+      Request Body:
+      {
+        "serialNumber": "9891420702726941701693",
+        "channelId": "1",
+        "source": "192.168.8.8",
+        "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE"
+      }
+      Response Status Code: 200
+      Response Body:
+      {
+        "validationResult": {
+          "resultType": "OTHER",
+          "resultCode": "3244",
+          "currency": "$",
+          "message": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+          "linkText": "Tell me more",
+          "linkUrl": "/winning-happens"
+        },
+        "response": {
+          "status": "success",
+          "message": "System available"
+        }
+      }[39m
+          [31m+ expected[39m [32m- actual[39m
+
+          [32m-OTHER[39m
+          [31m+WINNER[39m
+      [90m
+          at CustomWorld.<anonymous> (/Users/fcontreras/GITREPO/sphynxnz/skunkworks.mobile-utility/test/lib/step_definitions/restapi.steps.js:91:12)[39m
+
+100 scenarios ([31m12 failed[39m, [32m88 passed[39m)
+800 steps ([31m12 failed[39m, [36m10 skipped[39m, [32m778 passed[39m)
+0m00.961s

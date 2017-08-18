@@ -106,7 +106,7 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "3105"
 
   Scenario: OL TICKET - COMPLETELY_EXPIRED
@@ -140,7 +140,7 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1101"
 
   Scenario: OL TICKET - NOT_ABLE_TO_PAY
@@ -157,7 +157,7 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1102"
 
   Scenario: OL TICKET - ALREADY_CLAIMED
@@ -174,7 +174,7 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "3107"
 
   Scenario: OL TICKET - REJECTED_CALL_HOTLINE
@@ -211,6 +211,23 @@ Feature: Ticket checker examples
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3109"
 
+  Scenario: OL TICKET - ALREADY_CLAIMED
+    Given The json request data
+    """json
+    {
+      "serialNumber": "0660371269121333",
+      "channelId": 1,
+      "format": "1",
+      "source": "192.168.100.100",
+      "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+      "emailAddress": "userid08@dummy.co.nz"
+    }    
+    """
+    When I make a POST request to "/validations"
+    Then The response property "response.status" should be "success"
+    And The response property "validationResult.resultType" should be "WINNER"
+    And The response property "validationResult.resultCode" should be "3107"
+
   Scenario: OL TICKET - TERMINAL_IN_TRAINING_MODE
     Given The json request data
     """json
@@ -242,7 +259,7 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1103"
 
   Scenario: OL TICKET - TICKET_TOO_OLD
@@ -361,7 +378,7 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1106"
 
   Scenario: OL TICKET - REJECTED_FREE_TICKETS_STILL
@@ -378,7 +395,7 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1107"
 
   Scenario: OL TICKET - DEVICE_UNABLE_TO_PAY
@@ -398,11 +415,45 @@ Feature: Ticket checker examples
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1108"
 
+  Scenario: OL TICKET - FUNCTION_SUPRESSED
+    Given The json request data
+    """json
+    {
+      "serialNumber": "1170283747842001",
+      "channelId": 1,
+      "format": "1",
+      "source": "192.168.100.100",
+      "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+      "emailAddress": "userid08@dummy.co.nz"
+    }    
+    """
+    When I make a POST request to "/validations"
+    Then The response property "response.status" should be "success"
+    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultCode" should be "3247"
+
   Scenario: OL TICKET - DIVISION_WINNER
     Given The json request data
     """json
     {
       "serialNumber": "0660670881322058",
+      "channelId": 1,
+      "format": "1",
+      "source": "192.168.100.100",
+      "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+      "emailAddress": "userid08@dummy.co.nz"
+    }    
+    """
+    When I make a POST request to "/validations"
+    Then The response property "response.status" should be "success"
+    And The response property "validationResult.resultType" should be "WINNER"
+    And The response property "validationResult.resultCode" should be "1109"
+
+  Scenario: OL TICKET - DIVISION_WINNER
+    Given The json request data
+    """json
+    {
+      "serialNumber": "0500610572852045",
       "channelId": 1,
       "format": "1",
       "source": "192.168.100.100",
@@ -463,7 +514,7 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1111"
 
   Scenario: OL TICKET - PLEASE_SEE_RETAILER
@@ -488,6 +539,23 @@ Feature: Ticket checker examples
     """json
     {
       "serialNumber": "0660554882562063",
+      "channelId": 1,
+      "format": "1",
+      "source": "192.168.100.100",
+      "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+      "emailAddress": "userid08@dummy.co.nz"
+    }    
+    """
+    When I make a POST request to "/validations"
+    Then The response property "response.status" should be "success"
+    And The response property "validationResult.resultType" should be "WINNER"
+    And The response property "validationResult.resultCode" should be "1112"
+
+  Scenario: OL TICKET - WINNING_MAJOR
+    Given The json request data
+    """json
+    {
+      "serialNumber": "0500552906251283",
       "channelId": 1,
       "format": "1",
       "source": "192.168.100.100",
@@ -533,6 +601,23 @@ Feature: Ticket checker examples
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3118"
+
+  Scenario: OL TICKET - INVALID_TICKET_NUMBER
+    Given The json request data
+    """json
+    {
+      "serialNumber": "0660334865962035",
+      "channelId": 1,
+      "format": "1",
+      "source": "192.168.100.100",
+      "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+      "emailAddress": "userid08@dummy.co.nz"
+    }    
+    """
+    When I make a POST request to "/validations"
+    Then The response property "response.status" should be "success"
+    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultCode" should be "9001"
 
   Scenario: OL TICKET - HIGH_TIER_WINNER
     Given The json request data
@@ -584,6 +669,24 @@ Feature: Ticket checker examples
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3117"
+
+  Scenario: OL TICKET - PAID_BY_EFT
+    Given The json request data
+    """json
+    {
+      "serialNumber": "0500626298931317",
+      "channelId": 1,
+      "format": "1",
+      "source": "192.168.100.100",
+      "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+      "emailAddress": "userid08@dummy.co.nz"
+    }    
+    """
+    When I make a POST request to "/validations"
+    Then The response property "response.status" should be "success"
+    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultCode" should be "3117"
+
 #------------------------
 # IK TICKET SCENARIOS
 #------------------------
@@ -659,7 +762,7 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1203"
 
   Scenario: IK TICKET - Host Response 5
@@ -677,7 +780,7 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1204"
 
   Scenario: IK TICKET - Host Response 6
@@ -695,7 +798,7 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1205"
 
   Scenario: IK TICKET - Host Response 7
@@ -713,7 +816,7 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1206"
 
   Scenario: IK TICKET - Host Response 16
@@ -911,7 +1014,7 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1207"
 
   Scenario: IK TICKET - Host Response 33
@@ -1021,6 +1124,24 @@ Feature: Ticket checker examples
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3217"
+
+  Scenario: IK TICKET - Host Response 42
+    Given The json request data
+    """json
+    {
+      "serialNumber": "9891420704914830707289",
+      "checkDigits": "7289",
+      "channelId": 1,
+      "format": "1",
+      "source": "192.168.100.100",
+      "deviceId": "AAAAAAAA-BBBB-4CCC-8DDD-EEEEEEEEEEEE",
+      "emailAddress": "userid08@dummy.co.nz"
+    }    
+    """
+    When I make a POST request to "/validations"
+    Then The response property "response.status" should be "success"
+    And The response property "validationResult.resultType" should be "OTHER"
+    And The response property "validationResult.resultCode" should be "3239"
 
   Scenario: IK TICKET - Free Ticket Winner
     Given The json request data
