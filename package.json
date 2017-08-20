@@ -8,6 +8,7 @@
     "build:test": "npm install && npm run test:util",
     "build:prod": "npm install --production",
     "test:checker": "cucumberjs --require ./test/lib ./test/ticketchecker.feature",
+    "test:checker2": "cucumberjs --require ./test/lib ./test/ticketchecker2.feature",
     "test:finder": "cucumberjs --require ./test/lib ./test/storesfinder.feature",
     "test:checker:gcp": "cucumberjs --require ./test/lib ./test/ticketchecker_gcp.feature",
     "test:finder:gcp": "cucumberjs --require ./test/lib ./test/storesfinder_gcp.feature",
