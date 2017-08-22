@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="022646b3-32e7-4e4f-92df-1ff7ff21ada8" activeEnvironment="Default" name="ESI SW - Ticket Validation Only-FIXED" resourceRoot="" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="96e2c588-d777-414b-9e2c-9c299363654b" wsaVersion="NONE" name="PlayerSoapBinding" type="wsdl" bindingName="{http://nzlotteries.co.nz/service/v1}PlayerSoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/MuleIntegration/PlayerService-TicketValidationOnly.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\MuleIntegration\PlayerService-TicketValidationOnly.wsdl"><con:part><con:url>file:\C:\MuleIntegration\PlayerService-TicketValidationOnly.wsdl</con:url><con:content><![CDATA[<definitions name="PlayerService" targetNamespace="http://nzlotteries.co.nz/service/v1" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://nzlotteries.co.nz/service/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:e="http://nzlotteries.co.nz/exception/v1" xmlns:v="http://nzlotteries.co.nz/value/v1">
+<con:soapui-project id="022646b3-32e7-4e4f-92df-1ff7ff21ada8" activeEnvironment="Default" name="ESI SW - Ticket Validation Only-ALIGN1" resourceRoot="" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="96e2c588-d777-414b-9e2c-9c299363654b" wsaVersion="NONE" name="PlayerSoapBinding" type="wsdl" bindingName="{http://nzlotteries.co.nz/service/v1}PlayerSoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/MuleIntegration/PlayerService-TicketValidationOnly.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\MuleIntegration\PlayerService-TicketValidationOnly.wsdl"><con:part><con:url>file:\C:\MuleIntegration\PlayerService-TicketValidationOnly.wsdl</con:url><con:content><![CDATA[<definitions name="PlayerService" targetNamespace="http://nzlotteries.co.nz/service/v1" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://nzlotteries.co.nz/service/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:e="http://nzlotteries.co.nz/exception/v1" xmlns:v="http://nzlotteries.co.nz/value/v1">
   <types>
     <xsd:schema targetNamespace="http://nzlotteries.co.nz/value/v1" elementFormDefault="qualified">
       <xsd:complexType name="VoidOutput"/>
@@ -122,9 +122,9 @@
    <soapenv:Body>\r
       <v1:validationInquiryInstantInput>\r
          <!--Optional:-->\r
-         <v1:ticketSerialNumber>989-14207-048-1197930</v1:ticketSerialNumber>\r
+         <v1:ticketSerialNumber>943-00162-739-1234567</v1:ticketSerialNumber>\r
          <!--Optional:-->\r
-         <v1:checkDigits>6805</v1:checkDigits>\r
+         <v1:checkDigits>1234</v1:checkDigits>\r
          <!--Optional:-->\r
          <v1:channelId>1</v1:channelId>\r
       </v1:validationInquiryInstantInput>\r
@@ -134,12 +134,12 @@
    <soapenv:Body>\r
       <v1:validationInquiryOnlineInput>\r
          <!--Optional:-->\r
-         <v1:ticketSerialNumber>066-033486596-2035</v1:ticketSerialNumber>\r
+         <v1:ticketSerialNumber>066-037126912-1333</v1:ticketSerialNumber>\r
          <!--Optional:-->\r
          <v1:channelId>1</v1:channelId>\r
       </v1:validationInquiryOnlineInput>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="validationInquiryOnlineCmd"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:mockService id="4d0db027-a3b7-4ff9-b797-84c54ba21013" port="8088" path="/esiwebservice" host="localhost" name="PlayerSoapBinding MockService" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="validationInquiryInstantCmd" interface="PlayerSoapBinding" operation="validationInquiryInstantCmd" id="485cc79b-bfc8-4a71-87e8-763f7eaed4e6">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="validationInquiryOnlineCmd"/><con:wsrmConfig version="1.2"/></con:call><con:call id="e5786e39-0803-47ed-bdf7-4d8e3ebec219" name="Invalid Scenario Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.224.202/nzl-ws/services/PlayerService/v1</con:endpoint><con:wsaConfig mustUnderstand="NONE" version="200508" action="validationInquiryOnlineCmd"/></con:call></con:operation></con:interface><con:mockService id="4d0db027-a3b7-4ff9-b797-84c54ba21013" port="8088" path="/esiwebservice" host="localhost" name="PlayerSoapBinding MockService" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="validationInquiryInstantCmd" interface="PlayerSoapBinding" operation="validationInquiryInstantCmd" id="485cc79b-bfc8-4a71-87e8-763f7eaed4e6">
 <con:settings/>
 <con:dispatchPath>declare namespace soapenv = 'http://schemas.xmlsoap.org/soap/envelope/';
 declare namespace v1 = 'http://api.lottonz.co.nz/MobileUtilityService/v1';
@@ -1011,8 +1011,7 @@ declare namespace v1 = 'http://api.lottonz.co.nz/MobileUtilityService/v1';
 
 <con:response name="BAD_UNIT_CHECK_DIGIT" encoding="UTF-8" id="de28dfab-84c7-4bde-a694-11b90360fd07" httpResponseStatus="200">
 <con:settings/>
-<con:responseContent><![CDATA[
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<con:responseContent><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
    <soap:Body>
       <validationInquiryInstantOutput xmlns="http://nzlotteries.co.nz/value/v1" xmlns:ns2="http://nzlotteries.co.nz/exception/v1">
          <resultText>ok, Rejected - Bad check digits</resultText>
@@ -1021,10 +1020,9 @@ declare namespace v1 = 'http://api.lottonz.co.nz/MobileUtilityService/v1';
 </soap:Envelope>
 ]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="validationInquiryInstantCmd"/></con:response>
 
-<con:response name="BAD_UNIT_CHECK_DIGIT2" encoding="UTF-8" id="465728ef-4439-4e2b-a2d5-f3c45335c281" httpResponseStatus="200">
+<con:response name="BAD_UNIT_CHECK_DIGIT2" encoding="UTF-8" id="465728ef-4439-4e2b-a2d5-f3c45335c281" httpResponseStatus="500">
 <con:settings/>
-<con:responseContent><![CDATA[
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<con:responseContent><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
   <soap:Body>
     <soap:Fault>
       <faultcode>soap:Server</faultcode>
@@ -1105,7 +1103,24 @@ declare namespace v1 = 'http://api.lottonz.co.nz/MobileUtilityService/v1';
 ]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="validationInquiryInstantCmd"/></con:response>
 
 
-<con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:response name="Invalid Scenario" encoding="UTF-8" id="21856bef-7cab-463a-b2e0-579b3aeb43ab" httpResponseStatus="500">
+<con:settings/>
+<con:responseContent><![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <soap:Fault>
+      <faultcode>soap:Server</faultcode>
+      <faultstring>nz.co.nzlotteries.exception.ESTEException</faultstring>
+      <detail>
+        <ns2:faultInfo xmlns="http://nzlotteries.co.nz/value/v1" xmlns:ns2="http://nzlotteries.co.nz/exception/v1">
+          <ns2:exceptionClassName>nz.co.nzlotteries.exception.ESTEException</ns2:exceptionClassName>
+          <ns2:exceptionMessage>Ticket sent to host is invalid. Error type : HostErrorType[Non-matching scenario]</ns2:exceptionMessage >
+        </ns2:faultInfo>
+      </detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
+]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="validationInquiryInstantCmd"/></con:response><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 
   <con:query><con:name>Host Response 1</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query> <con:match>989-14207-001-8793750</con:match><con:response>Host Response 1</con:response></con:query>
@@ -1175,7 +1190,7 @@ declare namespace v1 = 'http://api.lottonz.co.nz/MobileUtilityService/v1';
   
   <con:query><con:name>Invalid Pack Status</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>989-14207-027-2694170</con:match><con:response>Invalid Pack Status</con:response></con:query>
 
-<con:query><con:name>Free Ticket Winner Dup</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>989-14198-002-9835000</con:match><con:response>Free Ticket Winner</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-1111</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-9111111</con:match><con:response>BAD_UNIT_CHECK_DIGIT2</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-2222</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-9222222</con:match><con:response>BAD_UNIT_CHECK_DIGIT2</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-3333</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-9333333</con:match><con:response>BAD_UNIT_CHECK_DIGIT2</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-4444</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-9444444</con:match><con:response>BAD_UNIT_CHECK_DIGIT2</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-5555</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-9555555</con:match><con:response>BAD_UNIT_CHECK_DIGIT2</con:response></con:query></con:dispatchConfig>
+<con:query><con:name>Free Ticket Winner Dup</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>989-14198-002-9835000</con:match><con:response>Free Ticket Winner</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-1111</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-9111111</con:match><con:response>BAD_UNIT_CHECK_DIGIT2</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-2222</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-9222222</con:match><con:response>BAD_UNIT_CHECK_DIGIT2</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-3333</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-9333333</con:match><con:response>BAD_UNIT_CHECK_DIGIT2</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-4444</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-9444444</con:match><con:response>BAD_UNIT_CHECK_DIGIT2</con:response></con:query><con:query><con:name>BAD_CHECK_DIGIT-5555</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-9555555</con:match><con:response>BAD_UNIT_CHECK_DIGIT2</con:response></con:query><con:query><con:name>Invalid Scenario IK</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soapenv:Envelope/soapenv:Body/v1:validationInquiryInstantInput/v1:ticketSerialNumber</con:query><con:match>943-00162-739-1234567</con:match><con:response>Invalid Scenario</con:response></con:query></con:dispatchConfig>
 </con:mockOperation><con:mockOperation name="validationInquiryOnlineCmd" interface="PlayerSoapBinding" operation="validationInquiryOnlineCmd" id="f6f5368e-0650-4c51-945f-c04b79e1c962">
 <con:settings/>
 <con:dispatchPath>declare namespace soap = 'http://schemas.xmlsoap.org/soap/envelope/';
@@ -2216,6 +2231,28 @@ declare namespace v1 = 'http://api.lottonz.co.nz/MobileUtilityService/v1';
     </soap:Fault>
    </soap:Body>
 </soap:Envelope>
+]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="validationInquiryOnlineCmd"/></con:response><con:response name="Invalid Scenario" encoding="UTF-8" id="2ce37326-2f19-4092-ba75-ae3f559db45e" httpResponseStatus="500">
+<con:settings/>
+<con:responseContent><![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://nzlotteries.co.nz/value/v1">
+   <soap:Header/>
+   <soap:Body>
+    <soap:Fault>
+      <faultcode>soap:Server</faultcode>
+      <faultstring>nz.co.nzlotteries.exception.ESTEException
+      </faultstring>
+      <detail>
+        <ns2:faultInfo xmlns="http://nzlotteries.co.nz/value/v1" xmlns:ns2="http://nzlotteries.co.nz/exception/v1">
+          <ns2:exceptionClassName>
+          nz.co.nzlotteries.exception.ESTEException
+          </ns2:exceptionClassName>
+          <ns2:exceptionMessage>Ticket sent to host is invalid. Error type : HostErrorType[Non-matching scenario]
+          </ns2:exceptionMessage >
+        </ns2:faultInfo>
+      </detail>
+    </soap:Fault>
+   </soap:Body>
+</soap:Envelope>
 ]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="validationInquiryOnlineCmd"/></con:response><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 
@@ -2228,10 +2265,10 @@ declare namespace v1 = 'http://api.lottonz.co.nz/MobileUtilityService/v1';
 <con:query><con:name>COMPLETELY_EXPIRED</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-053915392-1201</con:match><con:response>COMPLETELY_EXPIRED</con:response></con:query>
 <con:query><con:name>AMOUNT_TOO_LARGE_SMALL</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-043221765-2064</con:match><con:response>AMOUNT_TOO_LARGE_SMALL</con:response></con:query>
 <con:query><con:name>NOT_ABLE_PAY</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-035881729-2008</con:match><con:response>NOT_ABLE_PAY</con:response></con:query>
-<con:query><con:name>ALREADY_CLAIMED</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-037126912-1333</con:match><con:response>ALREADY_CLAIMED</con:response></con:query>
+<con:query><con:name>ALREADY_CLAIMED</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-009689861-2083</con:match><con:response>ALREADY_CLAIMED</con:response></con:query>
 <con:query><con:name>REJECTED_CALL_HOTLINE</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-002349825-2027</con:match><con:response>REJECTED_CALL_HOTLINE</con:response></con:query>
 <con:query><con:name>PAYMENT_DEFERRED</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-007330305-2574</con:match><con:response>PAYMENT_DEFERRED</con:response></con:query>
-<con:query><con:name>ALREADY_CLAIMED_TERMINAL</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-037126912-1333</con:match><con:response>ALREADY_CLAIMED_TERMINAL</con:response></con:query>
+<con:query><con:name>ALREADY_CLAIMED_TERMINAL</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-037126912-1333</con:match><con:response>ALREADY_CLAIMED</con:response></con:query>
 <con:query><con:name>TERMINAL_IN_TRAINING_MODE</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-043156229-2053</con:match><con:response>TERMINAL_IN_TRAINING_MODE</con:response></con:query>
 <con:query><con:name>PRIZE_EXCEEDED</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-035816193-2094</con:match><con:response>PRIZE_EXCEEDED</con:response></con:query>
 <con:query><con:name>TICKET_TOO_OLD</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-025622276-1281</con:match><con:response>TICKET_TOO_OLD</con:response></con:query>
@@ -2289,4 +2326,4 @@ declare namespace v1 = 'http://api.lottonz.co.nz/MobileUtilityService/v1';
 <con:query><con:name>ESTE_DOWN</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-060796421-2588</con:match><con:response>ESTE_DOWN</con:response></con:query>
 
 
-</con:dispatchConfig></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+<con:query><con:name>Invalid Scenario</con:name><con:query>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';declare namespace v1='http://nzlotteries.co.nz/value/v1';//soap:Envelope/soap:Body/v1:validationInquiryOnlineInput/v1:ticketSerialNumber</con:query><con:match>066-033486596-2099</con:match><con:response>Invalid Scenario</con:response></con:query></con:dispatchConfig></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

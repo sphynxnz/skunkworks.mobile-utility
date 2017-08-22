@@ -105,8 +105,8 @@ const checkInstantTicketPromise = (pObj) => {
          * If code in matched scenario is 3242 and there are no free tickets, then use 1201 as the code
          * otherwise, retain the code value
          */
-        if (result.code === 3242 && (data.freeTicketsNumber === undefined || parseInt(data.freeTicketsNumber) === 0)) {
-          checkResult.validationResult.resultCode = 1201
+        if (result.code === '3242' && (data.freeTicketsNumber === undefined || parseInt(data.freeTicketsNumber) === 0)) {
+          checkResult.validationResult.resultCode = '1201'
         } else {
           checkResult.validationResult.resultCode = result.code
         }

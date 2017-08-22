@@ -1,4 +1,4 @@
-@baseUrl @baseUrl-mobileutility
+@baseUrl @baseUrl-ticketchecker_localmock
 Feature: Ticket checker examples
   The following are test scenarios againts the ESI ticket validation mock service
 
@@ -106,7 +106,8 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    # ==> Changed to OTHER from WINNER
+    And The response property "validationResult.resultType" should be "OTHER"   
     And The response property "validationResult.resultCode" should be "3105"
 
   Scenario: OL TICKET - COMPLETELY_EXPIRED
@@ -140,7 +141,8 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    # ==> Changed to OTHER from WINNER
+    And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1101"
 
   Scenario: OL TICKET - NOT_ABLE_TO_PAY
@@ -157,7 +159,8 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    # ==> Changed to OTHER from WINNER
+    And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1102"
 
   Scenario: OL TICKET - ALREADY_CLAIMED
@@ -174,7 +177,8 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    # ==> Changed to OTHER from WINNER
+    And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3107"
 
   Scenario: OL TICKET - REJECTED_CALL_HOTLINE
@@ -225,7 +229,8 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    # ==> Changed to OTHER from WINNER
+    And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3107"
 
   Scenario: OL TICKET - TERMINAL_IN_TRAINING_MODE
@@ -259,7 +264,8 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    # ==> Changed to OTHER from WINNER
+    And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1103"
 
   Scenario: OL TICKET - TICKET_TOO_OLD
@@ -378,7 +384,8 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    # ==> Changed to OTHER from WINNER
+    And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1106"
 
   Scenario: OL TICKET - REJECTED_FREE_TICKETS_STILL
@@ -395,7 +402,8 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    # ==> Changed to OTHER from WINNER
+    And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1107"
 
   Scenario: OL TICKET - DEVICE_UNABLE_TO_PAY
@@ -514,7 +522,8 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    # ==> Changed to OTHER from WINNER
+    And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1111"
 
   Scenario: OL TICKET - PLEASE_SEE_RETAILER
@@ -762,7 +771,8 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    # ==> Changed to OTHER from WINNER
+    And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1203"
 
   Scenario: IK TICKET - Host Response 5
@@ -780,7 +790,8 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    # ==> Changed to OTHER from WINNER
+    And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1204"
 
   Scenario: IK TICKET - Host Response 6
@@ -798,7 +809,8 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    # ==> Changed to OTHER from WINNER
+    And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1205"
 
   Scenario: IK TICKET - Host Response 7
@@ -816,7 +828,8 @@ Feature: Ticket checker examples
     """
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
-    And The response property "validationResult.resultType" should be "WINNER"
+    # ==> Changed to OTHER from WINNER
+    And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "1206"
 
   Scenario: IK TICKET - Host Response 16
@@ -1213,7 +1226,8 @@ Feature: Ticket checker examples
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "3242"
+    # ==> Changed to 1201 from 3242
+    And The response property "validationResult.resultCode" should be "1201"
 
   Scenario: IK TICKET - Free Ticket Winner
     Given The json request data
@@ -1231,7 +1245,8 @@ Feature: Ticket checker examples
     When I make a POST request to "/validations"
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
-    And The response property "validationResult.resultCode" should be "3242"
+    # ==> Changed to 1201 from 3242
+    And The response property "validationResult.resultCode" should be "1201"
 
   Scenario: IK TICKET - BAD_UNIT_CHECK_DIGIT
     Given The json request data
