@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<mobile>
+			<!-- SQL server database configuration -->
+			<!-- 
+				<driverClassName>net.sourceforge.jtds.jdbc.Driver</driverClassName>			
+				<url>jdbc:jtds:sqlserver://LCAKINTW0619:53879/mobileutils</url>
+				<username>mobileadmin</username>
+				<password>mobileadmin</password>
+				
+				<driverClassName>com.microsoft.sqlserver.jdbc.SQLServerDriver</driverClassName>		
+				<url>jdbc:sqlserver://LCAKINTW0619:53879;databaseName=mobileutils;autoReconnect=true</url>
+				<username>MULEUSER</username>
+				<password>mule@DM1N</password>				
+			-->
+			
+			<leofs>
+				<s3-accessKey>ca86d886cd0ffa60494f</s3-accessKey>
+				<s3-secretKey>1795a0b28cd3cbf94997ffc81e058fa4db68a926</s3-secretKey>
+				<s3-protocol>HTTP</s3-protocol>
+				<s3-proxyHost>assets.service.cat1.nzlc.co.nz</s3-proxyHost>
+				<s3-proxyPort>80</s3-proxyPort>
+				<s3-bucket-name>scanned-tickets</s3-bucket-name>
+			</leofs>
+				
+			<jdbc>
+				<driverclassname>com.mysql.jdbc.Driver</driverclassname>
+
+				<!-- percona mobile environment -->
+				<url>jdbc:mysql://192.168.101.78:3306/mule_mobileapp</url>
+				<username>mobileuser</username>
+				<password>m7leuserp@ssword</password>
+				<maxpoolsize>50</maxpoolsize>
+				<minpoolsize>2</minpoolsize>
+				<acquireincrement>2</acquireincrement>
+				<testconnection>true</testconnection>
+
+				<!-- 
+					this is the format MULE used to formatted passed in java.util.Date(start, end) obj.
+					It should be the default date format supported by db configured above
+					Do check the default format on destination db.				
+				-->
+				<dateformat>yyyy-MM-dd HH:mm</dateformat>
+				<timeformat>HH:mm:ss</timeformat>
+		
+				<!-- CRM sqls -->
+				<storelocationsql>
+					SELECT * FROM (
+						SELECT ro.id,ro.name,ro.address,s.name as suburb,UPPER(LEFT(c.name,1))+LOWER(SUBSTRING(c.name,2,LENGTH(c.name))) as city,ro.post_code as postCode,ro.phone,ro.latitude,ro.longitude,
+						case 
+							when cos(radians(:LAT)) * cos(radians(latitude))*cos(radians(:LONG)- radians(longitude)) + sin( radians(:LAT)) * sin( radians(latitude)) &gt; 1 then 0.0
+							when cos(radians(:LAT)) * cos(radians(latitude))*cos(radians(:LONG)- radians(longitude)) + sin( radians(:LAT)) * sin( radians(latitude)) &lt; -1 then cast(6371 * acos(-1) as decimal(10,1))
+							else cast((6371*acos(cos(radians(:LAT)) * cos(radians(latitude))*cos(radians(:LONG)- radians(longitude)) + sin( radians(:LAT)) * sin( radians(latitude)))) as decimal(10,1))
+						end	
+						as distance 																						   
+						FROM retail_outlet ro left outer join City c on  ro.city_id = c.id left outer join suburb s on ro.suburb_id = s.id
+					) temp where distance &gt;= 0
+					order by distance
+					limit 20
+				</storelocationsql>
+				
+				<!-- NOT USED YET. life span (in millisecond) for cached store location data. set as 1 day. -->
+				<storelocationttl>86400000</storelocationttl>
+																			
+				<!-- CRM data update sqls -->
+				<deleteretaileroutlet>
+					delete from retail_outlet
+				</deleteretaileroutlet>
+				<deletesuburb>
+					delete from suburb
+				</deletesuburb>
+				<deletecity>
+					delete from City
+				</deletecity>
+				<insertcity>
+					insert into City(id,name) values (:ID,:NAME)
+				</insertcity>
+				<insertsuburb>
+					insert into suburb(id,name,city_id) values (:ID,:NAME,:CITY_ID)
+				</insertsuburb>
+				<insertretaileroutlet>
+					insert into retail_outlet(id,name,address,post_code,phone,longitude,latitude,suburb_id,city_id)
+					values (:ID,:NAME,:ADDRESS,:POST_CODE,:PHONE,:LONGITUDE,:LATITUDE,:SUBURB_ID,:CITY_ID)
+				</insertretaileroutlet>				
+			</jdbc>
+
+			<ikseriallength>22</ikseriallength>
+			<onlineseriallength>16</onlineseriallength>
+				
+			<bwbounuslinsperpage>4</bwbounuslinsperpage>
+			<bullseyebounuslinsperpage>3</bullseyebounuslinsperpage>
+			<strikebounuslinsperpage>20</strikebounuslinsperpage>
+			
+			<!-- list of product code and name that sent to engage after serial validation -->
+			<product>
+				<strike><code>12</code><name>Strike</name></strike>
+				<bigwednesday><code>13</code><name>Big Wednesday</name></bigwednesday>
+				<lotto><code>20</code><name>Lotto</name></lotto>
+				<keno><code>22</code><name>Keno</name></keno>
+				<bullseye><code>25</code><name>Bullseye</name></bullseye>
+			</product>
+						
+			<esi>
+				<!-- a preset message used to identify an invalid ticket number across all game types -->
+				<invalidserialmessage>INVALID SERIAL NUMBER</invalidserialmessage>
+			</esi>
+			
+			<communitymsgs>
+				<communitymsg>Did you know that by playing Lotto you're helping to fund thousands of community projects around New Zealand?  Last year Lotto players raised approximately $200 million for the community!</communitymsg>
+				<communitymsg>By playing Lotto you just helped fund an organisation in your community!  Some of Lotto's national grant recipients include Age ConcernCOMMA BarnadosCOMMA CanteenCOMMA Diabetes NZCOMMA Hearing AssociationCOMMA IHCCOMMA Refugee Services and Riding for the Disabled. </communitymsg>
+				<communitymsg>By playing Lotto you just helped fund an organisation in your community!  Some of Lotto's national grant recipients include Asthma NZCOMMA Child Cancer FoundationCOMMA Hearing AssociationCOMMA Stroke FoundationCOMMA Hospice and YMCA.</communitymsg>
+				<communitymsg>Did you know that by playing Lotto you're helping fund grassroots sport in New Zealand?  Sport NZ is the largest recipient of Lotto fundingCOMMA receiving over $40 million last year to support sport and recreation in New Zealand. </communitymsg>
+				<communitymsg>Did you know that all Lotto profits go back into the community through community grants?  Last year that was approximately $200 million!  Now that's a reason to celebrate!</communitymsg>
+				<communitymsg>You may have just helped fund a Kiwi blockbuster! Did you know that last year the NZ Film Commission received over $14 million in Lotto funding?  Thanks for making New Zealand an even better place to live!</communitymsg>
+				<communitymsg>By playing Lotto you're helping to save lives at sea!  Coastguard has received over $4.3 million in funding from Lotto over the past two years.  Thanks for making New Zealand an even better place to live!</communitymsg>
+				<communitymsg>It feels 'sweet as' to give back.  You've just helped fund over 3COMMA000 community groups across New Zealand. Your ticket helps fund lottery grants in healthCOMMA sportCOMMA arts and culture.</communitymsg>				
+			</communitymsgs>
+			
+			<service>
+				<path>MobileUtilityService</path>
+
+				<validateserialnumber>
+					<engageapitoken>u86s4gre5RmYjIqHwXKYaFBgx1am7bo5Ka6i4sjSUQ6g_dW0XpNAXaEII_571kwv2sMzOwaajsYBaXhcg_yAc4XZyAu9IZD7hRBrwWuaxqhvWx0uO-myCiK4VhX4DDUM7CeNNn58ywk</engageapitoken>
+					<engageurl>
+						https://lottonz-cat1.uq.nz/api/mobileapp/RecordTicketScan?authToken=${mobile.service.validateserialnumber.engageapitoken}&amp;ticketSerialNumber=#[flowVars['TICKET_SERIAL']]&amp;deviceToken=#[flowVars['DEVICE_TOKEN']]&amp;ticketType=#[flowVars['TICKET_TYPE']]&amp;dateTimeOfScan=#[flowVars['SCAN_TIME']]#[flowVars['OPTIONAL_EMAIL_ADDRESS']]
+					</engageurl>
+					<engagedateformat>yyyy-MM-dd%20HH:mm:ss</engagedateformat>
+					
+					<!-- maximum of times to try to send request to engage -->
+					<engageretry>2</engageretry>
+					<engageretryinterval>3</engageretryinterval><!-- seconds before retry -->
+					
+					<!-- general error code for this service -->
+					<errorcode>9000</errorcode>
+					<errormessage>Got error during mobile validation service</errormessage>
+					
+					<!-- invalid validation result code no info sent to engage -->
+					<invalidserialnumber>9001</invalidserialnumber>
+					<invalidserialnumbermsg>Invalid Serial Number</invalidserialnumbermsg>
+																									<!-- message for all esi exception -->
+					<generalerrormsg>Service is unavailable at the moment. Please try again later</generalerrormsg>
+					<esierrorcode>7000</esierrorcode>
+					
+					<missingscenario>
+						<code>8001</code>
+						<message>Unable to determine ticket outcome. Please take your ticket to the nearest Lotto store</message>
+					</missingscenario>
+					<esierror>
+						<code>9003</code>
+					</esierror>
+										
+					<currency>$</currency>
+					<winningmessage>Win</winningmessage>
+					<nonwinningmessage>Not a winning ticket</nonwinningmessage>
+					<!-- online merchandise message prefix -->
+					<merchandisetxt>Merchandise:</merchandisetxt>
+					<ikmerchandisetxt>IKMerchandise:</ikmerchandisetxt>
+					
+<ikfreeticketamtignored>true</ikfreeticketamtignored>
+					
+					<!--  message template that formatted according to real esi result(okinquiry). amount and bonus -->
+					<cashandorbonusmessage>Winning ticket - ${0} {1}</cashandorbonusmessage>
+					<!-- replace comma due to runntime issue -->
+					<commachar>COMMA</commachar>
+					
+<redemptionclaimamount>1000.01</redemptionclaimamount> 
+					
+					<!-- esi online response result text scenarios and customer message to be displayed on front end -->
+					<faultscenarios>
+						<FAULT_SCENARIO><name>TICKET_ON_HOLD</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[PLEASE_RETRY]</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>3101</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>NOT_WINNING_TICKET</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[TICKET_NOT_FOUND]</esi><mobile>Not a winning ticket</mobile><result>LOSER</result><communitymsg>true</communitymsg><code>2101</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>PRIOR_DRAW</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[RESULTS_NOT_IN]</esi><mobile>Results not in yetCOMMA please try again later</mobile><result>OTHER</result><code>3102</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>TICKET_CANCELLED</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[TICKET_PREVIOUSLY_CANCELLED]</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>3103</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>NEED_CONFIRMATION></name><esi>Ticket sent to host is invalid. Error type : HostErrorType[NEED_CONFIRMATION]</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>3104</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>PAID_ALREADY</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[PAID_ALREADY]</esi><mobile>This ticket has already been claimed</mobile><result>OTHER</result><code>3105</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>COMPLETELY_EXPIRED</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[COMPLETELY_EXPIRED]</esi><mobile>This ticket has expired. For more information visit your nearest Lotto store</mobile><result>OTHER</result><code>3106</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>AMOUNT_TOO_LARGE_SMALL</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[AMOUNT_TOO_LARGE_SMALL]</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>1101</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>NOT_ABLE_PAY</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[NOT_ABLE_PAY]</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>1102</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>ALREADY_CLAIMED</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[ALREADY_CLAIMED]</esi><mobile>This ticket has already been claimed</mobile><result>OTHER</result><code>3107</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>REJECTED_CALL_HOTLINE</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[REJECTED_CALL_HOTLINE]</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>3108</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>PAYMENT_DEFERRED</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[PAYMENT_DEFERRED]</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>3109</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>TERMINAL_IN_TRAINING_MODE</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[TERMINAL_IN_TRAINING_MODE]</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>3111</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>PRIZE_EXCEEDED</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[PRIZE_EXCEEDED]</esi><mobile>Please take yout ticket to the nearest Lotto store to collect your prize</mobile><result>OTHER</result><code>1103</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>TICKET_TOO_OLD</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[TICKET_TOO_OLD]</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>3112</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>EXPIRED</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[EXPIRED]</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>3113</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>DRAW_NOT_CLOSED</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[DRAW_NOT_CLOSED]</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>3114</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>VALIDATE_MANUALLY</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[VALIDATE_MANUALLY]</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>3115</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>HIGH_TIER_WINNER</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[HIGH_TIER_WINNER]</esi><mobile>Please take your ticket to the nearest Lotto store to claim your prize</mobile><result>WINNER</result><code>1104</code><majorprizemsg>A MAJOR PRIZE</majorprizemsg><winningwheelmsg>A MAJOR PRIZE</winningwheelmsg></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>MID_TIER_WINNER</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[MID_TIER_WINNER]</esi><mobile>Please take your ticket to the nearest Lotto store to claim your prize</mobile><result>WINNER</result><code>1105</code><majorprizemsg>A MAJOR PRIZE</majorprizemsg><winningwheelmsg>A MAJOR PRIZE</winningwheelmsg></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>HIGH_WITH_NO_EXCHANGE</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[HIGH_WITH_NO_EXCHANGE]</esi><mobile>Please take yout ticket to the nearest Lotto store to collect your prize</mobile><result>OTHER</result><code>1106</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>REJECTED_FREE_TICKETS_STILL</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[REJECTED_FREE_TICKETS_STILL]</esi><mobile>Please take yout ticket to the nearest Lotto store to collect your prize</mobile><result>OTHER</result><code>1107</code></FAULT_SCENARIO>
+						<FAULT_SCENARIO><name>DEVICE_UNABLE_TO_PAY</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[DEVICE_UNABLE_TO_PAY]</esi><mobile>Please take yout ticket to the nearest Lotto store to collect your prize</mobile><result>WINNER</result><code>1108</code></FAULT_SCENARIO>
+					<FAULT_SCENARIO><name>FUNCTION_SUPRESSED</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[FUNCTION_SUPRESSED]</esi><mobile>SorryCOMMA results are not available yet. Please check back soon.</mobile><result>OTHER</result><code>3247</code></FAULT_SCENARIO>
+					<FAULT_SCENARIO><name>SERVICE_DISABLED</name><esi>Ticket sent to host is invalid. Error type : HostErrorType[SERVICE_DISABLED]</esi><mobile>Service is unavailable at the moment. Please try again later.</mobile><result>OTHER</result><code>3249</code></FAULT_SCENARIO>
+					</faultscenarios>
+					
+					<okscenarios>		
+						<OK_SCENARIO><name>INVALID_TICKET_NUMBER</name><esi>Ticket Serial Number Incorrect.</esi><mobile>Ticket Serial Number Incorrect</mobile><result>OTHER</result><code>9001</code></OK_SCENARIO>
+						<OK_SCENARIO><name>DIVISION_WINNER</name><esi>okValidationApproved</esi><mobile>Please take your ticket to the nearest Lotto store to collect your prize</mobile><result>WINNER</result><code>1109</code><claimmsg>Please take your ticket to the nearest Lotto store to claim your prize</claimmsg><majorprizemsg>A MAJOR PRIZE</majorprizemsg><winningwheelmsg>A MAJOR PRIZE</winningwheelmsg></OK_SCENARIO>
+						<OK_SCENARIO><name>WINNING_CASH_BONUS</name><esi>okInquiry</esi><mobile>Please take your ticket to the nearest Lotto store to collect your prize</mobile><claimmsg>Please take your ticket to the nearest Lotto store to claim your prize</claimmsg><majorprizemsg>A MAJOR PRIZE</majorprizemsg><result>WINNER</result><code>1110</code></OK_SCENARIO>
+						<OK_SCENARIO><name>NOT_WINNING_MULTIDRAW</name><esi>errorNotWinnerButMore</esi><mobile>You have draws remaining for this ticket</mobile><result>LOSER</result><code>2102</code><communitymsg>true</communitymsg></OK_SCENARIO>
+						<OK_SCENARIO><name>WINNING_ALREADY_PAID</name><esi>null</esi><mobile>This ticket has already been claimed</mobile><result>OTHER</result><code>1111</code></OK_SCENARIO>
+						<OK_SCENARIO><name>PLEASE_SEE_RETAILER</name><esi>okCOMMA Rejected - Invalid pack status</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>3116</code></OK_SCENARIO>
+						<OK_SCENARIO><name>WINNING_MAJOR</name><esi>okCOMMA pay the winner</esi><mobile>Please take your ticket to the nearest Lotto store to collect your prize</mobile><result>WINNER</result><code>1112</code><claimmsg>Please take your ticket to the nearest Lotto store to claim your prize</claimmsg><majorprizemsg>A MAJOR PRIZE</majorprizemsg><winningwheelmsg>A MAJOR PRIZE</winningwheelmsg></OK_SCENARIO>
+						<OK_SCENARIO><name>PAID_BY_EFT</name><esi>errorEft</esi><mobile>This ticket has already been paid</mobile><result>OTHER</result><code>3117</code></OK_SCENARIO>
+						<OK_SCENARIO><name>WINNING_FREE_TICKET</name><esi>okCOMMA pay the winner 111</esi><mobile>Please take your ticket to the nearest Lotto store to collect your prize</mobile><result>WINNER</result><code>1113</code></OK_SCENARIO>
+						<OK_SCENARIO><name>VALIDATION_OK</name><esi>ok</esi><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><result>OTHER</result><code>3118</code></OK_SCENARIO>
+						<OK_SCENARIO><name>ERROR_NOT_WINNER</name><esi>errorNotWinner</esi><mobile>Not a winning ticket</mobile><result>LOSER</result><code>2103</code><communitymsg>true</communitymsg></OK_SCENARIO>						
+					</okscenarios>
+					
+					<!-- esi IK response result text scenarios and customer message to be displayed on front end -->
+					<ikscenarios>
+						<IK_SCENARIO><name>Host Response 1</name><mobile>Please take your ticket to the nearest Lotto store to collect your prize</mobile><esi>pay the winner</esi><result>WINNER</result><code>1201</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 2</name><mobile>Please take your ticket to the nearest Lotto store to claim your prize</mobile><esi>Invalid Check Digit for BookCOMMA file claim</esi><result>WINNER</result><code>1202</code><claimmsg>Please take your ticket to the nearest Lotto store to claim your prize</claimmsg><majorprizemsg>A MAJOR PRIZE</majorprizemsg></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 3</name><mobile>Not a winning ticket</mobile><esi>okCOMMA not a winner</esi><result>LOSER</result><code>2201</code><communitymsg>true</communitymsg></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 4</name><mobile>This ticket has already been claimed</mobile><esi>okCOMMA previously paid by other</esi><result>OTHER</result><code>1203</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 5</name><mobile>This ticket has already been claimed</mobile><esi>okCOMMA previously paid by you</esi><result>OTHER</result><code>1204</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 6</name><mobile>This ticket has already been claimed</mobile><esi>okCOMMA Previously claimed by other</esi><result>OTHER</result><code>1205</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 7</name><mobile>This ticket has already been claimed</mobile><esi>Previously claimed by you</esi><result>OTHER</result><code>1206</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 16</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Rejected-Record not found</esi><result>OTHER</result><code>3201</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 17</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Rejected - Invalid prize level</esi><result>OTHER</result><code>3202</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host response 18</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Rejected - Invalid prize amount</esi><result>OTHER</result><code>3203</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 19</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Rejected - Cashing limit exceeded</esi><result>OTHER</result><code>3204</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 20</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Rejected - Function not found</esi><result>OTHER</result><code>3205</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 21</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Rejected - No memory updated</esi><result>OTHER</result><code>3206</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 22</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Rejected - File claim at lottery</esi><result>OTHER</result><code>3207</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 23</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Rejected - Invalid GVT prize level</esi><result>OTHER</result><code>3208</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 24</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Rejected - Pack not confirmed</esi><result>OTHER</result><code>3209</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host response 25</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>keyless entry threshold exceeded</esi><result>OTHER</result><code>3210</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 32</name><mobile>Please take your ticket to the nearest Lotto store to collect your prize</mobile><esi>Rejected - Pay confirmation required</esi><result>OTHER</result><code>1207</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 33</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Rejected - Claim at Online Terminal</esi><result>OTHER</result><code>3211</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 34</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Invalid Check Digit for Book</esi><result>OTHER</result><code>3212</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 35</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>keyless entry threshold exceeded</esi><result>OTHER</result><code>3213</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 36</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Invalid Pin threshold exceeded for inquiries</esi><result>OTHER</result><code>3214</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 41</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Rejected - Ivalid Attempt</esi><result>OTHER</result><code>3216</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Host Response 42</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Pending PIN request</esi><result>OTHER</result><code>3217</code></IK_SCENARIO>
+												<IK_SCENARIO><name>Free Ticket Winner</name><mobile>Please take your ticket to the nearest Lotto store to collect your prize</mobile><esi>okCOMMA pay the winner</esi><result>WINNER</result><code>3242</code></IK_SCENARIO>
+						<IK_SCENARIO><name>Free Ticket Winner and already paid</name><mobile>This ticket has already been paid</mobile><esi>ESI RESPONSE FOR FREE TICKET PAID MISSING</esi><result>OTHER</result><code>3243</code></IK_SCENARIO>
+						
+						<IK_SCENARIO><name>Invalid Pack Status</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>okCOMMA Rejected- Invalid pack status</esi><result>OTHER</result><code>3244</code></IK_SCENARIO>
+						
+						<IK_SCENARIO><name>FREEZE_CLAIM</name><mobile>Please take your ticket to the nearest Lotto store to claim your prize</mobile><esi>Freeze the terminalCOMMA file claim</esi><result>WINNER</result><code>3245</code><claimmsg>Please take your ticket to the nearest Lotto store to claim your prize</claimmsg><majorprizemsg>A MAJOR PRIZE</majorprizemsg></IK_SCENARIO>
+												<IK_SCENARIO><name>FILE_CLAIM</name><mobile>Please take your ticket to the nearest Lotto store to claim your prize</mobile><esi>okCOMMA file claim</esi><result>WINNER</result><code>3248</code><claimmsg>Please take your ticket to the nearest Lotto store to claim your prize</claimmsg><majorprizemsg>A MAJOR PRIZE</majorprizemsg></IK_SCENARIO>
+						<IK_SCENARIO><name>Stolen Pack Status</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>okCOMMA Rejected - Ticket in stolen range</esi><result>OTHER</result><code>3240</code></IK_SCENARIO>
+						
+						<IK_SCENARIO><name>BAD_UNIT_CHECK_DIGIT</name><mobile>Incorrect serial number enteredCOMMA please try again</mobile><esi>okCOMMA Rejected - Bad check digits</esi><result>OTHER</result><code>9001</code></IK_SCENARIO>
+						<IK_SCENARIO><name>GAME_NOT_ACTIVE</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>okCOMMA Rejected- Game not active</esi><result>OTHER</result><code>3239</code></IK_SCENARIO>
+						
+						<IK_SCENARIO><name>PACK_ALREADY_HAS_STATUS</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[PACK_ALREADY_HAS_STATUS]</esi><result>OTHER</result><code>3241</code></IK_SCENARIO>
+						
+						<IK_SCENARIO><name>FUNCTION_SUPRESSED</name><mobile>SorryCOMMA results are not available yet. Please check back soon.</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[FUNCTION_SUPRESSED]</esi><result>OTHER</result><code>3218</code></IK_SCENARIO>
+						<IK_SCENARIO><name>NOT_ALLOWED_THIS_FUNCTION</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[NOT_ALLOWED_THIS_FUNCTION]</esi><result>OTHER</result><code>3219</code></IK_SCENARIO>
+						<IK_SCENARIO><name>BAD_PASS_NUMBER</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[BAD_PASS_NUMBER]</esi><result>OTHER</result><code>3220</code></IK_SCENARIO>
+						<IK_SCENARIO><name>INCORRECT_TERM_AGENT</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[INCORRECT_TERM_AGENT]</esi><result>OTHER</result><code>3221</code></IK_SCENARIO>
+						<IK_SCENARIO><name>INVALID_ATTEMPT</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[INVALID_ATTEMPT]</esi><result>OTHER</result><code>3222</code></IK_SCENARIO>
+						<IK_SCENARIO><name>DB_TRANSACTION_FAILURE</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[DB_TRANSACTION_FAILURE]</esi><result>OTHER</result><code>3223</code></IK_SCENARIO>
+						<IK_SCENARIO><name>LOCATION_CHANGE_NOT_ALLOWED</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[LOCATION_CHANGE_NOT_ALLOWED]</esi><result>OTHER</result><code>3224</code></IK_SCENARIO>
+						<IK_SCENARIO><name>UNIT_NOT_AT_LOCATION</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[UNIT_NOT_AT_LOCATION]</esi><result>OTHER</result><code>3225</code></IK_SCENARIO>
+						<IK_SCENARIO><name>INVALID_LOCATION_TRANSFER</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[INVALID_LOCATION_TRANSFER]</esi><result>OTHER</result><code>3226</code></IK_SCENARIO>
+						<IK_SCENARIO><name>NOT_ENOUGH_INVENTORY_AVAILABLE</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[NOT_ENOUGH_INVENTORY_AVAILABLE]</esi><result>OTHER</result><code>3227</code></IK_SCENARIO>
+						<IK_SCENARIO><name>DESTINATION_LOC_NOT_ACTIVE</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[DESTINATION_LOC_NOT_ACTIVE]</esi><result>OTHER</result><code>3228</code></IK_SCENARIO>
+						<IK_SCENARIO><name>FROM_LOC_NOT_ACTIVE</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[FROM_LOC_NOT_ACTIVE]</esi><result>OTHER</result><code>3229</code></IK_SCENARIO>
+						<IK_SCENARIO><name>SPLITS_NOT_ALLOWED</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[SPLITS_NOT_ALLOWED]</esi><result>OTHER</result><code>3230</code></IK_SCENARIO>
+						<IK_SCENARIO><name>INVALID_TEST_CONDITION_FOR_TRANS</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[INVALID_TEST_CONDITION_FOR_TRANS]</esi><result>OTHER</result><code>3231</code></IK_SCENARIO>
+						<IK_SCENARIO><name>INVALID_SIDE_EFFECT_FOR_TRANS</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[INVALID_SIDE_EFFECT_FOR_TRANS]</esi><result>OTHER</result><code>3232</code></IK_SCENARIO>
+						<IK_SCENARIO><name>NO_UNITS_FOUND</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[NO_UNITS_FOUND]</esi><result>OTHER</result><code>3233</code></IK_SCENARIO>
+						<IK_SCENARIO><name>NO_AVAILABLE_UNITS</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[NO_AVAILABLE_UNITS]</esi><result>OTHER</result><code>3234</code></IK_SCENARIO>
+						<IK_SCENARIO><name>INVALID_REFERENCE_NUMBER</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[INVALID_REFERENCE_NUMBER]</esi><result>OTHER</result><code>3235</code></IK_SCENARIO>
+						<IK_SCENARIO><name>MESSES_TO_IDIS_FAILED</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[MESSES_TO_IDIS_FAILED]</esi><result>OTHER</result><code>3236</code></IK_SCENARIO>
+						<IK_SCENARIO><name>INVALID_PRODUCT_NUMBER</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[INVALID_PRODUCT_NUMBER]</esi><result>OTHER</result><code>3237</code></IK_SCENARIO>
+																														<IK_SCENARIO><name>BAD_UNIT_CHECK_DIGIT</name><mobile>Invalid ticket number</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[BAD_UNIT_CHECK_DIGIT]</esi><result>OTHER</result><code>9001</code></IK_SCENARIO>
+						<IK_SCENARIO><name>GAME_NOT_ACTIVE</name><mobile>Unable to determine ticket outcomeCOMMA please take your ticket to the nearest Lotto store</mobile><esi>Ticket sent to host is invalid. Error type : HostErrorType[GAME_NOT_ACTIVE]</esi><result>OTHER</result><code>3246</code></IK_SCENARIO>
+					</ikscenarios>
+					
+					<linktext>Tell me more</linktext>
+					<linkurl>/winning-happens</linkurl>
+					<esteexception>nz.co.nzlotteries.exception.ESTEException</esteexception>
+																																								</validateserialnumber>
+				
+				<esiproxy>
+					<!-- timeout for out-bound http end point to esi proxy  -->
+					<responsetimeout>6000</responsetimeout>
+					
+					<!-- remote ESI player service url-->
+					<!-- http://localhost:7777/mockPlayerSoapBinding http://10.7.8.232:8088/mockPlayerSoapBinding -->
+<!-- 					<esiplayerserviceurl>http://localhost:7777/mockPlayerSoapBinding</esiplayerserviceurl> -->
+					
+					 <!-- Solnet ESi service -->
+                                        <esiplayerserviceurl>http://192.168.100.201/nzl-ws/services/PlayerService/v1?wsdl</esiplayerserviceurl>
+                                        <!-- Mock Service -->
+					<!--- <esiplayerserviceurl>http://192.168.200.64:8088/esiwebservice?wsdl</esiplayerserviceurl> -->
+				</esiproxy>
+						
+				<getcrmdata>
+					<crmpullpath>storesDataLoader</crmpullpath>
+					<path>/opt/mobile/conf</path>
+					<filename>StoresData.csv</filename>
+					<mobilefilepath>/opt/mobile/conf</mobilefilepath>
+					<mobilefilename>StoresData.json</mobilefilename>
+					<filenameprocessed>${mobile.service.getcrmdata.filename}_processed</filenameprocessed>
+				</getcrmdata>	
+						
+								
+				<heartbeat>
+					<path>MobileUtilityService/heartbeat</path>
+				</heartbeat>
+				
+				<errorcode>6000</errorcode>
+				<errormsg>Error occurred during mobile application service</errormsg>	
+				
+			</service>
+
+			<hazelcast>
+			    <configfile>mobile-hazelcast-config.xml</configfile>
+			</hazelcast>
+
+	</mobile>
+	
+</configuration>
