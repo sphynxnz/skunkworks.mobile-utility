@@ -97,6 +97,23 @@ const checkInstantTicketPromise = (pObj) => {
         }
 
         /**
+         * Assign default currency and link text
+         */
+        checkResult.validationResult.currency = '$'
+        checkResult.validationResult.linkText = misc.linkText
+
+        /**
+         * If matched scenario includes major prize, then include major prize message in response.
+         * And if matched scenario contains claim message, then replace message with claim message.
+         */
+        if (result.majorprizemsg) {
+          checkResult.validationResult.majorPrizeMessage = result.majorprizemsg
+          if (result.claimmsg) {
+            checkResult.validationResult.message = result.claimmsg
+          }
+        }
+
+        /**
          * Assign result type from the matched scenario. value is 'WINNER', 'LOSER' or 'OTHER'
          */
         checkResult.validationResult.resultType = result.result
@@ -112,22 +129,12 @@ const checkInstantTicketPromise = (pObj) => {
         }
 
         /**
-         * Assign default currency, mobile message, link text and link URL
+         * If not emulating mule, add the following properties
          */
-        checkResult.validationResult.currency = '$'
-        checkResult.validationResult.message = result.mobile
-        checkResult.validationResult.linkText = misc.linkText
-        checkResult.validationResult.linkUrl = misc.linkUrl
-
-        /**
-         * If matched scenario includes major prize, then include major prize message in response.
-         * And if matched scenario contains claim message, then replace message with claim message.
-         */
-        if (result.majorprizemsg) {
-          checkResult.validationResult.majorPrizeMessage = result.majorprizemsg
-          if (result.claimmsg) {
-            checkResult.validationResult.message = result.claimmsg
-          }
+        server.log('emulation:', server.settings.app.env.emulation)
+        if (!server.settings.app.env.emulation) {
+          checkResult.validationResult.message = result.mobile
+          checkResult.validationResult.linkUrl = misc.linkUrl
         }
 
         /**

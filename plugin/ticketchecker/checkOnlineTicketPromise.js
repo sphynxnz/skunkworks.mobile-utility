@@ -114,14 +114,10 @@ const checkOnlineTicketPromise = (pObj) => {
         }
 
         /**
-         * Assign result, code, currency, mobile message, link text and link URL
+         * Assign currency, link text
          */
-        checkResult.validationResult.resultType = result.result
-        checkResult.validationResult.resultCode = result.code
         checkResult.validationResult.currency = '$'
-        checkResult.validationResult.message = result.mobile
         checkResult.validationResult.linkText = misc.linkText
-        checkResult.validationResult.linkUrl = misc.linkUrl
 
         /**
          * If response includes claim amount or matched scenario includes major prize,
@@ -133,6 +129,21 @@ const checkOnlineTicketPromise = (pObj) => {
           if (result.claimmsg) {
             checkResult.validationResult.message = result.claimmsg
           }
+        }
+
+        /**
+         * Assign result, code
+         */
+        checkResult.validationResult.resultCode = result.code
+        checkResult.validationResult.resultType = result.result
+
+        /**
+         * If not emulating mule, add the following properties
+         */
+        server.log('emulation:', server.settings.app.env.emulation)
+        if (!server.settings.app.env.emulation) {
+          checkResult.validationResult.message = result.mobile
+          checkResult.validationResult.linkUrl = misc.linkUrl
         }
 
         /**

@@ -24,5 +24,7 @@ module.exports = {
     ]
   },
   port: 8000,
-  timeout: 5000
+  timeout: 5000,
+  esiTimeout: 5000,
+  emulation: true
 }

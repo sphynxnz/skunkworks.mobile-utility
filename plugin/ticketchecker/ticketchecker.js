@@ -113,7 +113,18 @@ module.exports = function (request, reply) {
        */
       let result = await apiCallPromise({ server, args })
       server.log('info', 'API call successful')
-      reply(result.checkResult).header('Content-Type', 'application/json').code(200)
+      if (result.checkResult.validationResult.resultCode === '8001') {
+        result.checkResult = {
+          response: {
+            status: 'failure',
+            code: 8001,
+            mesage: 'Unable to determine ticket outcome. Please take your ticket to the nearest Lotto store'
+          }
+        }
+        reply(result.checkResult).header('Content-Type', 'application/json').code(400)
+      } else {
+        reply(result.checkResult).header('Content-Type', 'application/json').code(200)
+      }
     } catch (error) {
       /**
        * Errors will be caught here and a custom error response is returned

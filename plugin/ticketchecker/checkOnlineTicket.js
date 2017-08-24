@@ -67,7 +67,7 @@ const init = (server) => {
        * Anything else is returned as an error
        */
       return (callback(err, null, false))
-    }, { timeout: 5000 })
+    }, { timeout: server.settings.app.env.esiTimeout })
   }
 
   /**
