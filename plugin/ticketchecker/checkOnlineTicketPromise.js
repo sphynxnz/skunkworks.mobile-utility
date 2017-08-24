@@ -79,10 +79,11 @@ const checkOnlineTicketPromise = (pObj) => {
         }
 
         /**
-         * Set amount to cash amount cash amount is defined and it is not a major prize
-         * based on the data found in the matching scenario
+         * Set amount to cash amount if cash amount is defined.
+         * Note that the result.majorprizemsg is no longer used to determine major prize message 
          */
-        if (data.cashAmount && result.majorprizemsg === undefined) {
+        // if (data.cashAmount && result.majorprizemsg === undefined) {
+        if (data.cashAmount) {
           checkResult.validationResult.amount = parseFloat(data.cashAmount)
         }
 
@@ -96,21 +97,28 @@ const checkOnlineTicketPromise = (pObj) => {
          *    bonus lines per page (Bullseye)     = 3
          *    bonus lines per page (other games)  = 1
          *
-         * <bonus tickets> = Math.ceil(<free tickets number> / <bonus lines per page>)
+         * <bonus tickets> = Math.ceil(<free tickets number> / <bonus lines per page>) if (Strike or Bullseye)
+         *                 = <bonus tickets> otherwise
          *
+         * Note: Always calculate bonus ticket in emulation mode. If not, only when > 0
          */
-        if (data.freeTicketsNumber && parseInt(data.freeTicketsNumber) > 0) {
+        if (data.freeTicketsNumber &&
+          (server.settings.app.env.emulation || parseInt(data.freeTicketsNumber) > 0)) {
           let bonusTickets = parseInt(data.freeTicketsNumber)
-          let productCode = args.ticketSerialNumber.substr(14, 2)
+          let productCode = parseInt(args.ticketSerialNumber.substr(14, 2))
           let blpp = 1
           server.log('info', 'Product: ' + productCode)
-          if (productCode === misc.products.Strike.code) {
-            blpp = misc.bonusLinesPerPage.Strike
-          } else if (productCode === misc.products.Bullseye.code) {
-            blpp = misc.bonusLinesPerPage.Bullseye
+          if (productCode !== misc.products.Strike.code && productCode !== misc.products.Bullseye.code) {
+            checkResult.validationResult.bonusTickets = bonusTickets
+          } else {
+            if (productCode === misc.products.Strike.code) {
+              blpp = misc.bonusLinesPerPage.Strike
+            } else if (productCode === misc.products.Bullseye.code) {
+              blpp = misc.bonusLinesPerPage.Bullseye
+            }
+            server.log('info', 'lines: ' + blpp)
+            checkResult.validationResult.bonusTickets = Math.ceil(bonusTickets / blpp)
           }
-          server.log('info', 'lines: ' + blpp)
-          checkResult.validationResult.bonusTickets = Math.ceil(bonusTickets / blpp)
         }
 
         /**
@@ -120,13 +128,14 @@ const checkOnlineTicketPromise = (pObj) => {
         checkResult.validationResult.linkText = misc.linkText
 
         /**
-         * If response includes claim amount or matched scenario includes major prize,
-         * then add major prize message in response. And if matched scenario contains
-         * claim message, then replace message with claim message.
+         * If response includes claim amount then add major prize message in response. 
+         * If matched scenario contains claim message, then replace message with claim message
+         * if emulation is not on.
          */
-        if ((data.claimAmount && parseFloat(data.claimAmount) >= 0) || result.majorprizemsg) {
+        // if ((data.claimAmount && parseFloat(data.claimAmount) >= 0) || result.majorprizemsg) {
+        if (data.claimAmount && parseFloat(data.claimAmount) >= 0) {
           checkResult.validationResult.majorPrizeMessage = result.majorprizemsg
-          if (result.claimmsg) {
+          if (result.claimmsg && !server.settings.app.env.emulation) {
             checkResult.validationResult.message = result.claimmsg
           }
         }
