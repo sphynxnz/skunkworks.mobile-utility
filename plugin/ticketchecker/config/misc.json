@@ -21,6 +21,7 @@
 	"IKFreeTicketAmountIgnored": true,
 	"cashaAdOrBonusMessage": "Winning ticket - ${0} {1}",
 	"redemptionClaimAmount": 1000.01,
+	"multiDrawCode": "2102",
 	"bonusLinesPerPage": {
 		"Strike": 20,
 		"Bullseye": 3

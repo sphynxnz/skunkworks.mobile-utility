@@ -12,6 +12,7 @@
 module.exports = {
   baseUrl: {
     mobileutility: 'http://localhost:8000/api/mobileutility/v1',
+    mobileutility_soapmock: 'http://localhost:8888/api/mobileutility/v1',
     mobileutility_localmock: 'http://localhost:8000/api/mobileutility/v1',
     mobileutility_nodejsmock: 'http://localhost:8000/api/mobileutility/v1',
     mobileutility_cat2mock: 'http://192.168.102.196/api/mobileutility/v1',

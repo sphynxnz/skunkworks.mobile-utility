@@ -1,0 +1,3870 @@
+{
+    "protocol": "http",
+    "port": 8000,
+    "numberOfRequests": 102,
+    "name": "proxyAlways",
+    "requests": [],
+    "stubs": [
+        {
+            "responses": [
+                {
+                    "proxy": {
+                        "to": "http://192.168.102.196",
+                        "mode": "proxyAlways",
+                        "predicateGenerators": [
+                            {
+                                "matches": {
+                                    "method": true,
+                                    "path": true
+                                }
+                            },
+                            {
+                                "matches": {
+                                    "body": true
+                                },
+                                "jsonpath": {
+                                    "selector": "$..serialNumber"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660089034281259"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:04 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3101\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 74
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660177579522026"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 601,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:04 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"commMessage\": \"Did you know that all Lotto profits go back into the community through community grants?  Last year that was approximately $200 million!  Now that's a reason to celebrate!\",\n    \"linkText\": \"Tell me more\",\n    \"linkUrl\": \"Did you know that all Lotto profits go back into the community through community grants?  Last year that was approximately $200 million!  Now that's a reason to celebrate!\",\n    \"resultCode\": \"2101\",\n    \"resultType\": \"LOSER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 80
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660036605441264"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:04 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3102\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 72
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660345710082082"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:04 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3103\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 91
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660423697961229"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:04 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3104\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 76
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660100391042004"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:05 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3105\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 76
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660539153921201"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:05 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3106\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 71
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660432217652064"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:05 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1101\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 80
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660358817292008"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:05 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1102\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 76
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660096898612083"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:05 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3107\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 83
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660023498252027"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:05 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3108\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 71
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660073303052574"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:05 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3109\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 78
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660371269121333"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:05 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3107\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 77
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660431562292053"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:05 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3111\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 80
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660358161932094"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:05 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1103\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 77
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660256222761281"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:05 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3112\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 78
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660022842892016"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:06 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3113\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 83
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660607308852542"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:06 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3114\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 73
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660533908492583"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:06 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3115\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 68
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660271948852530"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 260,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:06 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"majorPrizeMessage\": \"A MAJOR PRIZE\",\n    \"resultCode\": \"1104\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 81
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 260,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:07 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"majorPrizeMessage\": \"A MAJOR PRIZE\",\n    \"resultCode\": \"1104\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 111
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660088378921347"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 260,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:06 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"majorPrizeMessage\": \"A MAJOR PRIZE\",\n    \"resultCode\": \"1105\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 81
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660424353321339"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:06 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1106\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 197
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660371924481344"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:06 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1107\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 80
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660089034261358"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 218,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:06 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1108\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 71
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "1170283747842001"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:06 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3247\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 80
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660670881322058"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 281,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:06 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"majorPrizeMessage\": \"A MAJOR PRIZE\",\n    \"resultCode\": \"1109\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 76
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0500610572852045"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 260,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:07 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 120.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1109\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 60
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660555537922074"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 260,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:07 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 100.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1110\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 81
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660335521322046"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 705,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:07 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"commMessage\": \"Did you know that all Lotto profits go back into the community through community grants?  Last year that was approximately $200 million!  Now that's a reason to celebrate!\",\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"linkUrl\": \"Did you know that all Lotto profits go back into the community through community grants?  Last year that was approximately $200 million!  Now that's a reason to celebrate!\",\n    \"multiDrawMsg\": \"You have draws remaining for this ticket\",\n    \"resultCode\": \"2102\",\n    \"resultType\": \"LOSER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 62
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660220177922062"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:07 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1111\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 83
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660670225962047"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 257,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:07 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3116\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 80
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660554882562063"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 260,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:07 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 900.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1112\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 69
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0500552906251283"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 300,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:07 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 1,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"majorPrizeMessage\": \"A MAJOR PRIZE\",\n    \"resultCode\": \"1112\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 79
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660607964212553"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 258,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:07 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 3,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1113\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 66
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660534563852594"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 257,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:07 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3118\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 61
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660334865962035"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 400,
+                        "headers": {
+                            "Content-Length": 179,
+                            "Content-Type": "application/json; charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:07 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"message\": \"Error reading XMLStreamReader.. Message payload is of type: NullPayload\",\n  \"uuid\": \"/api/mobileutility/v1/validations:POST-f78f5440-893f-11e7-a83b-90b8d0f9ea0d\"\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 86
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660562744331394"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 733,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:09 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"commMessage\": \"By playing Lotto you just helped fund an organisation in your community!  Some of Lotto's national grant recipients include Asthma NZ, Child Cancer Foundation, Hearing Association, Stroke Foundation, Hospice and YMCA.\",\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"linkUrl\": \"By playing Lotto you just helped fund an organisation in your community!  Some of Lotto's national grant recipients include Asthma NZ, Child Cancer Foundation, Hearing Association, Stroke Foundation, Hospice and YMCA.\",\n    \"resultCode\": \"2103\",\n    \"resultType\": \"LOSER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 95
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660051678722018"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 257,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:09 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3117\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 99
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0500626298931317"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 500,
+                        "headers": {
+                            "SOAPAction": "\"http://api.lottonz.co.nz/MobileUtilityService/v1/validateSerialNumber\"",
+                            "Content-Length": 144,
+                            "MULE_ENCODING": "UTF-8",
+                            "Content-Type": "text/xml; charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:14 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{ \"message\": \"Runtime Exception - Contact Administrator\", \"uuid\":\"/api/mobileutility/v1/validations:POST-f7dcff10-893f-11e7-a83b-90b8d0f9ea0d\" }",
+                        "_mode": "text",
+                        "_proxyResponseTime": 5637
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "0660334865962099"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 400,
+                        "headers": {
+                            "Content-Length": 170,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:14 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"response\": {\n    \"status\": \"failure\",\n    \"code\": 8001,\n    \"message\": \"Unable to determine ticket outcome. Please take your ticket to the nearest Lotto store\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 98
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420700187937509924"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 237,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:14 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 20.0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1201\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 471
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420700229002409815"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 259,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:18 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"majorPrizeMessage\": \"A MAJOR PRIZE\",\n    \"resultCode\": \"1202\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 3097
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420700322291700780"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 632,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:18 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"commMessage\": \"Did you know that by playing Lotto you're helping to fund thousands of community projects around New Zealand?  Last year Lotto players raised approximately $200 million for the community!\",\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"linkUrl\": \"Did you know that by playing Lotto you're helping to fund thousands of community projects around New Zealand?  Last year Lotto players raised approximately $200 million for the community!\",\n    \"resultCode\": \"2201\",\n    \"resultType\": \"LOSER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 102
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420700442424501859"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:18 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1203\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 135
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420700576905905689"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:18 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1204\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 78
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420700608165400118"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:18 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1205\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 78
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420700793273209906"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:18 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1206\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 78
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420700894098204143"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:18 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3201\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 79
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420700920101400090"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:18 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3202\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 70
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420701031841204610"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:18 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3203\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 70
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420701127098302337"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:19 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3204\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 74
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420701251118606056"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:19 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3205\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 110
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420701344467106945"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:22 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3206\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 3092
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420701430391603248"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 260,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:22 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 5000.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3207\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 91
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420701517020802241"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 257,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:22 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3208\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 84
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420701695194909734"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 257,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:23 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3209\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 75
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420701764109705177"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 257,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:23 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3210\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 162
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420701811088009649"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:23 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1207\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 73
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420701945593409592"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 257,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:23 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3211\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 66
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420702033290403334"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 257,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:26 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3212\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 3167
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420702189626307580"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 257,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:26 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3210\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 80
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420702232381500786"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 257,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:26 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3214\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 83
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420702410853508724"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 257,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:26 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3216\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 105
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420702560198406065"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 257,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:26 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 0.0,\n    \"bonusTicket\": 0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3217\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 93
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420704914830707289"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:26 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3239\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 97
+                    }
+                },
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:37 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3239\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 105
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420702694435600051"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 239,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:26 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 1,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3242\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 103
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891419800298350004675"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 239,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:26 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 1,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3242\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 83
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9971000100218322300477"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 239,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:27 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 1,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3242\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 88
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9971000200128526807891"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 239,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:27 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 1000.0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1201\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 159
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9971000100135167508506"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 238,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:27 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"amount\": 100.0,\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"1201\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 111
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420704811979306805"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 400,
+                        "headers": {
+                            "Content-Length": 179,
+                            "Content-Type": "application/json; charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:27 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"message\": \"Error reading XMLStreamReader.. Message payload is of type: NullPayload\",\n  \"uuid\": \"/api/mobileutility/v1/validations:POST-03327480-8940-11e7-a83b-90b8d0f9ea0d\"\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 92
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891419800145779204331"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:27 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3240\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 86
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420702726941701693"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 216,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:27 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3244\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 84
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9971000200287882201466"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 259,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:27 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"majorPrizeMessage\": \"A MAJOR PRIZE\",\n    \"resultCode\": \"3245\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 160
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9971000100399126400124"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 259,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:28 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"majorPrizeMessage\": \"A MAJOR PRIZE\",\n    \"resultCode\": \"3245\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 101
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9971000200301183409919"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 259,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:28 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"majorPrizeMessage\": \"A MAJOR PRIZE\",\n    \"resultCode\": \"3245\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 86
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9971000100460621600141"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 259,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:28 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"currency\": \"$\",\n    \"linkText\": \"Tell me more\",\n    \"majorPrizeMessage\": \"A MAJOR PRIZE\",\n    \"resultCode\": \"3248\",\n    \"resultType\": \"WINNER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 86
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420702889747900451"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:28 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3218\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 151
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420702985434407609"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:28 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3219\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 97
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420703042003803563"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:28 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3220\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 124
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420703137793402907"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:28 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3221\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 98
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420703258778409238"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:30 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3222\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 258
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420703394656202867"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:30 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3223\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 121
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420703400324702756"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:30 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3224\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 126
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420703524221700247"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:30 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3225\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 87
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420703648373806222"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:30 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3226\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 80
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420703794396107128"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:30 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3227\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 1174
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420703821044009361"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:31 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3228\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 1179
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420703976627308157"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:33 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3229\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 132
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420704051499901980"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:36 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3230\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 3096
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420704185349505669"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:36 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3231\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 72
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420704269985008156"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:36 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3232\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 80
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420704393507209560"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:36 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3233\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 107
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420704499441307888"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:36 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3234\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 96
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420704559427208568"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:37 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3235\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 102
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420704673137406891"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:37 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3236\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 111
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420704735802609219"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:37 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3237\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 161
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420705096601100694"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:37 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3222\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 82
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9891420705113164804969"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 200,
+                        "headers": {
+                            "Content-Length": 217,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:37 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"validationResult\": {\n    \"bonusTicket\": 0,\n    \"linkText\": \"Tell me more\",\n    \"resultCode\": \"3241\",\n    \"resultType\": \"OTHER\"\n  },\n  \"response\": {\n    \"status\": \"success\",\n    \"message\": \"System available\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 84
+                    }
+                }
+            ]
+        },
+        {
+            "predicates": [
+                {
+                    "deepEquals": {
+                        "method": "POST"
+                    }
+                },
+                {
+                    "deepEquals": {
+                        "path": "/api/mobileutility/v1/validations"
+                    }
+                },
+                {
+                    "jsonpath": {
+                        "selector": "$..serialNumber"
+                    },
+                    "deepEquals": {
+                        "body": "9430016273912345671234"
+                    }
+                }
+            ],
+            "responses": [
+                {
+                    "is": {
+                        "statusCode": 400,
+                        "headers": {
+                            "Content-Length": 170,
+                            "Content-Type": "application/json;charset=UTF-8",
+                            "Date": "Fri, 25 Aug 2017 02:49:37 GMT",
+                            "Connection": "close"
+                        },
+                        "body": "{\n  \"response\": {\n    \"status\": \"failure\",\n    \"code\": 8001,\n    \"message\": \"Unable to determine ticket outcome. Please take your ticket to the nearest Lotto store\"\n  }\n}",
+                        "_mode": "text",
+                        "_proxyResponseTime": 88
+                    }
+                }
+            ]
+        }
+    ],
+    "_links": {
+        "self": {
+            "href": "http://localhost:2525/imposters/8000"
+        }
+    }
+}

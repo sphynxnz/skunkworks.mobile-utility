@@ -2,7 +2,7 @@ module.exports = {
   id: 'MOCK',
   appName: 'mobile-utility',
   version: '0.0.1',
-  esiWsUrl: 'http://localhost:7777/esiwebservice?wsdl',
+  esiWsUrl: 'http://localhost:8088/esiwebservice?wsdl',
   basePath: '/api/mobileutility/v1',
   getCheckerPath: '/validations/{serialnumber}',
   postCheckerPath: '/validations',
@@ -23,7 +23,7 @@ module.exports = {
       }
     ]
   },
-  port: 8000,
+  port: 8888,
   timeout: 5000,
   esiTimeout: 5000,
   emulation: true

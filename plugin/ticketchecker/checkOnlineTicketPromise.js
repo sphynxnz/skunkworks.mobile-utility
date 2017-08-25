@@ -102,14 +102,15 @@ const checkOnlineTicketPromise = (pObj) => {
          *
          * Note: Always calculate bonus ticket in emulation mode. If not, only when > 0
          */
+        checkResult.validationResult.bonusTicket = 0
         if (data.freeTicketsNumber &&
           (server.settings.app.env.emulation || parseInt(data.freeTicketsNumber) > 0)) {
-          let bonusTickets = parseInt(data.freeTicketsNumber)
+          let bonusTicket = parseInt(data.freeTicketsNumber)
           let productCode = parseInt(args.ticketSerialNumber.substr(14, 2))
           let blpp = 1
           server.log('info', 'Product: ' + productCode)
           if (productCode !== misc.products.Strike.code && productCode !== misc.products.Bullseye.code) {
-            checkResult.validationResult.bonusTickets = bonusTickets
+            checkResult.validationResult.bonusTicket = bonusTicket
           } else {
             if (productCode === misc.products.Strike.code) {
               blpp = misc.bonusLinesPerPage.Strike
@@ -117,27 +118,46 @@ const checkOnlineTicketPromise = (pObj) => {
               blpp = misc.bonusLinesPerPage.Bullseye
             }
             server.log('info', 'lines: ' + blpp)
-            checkResult.validationResult.bonusTickets = Math.ceil(bonusTickets / blpp)
+            checkResult.validationResult.bonusTicket = Math.ceil(bonusTicket / blpp)
           }
+        }
+
+        /**
+         * If matched scenario requires a community message, randomly select one of the community messages
+         */
+        if (result.communitymsg === true) {
+          let ridx = Math.floor(Math.random() * (8))
+          checkResult.validationResult.commMessage = messages[ridx]
         }
 
         /**
          * Assign currency, link text
          */
-        checkResult.validationResult.currency = '$'
+        if (data.cashAmount) {
+          checkResult.validationResult.currency = '$'
+        }
         checkResult.validationResult.linkText = misc.linkText
 
         /**
-         * If response includes claim amount then add major prize message in response. 
+         * If response includes claim amount or if ESI returned fault and there is a major prize message
+         * on the matched result, then add major prize message in response. 
+         * 
          * If matched scenario contains claim message, then replace message with claim message
          * if emulation is not on.
          */
-        // if ((data.claimAmount && parseFloat(data.claimAmount) >= 0) || result.majorprizemsg) {
-        if (data.claimAmount && parseFloat(data.claimAmount) >= 0) {
+        // if (data.claimAmount && parseFloat(data.claimAmount) >= 0) {
+        if ((data.claimAmount && parseFloat(data.claimAmount) >= 0) || (fault && result.majorprizemsg)) {
           checkResult.validationResult.majorPrizeMessage = result.majorprizemsg
           if (result.claimmsg && !server.settings.app.env.emulation) {
             checkResult.validationResult.message = result.claimmsg
           }
+        }
+
+        /**
+         * Assign multi draw message 
+         */
+        if (result.code === misc.multiDrawCode) {
+          checkResult.validationResult.multiDrawMsg = result.mobile
         }
 
         /**
@@ -153,14 +173,6 @@ const checkOnlineTicketPromise = (pObj) => {
         if (!server.settings.app.env.emulation) {
           checkResult.validationResult.message = result.mobile
           checkResult.validationResult.linkUrl = misc.linkUrl
-        }
-
-        /**
-         * If matched scenario requires a community message, randomly select one of the community messages
-         */
-        if (result.communitymsg === true) {
-          let ridx = Math.floor(Math.random() * (8))
-          checkResult.validationResult.commMessage = messages[ridx]
         }
 
         /**

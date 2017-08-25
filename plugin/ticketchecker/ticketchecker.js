@@ -118,7 +118,7 @@ module.exports = function (request, reply) {
           response: {
             status: 'failure',
             code: 8001,
-            mesage: 'Unable to determine ticket outcome. Please take your ticket to the nearest Lotto store'
+            message: 'Unable to determine ticket outcome. Please take your ticket to the nearest Lotto store'
           }
         }
         reply(result.checkResult).header('Content-Type', 'application/json').code(400)

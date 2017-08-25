@@ -77,6 +77,14 @@ const checkInstantTicketPromise = (pObj) => {
         }
 
         /**
+         * If matched scenario requires a community message, randomly select one of the community messages
+         */
+        if (result.communitymsg === true) {
+          let ridx = Math.floor(Math.random() * (8))
+          checkResult.validationResult.commMessage = messages[ridx]
+        }
+
+        /**
          * Check if amount will be included in response. It will be included if:
          * - amount is present in the response from ESI and
          * - major prize is not defined in the matching scenario and
@@ -91,15 +99,23 @@ const checkInstantTicketPromise = (pObj) => {
 
         /**
          * Add free tickets in the response if found in the response from ESI
+         * 
+         * If in emulation mode and ESI fault, set free ticket to 0
          */
-        if (data.freeTicketsNumber) {
-          checkResult.validationResult.bonusTickets = parseFloat(data.freeTicketsNumber)
+        if (data.freeTicketsNumber && parseInt(data.freeTicketsNumber) > 0) {
+          checkResult.validationResult.bonusTicket = parseInt(data.freeTicketsNumber)
+        } else if (server.settings.app.env.emulation && fault) {
+          checkResult.validationResult.bonusTicket = 0
         }
 
         /**
-         * Assign default currency and link text
+         * Assign default currency (if amount is defined ) or if emulation mode and not ESI fault
+         * 
+         * Add link text
          */
-        checkResult.validationResult.currency = '$'
+        if (checkResult.validationResult.amount || (server.settings.app.env.emulation && !fault)) {
+          checkResult.validationResult.currency = '$'
+        }
         checkResult.validationResult.linkText = misc.linkText
 
         /**
@@ -108,15 +124,10 @@ const checkInstantTicketPromise = (pObj) => {
          */
         if (result.majorprizemsg) {
           checkResult.validationResult.majorPrizeMessage = result.majorprizemsg
-          if (result.claimmsg) {
+          if (result.claimmsg && !server.settings.app.env.emulation) {
             checkResult.validationResult.message = result.claimmsg
           }
         }
-
-        /**
-         * Assign result type from the matched scenario. value is 'WINNER', 'LOSER' or 'OTHER'
-         */
-        checkResult.validationResult.resultType = result.result
 
         /**
          * If code in matched scenario is 3242 and there are no free tickets, then use 1201 as the code
@@ -127,6 +138,11 @@ const checkInstantTicketPromise = (pObj) => {
         } else {
           checkResult.validationResult.resultCode = result.code
         }
+
+        /**
+         * Assign result type from the matched scenario. value is 'WINNER', 'LOSER' or 'OTHER'
+         */
+        checkResult.validationResult.resultType = result.result
 
         /**
          * If not emulating mule, add the following properties
