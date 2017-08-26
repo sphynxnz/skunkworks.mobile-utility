@@ -68,10 +68,23 @@ const checkOnlineTicketPromise = (pObj) => {
         server.log('info', 'Scenario: ' + result.name + ' Code: ' + result.code)
 
         /**
-         * Initialise response to online ticket checking
+         * Initialise response to Online ticket checking
          */
         let checkResult = {
-          validationResult: {},
+          validationResult: {
+            amount: (data.cashAmount !== undefined ? parseFloat(data.cashAmount) : null),
+            bonusTicket: null,
+            commMessage: (result.communitymsg !== undefined ? messages[Math.floor(Math.random() * messages.length)] : null),
+            currency: misc.currency,
+            linkText: misc.linkText,
+            linkUrl: misc.linkUrl,
+            majorPrizeMessage: null,
+            // merchandise: null,
+            message: result.mobile,
+            multiDrawMsg: null,
+            resultCode: result.code,
+            resultType: result.result
+          },
           response: {
             status: 'success',
             message: 'System available'
@@ -79,101 +92,92 @@ const checkOnlineTicketPromise = (pObj) => {
         }
 
         /**
-         * Set amount to cash amount if cash amount is defined.
-         * Note that the result.majorprizemsg is no longer used to determine major prize message 
+         * Process response depending on ESI response
          */
-        // if (data.cashAmount && result.majorprizemsg === undefined) {
-        if (data.cashAmount) {
-          checkResult.validationResult.amount = parseFloat(data.cashAmount)
-        }
-
-        /**
-         * If free tickets then calculate the number of bonus tickets.
-         * The number of bonus tickets is determined by the type of the game (product code)
-         * and is calculated based on the following formula:
-         *
-         * Given:
-         *    bonus lines per page (Strike)       = 20
-         *    bonus lines per page (Bullseye)     = 3
-         *    bonus lines per page (other games)  = 1
-         *
-         * <bonus tickets> = Math.ceil(<free tickets number> / <bonus lines per page>) if (Strike or Bullseye)
-         *                 = <bonus tickets> otherwise
-         *
-         * Note: Always calculate bonus ticket in emulation mode. If not, only when > 0
-         */
-        checkResult.validationResult.bonusTicket = 0
-        if (data.freeTicketsNumber &&
-          (server.settings.app.env.emulation || parseInt(data.freeTicketsNumber) > 0)) {
-          let bonusTicket = parseInt(data.freeTicketsNumber)
-          let productCode = parseInt(args.ticketSerialNumber.substr(14, 2))
-          let blpp = 1
-          server.log('info', 'Product: ' + productCode)
-          if (productCode !== misc.products.Strike.code && productCode !== misc.products.Bullseye.code) {
-            checkResult.validationResult.bonusTicket = bonusTicket
-          } else {
-            if (productCode === misc.products.Strike.code) {
-              blpp = misc.bonusLinesPerPage.Strike
-            } else if (productCode === misc.products.Bullseye.code) {
-              blpp = misc.bonusLinesPerPage.Bullseye
-            }
-            server.log('info', 'lines: ' + blpp)
-            checkResult.validationResult.bonusTicket = Math.ceil(bonusTicket / blpp)
-          }
-        }
-
-        /**
-         * If matched scenario requires a community message, randomly select one of the community messages
-         */
-        if (result.communitymsg === true) {
-          let ridx = Math.floor(Math.random() * (8))
-          checkResult.validationResult.commMessage = messages[ridx]
-        }
-
-        /**
-         * Assign currency, link text
-         */
-        if (data.cashAmount) {
-          checkResult.validationResult.currency = '$'
-        }
-        checkResult.validationResult.linkText = misc.linkText
-
-        /**
-         * If response includes claim amount or if ESI returned fault and there is a major prize message
-         * on the matched result, then add major prize message in response. 
-         * 
-         * If matched scenario contains claim message, then replace message with claim message
-         * if emulation is not on.
-         */
-        // if (data.claimAmount && parseFloat(data.claimAmount) >= 0) {
-        if ((data.claimAmount && parseFloat(data.claimAmount) >= 0) || (fault && result.majorprizemsg)) {
+        if (fault) {
+          /**
+           * If ESI fault message, reset these properties
+           */
+          checkResult.validationResult.cashAmount = null
+          checkResult.validationResult.bonusTicket = 0
+          checkResult.validationResult.currency = null
           checkResult.validationResult.majorPrizeMessage = result.majorprizemsg
-          if (result.claimmsg && !server.settings.app.env.emulation) {
-            checkResult.validationResult.message = result.claimmsg
+        } else {
+          /**
+           * Non-ESI fault message, process as follows
+           */
+
+          /**
+           * If free tickets then calculate the number of bonus tickets.
+           * The number of bonus tickets is determined by the type of the game (product code)
+           * and is calculated based on the following formula:
+           *
+           * Given:
+           *    bonus lines per page (Strike)       = 20
+           *    bonus lines per page (Bullseye)     = 3
+           *    bonus lines per page (other games)  = 1
+           *
+           * <bonus tickets> = Math.ceil(<free tickets number> / <bonus lines per page>) if (Strike or Bullseye)
+           *                 = <bonus tickets> otherwise
+           *
+           * Note: Always calculate bonus ticket in emulation mode. If not, only when > 0
+           */
+          if (data.freeTicketsNumber !== undefined &&
+            (server.settings.app.env.emulation || parseInt(data.freeTicketsNumber) > 0)) {
+            let bonusTicket = parseInt(data.freeTicketsNumber)
+            let productCode = parseInt(args.ticketSerialNumber.substr(14, 2))
+            let blpp = 1
+            server.log('info', 'Product: ' + productCode)
+            if (productCode !== misc.products.Strike.code && productCode !== misc.products.Bullseye.code) {
+              checkResult.validationResult.bonusTicket = bonusTicket
+            } else {
+              if (productCode === misc.products.Strike.code) {
+                blpp = misc.bonusLinesPerPage.Strike
+              } else if (productCode === misc.products.Bullseye.code) {
+                blpp = misc.bonusLinesPerPage.Bullseye
+              }
+              server.log('info', 'lines: ' + blpp)
+              checkResult.validationResult.bonusTicket = Math.ceil(bonusTicket / blpp)
+            }
+          }
+
+          /**
+           * If response includes claim amount or if ESI returned fault and there is a major prize message
+           * on the matched result, then add major prize message in response. 
+           * 
+           * If matched scenario contains claim message, then replace message with claim message
+           * if emulation is not on.
+           */
+          // if (data.claimAmount && parseFloat(data.claimAmount) >= 0) {
+          if (data.claimAmount !== undefined && parseFloat(data.claimAmount) >= 0) {
+            checkResult.validationResult.majorPrizeMessage = result.majorprizemsg
+          }
+
+          /**
+           * Assign multi draw message for multi draw scenario
+           */
+          if (result.code === misc.multiDrawCode) {
+            checkResult.validationResult.multiDrawMsg = result.mobile
           }
         }
 
         /**
-         * Assign multi draw message 
+         * Delete message, link url if emulating mule 2.0 mobile utility
+         * If fault, delete currency and set bonus ticket to 0
          */
-        if (result.code === misc.multiDrawCode) {
-          checkResult.validationResult.multiDrawMsg = result.mobile
+        if (server.settings.app.env.emulation) {
+          delete checkResult.validationResult.message
+          delete checkResult.validationResult.linkUrl
         }
 
         /**
-         * Assign result, code
+         * Delete all null properties
          */
-        checkResult.validationResult.resultCode = result.code
-        checkResult.validationResult.resultType = result.result
-
-        /**
-         * If not emulating mule, add the following properties
-         */
-        server.log('emulation:', server.settings.app.env.emulation)
-        if (!server.settings.app.env.emulation) {
-          checkResult.validationResult.message = result.mobile
-          checkResult.validationResult.linkUrl = misc.linkUrl
-        }
+        Object.keys(checkResult.validationResult).forEach((prop) => {
+          if (checkResult.validationResult[prop] === undefined || checkResult.validationResult[prop] === null) {
+            delete checkResult.validationResult[prop]
+          }
+        })
 
         /**
          * Return ticket check result in the pObj

@@ -61,12 +61,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:46 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3101\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 31
+                        "_proxyResponseTime": 54
                     }
                 }
             ]
@@ -99,14 +99,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 387,
+                            "content-length": 409,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"bonusTicket\":0,\"commMessage\":\"By playing Lotto you're helping to save lives at sea!  Coastguard has received over $4.3 million in funding from Lotto over the past two years.  Thanks for making New Zealand an even better place to live!\",\"linkText\":\"Tell me more\",\"resultCode\":\"2101\",\"resultType\":\"LOSER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"bonusTicket\":0,\"commMessage\":\"Did you know that by playing Lotto you're helping fund grassroots sport in New Zealand?  Sport NZ is the largest recipient of Lotto funding, receiving over $40 million last year to support sport and recreation in New Zealand. \",\"linkText\":\"Tell me more\",\"resultCode\":\"2101\",\"resultType\":\"LOSER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 17
+                        "_proxyResponseTime": 19
                     }
                 }
             ]
@@ -141,12 +141,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3102\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 24
+                        "_proxyResponseTime": 19
                     }
                 }
             ]
@@ -181,12 +181,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3103\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 13
+                        "_proxyResponseTime": 24
                     }
                 }
             ]
@@ -221,12 +221,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3104\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 15
+                        "_proxyResponseTime": 22
                     }
                 }
             ]
@@ -261,12 +261,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3105\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 15
+                        "_proxyResponseTime": 18
                     }
                 }
             ]
@@ -301,12 +301,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3106\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 12
+                        "_proxyResponseTime": 14
                     }
                 }
             ]
@@ -341,12 +341,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"1101\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 13
+                        "_proxyResponseTime": 16
                     }
                 }
             ]
@@ -381,12 +381,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"1102\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 14
                     }
                 }
             ]
@@ -421,12 +421,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3107\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 10
+                        "_proxyResponseTime": 14
                     }
                 }
             ]
@@ -461,7 +461,7 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3108\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -501,12 +501,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3109\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 11
                     }
                 }
             ]
@@ -541,12 +541,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3107\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 9
                     }
                 }
             ]
@@ -581,12 +581,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3111\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 10
+                        "_proxyResponseTime": 9
                     }
                 }
             ]
@@ -621,7 +621,7 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"1103\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -661,12 +661,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:15 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3112\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 10
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -701,7 +701,7 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3113\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -741,12 +741,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3114\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 8
                     }
                 }
             ]
@@ -781,12 +781,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3115\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 10
+                        "_proxyResponseTime": 8
                     }
                 }
             ]
@@ -821,7 +821,7 @@
                             "cache-control": "no-cache",
                             "content-length": 203,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"majorPrizeMessage\":\"A MAJOR PRIZE\",\"resultCode\":\"1104\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -837,12 +837,12 @@
                             "cache-control": "no-cache",
                             "content-length": 203,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"majorPrizeMessage\":\"A MAJOR PRIZE\",\"resultCode\":\"1104\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -877,7 +877,7 @@
                             "cache-control": "no-cache",
                             "content-length": 203,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"majorPrizeMessage\":\"A MAJOR PRIZE\",\"resultCode\":\"1105\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -917,7 +917,7 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"1106\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -957,12 +957,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"1107\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -997,12 +997,12 @@
                             "cache-control": "no-cache",
                             "content-length": 167,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"1108\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 10
+                        "_proxyResponseTime": 8
                     }
                 }
             ]
@@ -1037,12 +1037,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3247\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 12
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -1075,14 +1075,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 203,
+                            "content-length": 218,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"majorPrizeMessage\":\"A MAJOR PRIZE\",\"resultCode\":\"1109\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"majorPrizeMessage\":\"A MAJOR PRIZE\",\"resultCode\":\"1109\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 9
                     }
                 }
             ]
@@ -1117,12 +1117,12 @@
                             "cache-control": "no-cache",
                             "content-length": 195,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"amount\":120,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"1109\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -1157,12 +1157,12 @@
                             "cache-control": "no-cache",
                             "content-length": 195,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"amount\":100,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"1110\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -1195,14 +1195,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 447,
+                            "content-length": 454,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"commMessage\":\"It feels 'sweet as' to give back.  You've just helped fund over 3,000 community groups across New Zealand. Your ticket helps fund lottery grants in health, sport, arts and culture.\",\"currency\":\"$\",\"linkText\":\"Tell me more\",\"multiDrawMsg\":\"You have draws remaining for this ticket\",\"resultCode\":\"2102\",\"resultType\":\"LOSER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"commMessage\":\"Did you know that by playing Lotto you're helping to fund thousands of community projects around New Zealand?  Last year Lotto players raised approximately $200 million for the community!\",\"currency\":\"$\",\"linkText\":\"Tell me more\",\"multiDrawMsg\":\"You have draws remaining for this ticket\",\"resultCode\":\"2102\",\"resultType\":\"LOSER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 9
                     }
                 }
             ]
@@ -1235,14 +1235,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 166,
+                            "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"1111\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"1111\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 8
                     }
                 }
             ]
@@ -1277,12 +1277,12 @@
                             "cache-control": "no-cache",
                             "content-length": 192,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3116\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -1317,12 +1317,12 @@
                             "cache-control": "no-cache",
                             "content-length": 195,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"amount\":900,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"1112\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 10
                     }
                 }
             ]
@@ -1357,7 +1357,7 @@
                             "cache-control": "no-cache",
                             "content-length": 229,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":1,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"majorPrizeMessage\":\"A MAJOR PRIZE\",\"resultCode\":\"1112\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -1397,12 +1397,12 @@
                             "cache-control": "no-cache",
                             "content-length": 193,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":3,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"1113\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 6
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -1437,7 +1437,7 @@
                             "cache-control": "no-cache",
                             "content-length": 192,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3118\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -1475,14 +1475,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 166,
+                            "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:47 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"9001\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"9001\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -1515,14 +1515,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 380,
+                            "content-length": 389,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:48 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"commMessage\":\"Did you know that all Lotto profits go back into the community through community grants?  Last year that was approximately $200 million!  Now that's a reason to celebrate!\",\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"2103\",\"resultType\":\"LOSER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"commMessage\":\"It feels 'sweet as' to give back.  You've just helped fund over 3,000 community groups across New Zealand. Your ticket helps fund lottery grants in health, sport, arts and culture.\",\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"2103\",\"resultType\":\"LOSER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 6
+                        "_proxyResponseTime": 9
                     }
                 }
             ]
@@ -1557,12 +1557,12 @@
                             "cache-control": "no-cache",
                             "content-length": 192,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:16 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:48 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3117\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 6
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -1597,12 +1597,12 @@
                             "cache-control": "no-cache",
                             "content-length": 156,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:21 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"response\":{\"status\":\"failure\",\"code\":7000,\"message\":\"Service is unavailable. Please try again later.\",\"error\":{\"code\":\"ESOCKETTIMEDOUT\",\"connect\":false}}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 5012
+                        "_proxyResponseTime": 5010
                     }
                 }
             ]
@@ -1637,12 +1637,12 @@
                             "cache-control": "no-cache",
                             "content-length": 144,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:21 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"response\":{\"status\":\"failure\",\"code\":8001,\"message\":\"Unable to determine ticket outcome. Please take your ticket to the nearest Lotto store\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 104
+                        "_proxyResponseTime": 9
                     }
                 }
             ]
@@ -1677,7 +1677,7 @@
                             "cache-control": "no-cache",
                             "content-length": 178,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:21 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"amount\":20,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"1201\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -1717,12 +1717,12 @@
                             "cache-control": "no-cache",
                             "content-length": 202,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:21 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"majorPrizeMessage\":\"A MAJOR PRIZE\",\"resultCode\":\"1202\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 12
+                        "_proxyResponseTime": 11
                     }
                 }
             ]
@@ -1755,14 +1755,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 362,
+                            "content-length": 369,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:21 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"commMessage\":\"It feels 'sweet as' to give back.  You've just helped fund over 3,000 community groups across New Zealand. Your ticket helps fund lottery grants in health, sport, arts and culture.\",\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"2201\",\"resultType\":\"LOSER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"commMessage\":\"Did you know that by playing Lotto you're helping to fund thousands of community projects around New Zealand?  Last year Lotto players raised approximately $200 million for the community!\",\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"2201\",\"resultType\":\"LOSER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 13
                     }
                 }
             ]
@@ -1797,12 +1797,12 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:21 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"1203\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 9
                     }
                 }
             ]
@@ -1837,12 +1837,12 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:21 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"1204\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 8
                     }
                 }
             ]
@@ -1877,7 +1877,7 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"1205\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -1917,7 +1917,7 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"1206\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -1957,12 +1957,12 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3201\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -1997,12 +1997,12 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3202\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -2037,12 +2037,12 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3203\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 6
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -2077,12 +2077,12 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3204\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -2117,7 +2117,7 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3205\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -2157,12 +2157,12 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3206\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -2195,14 +2195,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 165,
+                            "content-length": 195,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3207\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"amount\":5000,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3207\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -2235,14 +2235,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 165,
+                            "content-length": 192,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3208\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3208\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -2275,14 +2275,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 165,
+                            "content-length": 192,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3209\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3209\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -2315,14 +2315,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 165,
+                            "content-length": 192,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3210\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3210\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 11
                     }
                 }
             ]
@@ -2357,7 +2357,7 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"1207\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -2395,14 +2395,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 165,
+                            "content-length": 192,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3211\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3211\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -2435,14 +2435,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 165,
+                            "content-length": 192,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3212\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3212\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 8
                     }
                 }
             ]
@@ -2475,12 +2475,12 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 165,
+                            "content-length": 192,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3210\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3210\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
                         "_proxyResponseTime": 5
                     }
@@ -2515,14 +2515,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 165,
+                            "content-length": 192,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3214\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3214\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -2555,12 +2555,12 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 165,
+                            "content-length": 192,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3216\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3216\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
                         "_proxyResponseTime": 11
                     }
@@ -2595,14 +2595,14 @@
                         "headers": {
                             "content-type": "application/json; charset=utf-8",
                             "cache-control": "no-cache",
-                            "content-length": 165,
+                            "content-length": 192,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:53 GMT",
                             "Connection": "close"
                         },
-                        "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3217\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
+                        "body": "{\"validationResult\":{\"amount\":0,\"bonusTicket\":0,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3217\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 19
+                        "_proxyResponseTime": 10
                     }
                 }
             ]
@@ -2637,12 +2637,12 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3239\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 19
                     }
                 },
                 {
@@ -2653,12 +2653,12 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:24 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3239\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 6
+                        "_proxyResponseTime": 10
                     }
                 }
             ]
@@ -2693,12 +2693,12 @@
                             "cache-control": "no-cache",
                             "content-length": 182,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":1,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3242\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 6
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -2733,12 +2733,12 @@
                             "cache-control": "no-cache",
                             "content-length": 182,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":1,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3242\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -2773,12 +2773,12 @@
                             "cache-control": "no-cache",
                             "content-length": 182,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":1,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3242\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 11
                     }
                 }
             ]
@@ -2813,12 +2813,12 @@
                             "cache-control": "no-cache",
                             "content-length": 180,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"amount\":1000,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"1201\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 6
+                        "_proxyResponseTime": 8
                     }
                 }
             ]
@@ -2853,12 +2853,12 @@
                             "cache-control": "no-cache",
                             "content-length": 179,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"amount\":100,\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"1201\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 6
+                        "_proxyResponseTime": 10
                     }
                 }
             ]
@@ -2893,12 +2893,12 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:22 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"9001\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 14
                     }
                 }
             ]
@@ -2933,12 +2933,12 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3240\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 10
                     }
                 }
             ]
@@ -2973,7 +2973,7 @@
                             "cache-control": "no-cache",
                             "content-length": 165,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"resultCode\":\"3244\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -3013,7 +3013,7 @@
                             "cache-control": "no-cache",
                             "content-length": 202,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"majorPrizeMessage\":\"A MAJOR PRIZE\",\"resultCode\":\"3245\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -3053,12 +3053,12 @@
                             "cache-control": "no-cache",
                             "content-length": 202,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"majorPrizeMessage\":\"A MAJOR PRIZE\",\"resultCode\":\"3245\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 10
+                        "_proxyResponseTime": 8
                     }
                 }
             ]
@@ -3093,12 +3093,12 @@
                             "cache-control": "no-cache",
                             "content-length": 202,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"majorPrizeMessage\":\"A MAJOR PRIZE\",\"resultCode\":\"3245\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 8
                     }
                 }
             ]
@@ -3133,7 +3133,7 @@
                             "cache-control": "no-cache",
                             "content-length": 202,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"currency\":\"$\",\"linkText\":\"Tell me more\",\"majorPrizeMessage\":\"A MAJOR PRIZE\",\"resultCode\":\"3248\",\"resultType\":\"WINNER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -3173,12 +3173,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3218\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -3213,12 +3213,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3219\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -3253,12 +3253,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3220\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 10
                     }
                 }
             ]
@@ -3293,12 +3293,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3221\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -3333,12 +3333,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3222\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -3373,12 +3373,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3223\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 8
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -3413,12 +3413,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3224\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 8
                     }
                 }
             ]
@@ -3453,7 +3453,7 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3225\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -3493,12 +3493,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3226\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 12
+                        "_proxyResponseTime": 8
                     }
                 }
             ]
@@ -3533,12 +3533,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:54 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3227\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 10
                     }
                 }
             ]
@@ -3573,12 +3573,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3228\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 12
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -3613,12 +3613,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3229\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 13
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -3653,12 +3653,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3230\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 12
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -3693,12 +3693,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3231\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 10
+                        "_proxyResponseTime": 6
                     }
                 }
             ]
@@ -3733,12 +3733,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:23 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3232\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 11
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -3773,12 +3773,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:24 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3233\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 10
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -3813,12 +3813,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:24 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3234\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 14
                     }
                 }
             ]
@@ -3853,12 +3853,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:24 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3235\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 8
                     }
                 }
             ]
@@ -3893,12 +3893,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:24 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3236\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 9
+                        "_proxyResponseTime": 7
                     }
                 }
             ]
@@ -3933,12 +3933,12 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:24 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3237\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 8
                     }
                 }
             ]
@@ -3973,7 +3973,7 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:24 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3222\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -4013,7 +4013,7 @@
                             "cache-control": "no-cache",
                             "content-length": 166,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:24 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"validationResult\":{\"bonusTicket\":0,\"linkText\":\"Tell me more\",\"resultCode\":\"3241\",\"resultType\":\"OTHER\"},\"response\":{\"status\":\"success\",\"message\":\"System available\"}}",
@@ -4053,12 +4053,12 @@
                             "cache-control": "no-cache",
                             "content-length": 144,
                             "vary": "accept-encoding",
-                            "Date": "Fri, 25 Aug 2017 03:27:24 GMT",
+                            "Date": "Sat, 26 Aug 2017 08:26:55 GMT",
                             "Connection": "close"
                         },
                         "body": "{\"response\":{\"status\":\"failure\",\"code\":8001,\"message\":\"Unable to determine ticket outcome. Please take your ticket to the nearest Lotto store\"}}",
                         "_mode": "text",
-                        "_proxyResponseTime": 7
+                        "_proxyResponseTime": 11
                     }
                 }
             ]
