@@ -69,19 +69,24 @@ const checkInstantTicketPromise = (pObj) => {
          * Initialise response to IK ticket checking
          */
         let checkResult = {
-          validationResult: {},
+          validationResult: {
+            amount: (data.amount !== undefined ? parseFloat(data.amount) : null),
+            bonusTicket: (data.freeTicketsNumber !== undefined ? parseInt(data.freeTicketsNumber) : null),
+            commMessage: (result.communitymsg !== undefined ? messages[Math.floor(Math.random() * messages.length)] : null),
+            currency: misc.currency,
+            linkText: misc.linkText,
+            linkUrl: misc.linkUrl,
+            majorPrizeMessage: result.majorprizemsg,
+            // merchandise: null,
+            message: result.mobile,
+            // multiDrawMsg: null,
+            resultCode: result.code,
+            resultType: result.result
+          },
           response: {
             status: 'success',
             message: 'System available'
           }
-        }
-
-        /**
-         * If matched scenario requires a community message, randomly select one of the community messages
-         */
-        if (result.communitymsg === true) {
-          let ridx = Math.floor(Math.random() * (8))
-          checkResult.validationResult.commMessage = messages[ridx]
         }
 
         /**
@@ -91,41 +96,14 @@ const checkInstantTicketPromise = (pObj) => {
          * - there are no free tickets or free ticket is present in the response from ESI but
          *   has value of 0 or must be ignored (IKFreeTicketAmountIgnored == false)
          */
-        if ((data.amount && parseFloat(data.amount) > 0) && result.majorprizemsg === undefined &&
-           (data.freeTicketsNumber === undefined ||
-            (data.freeTicketsNumber && (parseInt(data.freeTicketsNumber) === 0 || misc.IKFreeTicketAmountIgnored === false)))) {
-          checkResult.validationResult.amount = parseFloat(data.amount)
-        }
-
-        /**
-         * Add free tickets in the response if found in the response from ESI
-         * 
-         * If in emulation mode and ESI fault, set free ticket to 0
-         */
-        if (data.freeTicketsNumber && parseInt(data.freeTicketsNumber) > 0) {
-          checkResult.validationResult.bonusTicket = parseInt(data.freeTicketsNumber)
-        } else if (server.settings.app.env.emulation && fault) {
-          checkResult.validationResult.bonusTicket = 0
-        }
-
-        /**
-         * Assign default currency (if amount is defined ) or if emulation mode and not ESI fault
-         * 
-         * Add link text
-         */
-        if (checkResult.validationResult.amount || (server.settings.app.env.emulation && !fault)) {
-          checkResult.validationResult.currency = '$'
-        }
-        checkResult.validationResult.linkText = misc.linkText
-
-        /**
-         * If matched scenario includes major prize, then include major prize message in response.
-         * And if matched scenario contains claim message, then replace message with claim message.
-         */
-        if (result.majorprizemsg) {
-          checkResult.validationResult.majorPrizeMessage = result.majorprizemsg
-          if (result.claimmsg && !server.settings.app.env.emulation) {
-            checkResult.validationResult.message = result.claimmsg
+        if (checkResult.validationResult.amount && checkResult.validationResult.amount > 0) {
+          if (result.majorprizemsg) {
+            delete checkResult.validationResult.amount
+          }
+          if (checkResult.validationResult.bonusTicket && checkResult.validationResult.bonusTicket > 0) {
+            if (misc.IKFreeTicketAmountIgnored) {
+              delete checkResult.validationResult.amount
+            }
           }
         }
 
@@ -135,31 +113,29 @@ const checkInstantTicketPromise = (pObj) => {
          */
         if (result.code === '3242' && (data.freeTicketsNumber === undefined || parseInt(data.freeTicketsNumber) === 0)) {
           checkResult.validationResult.resultCode = '1201'
-        } else {
-          checkResult.validationResult.resultCode = result.code
         }
 
         /**
-         * Assign result type from the matched scenario. value is 'WINNER', 'LOSER' or 'OTHER'
+         * Delete message, link url if emulating mule 2.0 mobile utility
+         * If fault, delete currency and set bonus ticket to 0
          */
-        checkResult.validationResult.resultType = result.result
-
-        /**
-         * If not emulating mule, add the following properties
-         */
-        server.log('emulation:', server.settings.app.env.emulation)
-        if (!server.settings.app.env.emulation) {
-          checkResult.validationResult.message = result.mobile
-          checkResult.validationResult.linkUrl = misc.linkUrl
+        if (server.settings.app.env.emulation) {
+          delete checkResult.validationResult.message
+          delete checkResult.validationResult.linkUrl
+          if (fault) {
+            delete checkResult.validationResult.currency
+            checkResult.validationResult.bonusTicket = 0
+          }
         }
 
         /**
-         * If matched scenario requires a community message, randomly select one of the community messages
+         * Delete all null properties
          */
-        if (result.communitymsg === true) {
-          let ridx = Math.floor(Math.random() * (8))
-          checkResult.validationResult.commMessage = messages[ridx]
-        }
+        Object.keys(checkResult.validationResult).forEach((prop) => {
+          if (checkResult.validationResult[prop] === undefined || checkResult.validationResult[prop] === null) {
+            delete checkResult.validationResult[prop]
+          }
+        })
 
         /**
          * Return ticket check result in the pObj
