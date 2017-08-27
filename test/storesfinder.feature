@@ -19,13 +19,14 @@ Feature: Stores finder examples
   Scenario Outline: Store closest to Lotto NZ Office
     Given longitude set to <longitude>
     And latitude set to <latitude>
+    And maxcount set to <maxcount>
     When I fetch store locations
     Then The response status code should be "200"
     And The closest store is "Countdown Newmarket"
 
     Examples:
-      | longitude  | latitude   |
-      | 174.779520 | -36.872087 |
+      | longitude  | latitude   | maxcount |
+      | 174.779520 | -36.872087 | 1        |
 
   Scenario Outline: Stores within 1km from Lotto NZ Office
     Given longitude set to <longitude>

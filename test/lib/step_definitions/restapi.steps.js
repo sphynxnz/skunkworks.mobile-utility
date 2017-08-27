@@ -116,6 +116,10 @@ defineSupportCode(function ({Given, When, Then}) {
     this.setLongitude(longitude)
   })
 
+  Given(/^maxcount set to (.*)$/, function (maxcount) {
+    this.setMaxcount(maxcount)
+  })
+
   Given(/^radius set to (.*)$/, function (radius) {
     this.setRadius(radius)
   })
@@ -139,8 +143,9 @@ defineSupportCode(function ({Given, When, Then}) {
   })
 
   When(/^I fetch store locations$/, function () {
-    const uri = '/stores?channelid=1' + '&longitude=' + this.longitude + '&latitude=' + this.latitude + 
-      (this.radius ? '&radius=' + this.radius : '')
+    const uri = '/stores?channelid=1' + '&longitude=' + this.longitude + '&latitude=' + this.latitude +
+      (this.radius ? '&radius=' + this.radius : '') +
+      (this.maxcount ? '&maxcount=' + this.maxcount : '')
     return this.httpGet(uri)
   })
 
