@@ -1,654 +1,657 @@
 {
-	"instant": {
-		"results": [{
-				"name": "Host Response 1",
-				"mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
-				"esi": "pay the winner",
-				"result": "WINNER",
-				"code": "1201"
-			},
-			{
-				"name": "Host Response 2",
-				"mobile": "Please take your ticket to the nearest Lotto store to claim your prize",
-				"esi": "Invalid Check Digit for Book, file claim",
-				"result": "WINNER",
-				"code": "1202",
-				"claimmsg": "Please take your ticket to the nearest Lotto store to claim your prize",
-				"majorprizemsg": "A MAJOR PRIZE"
-			},
-			{
-				"name": "Host Response 3",
-				"mobile": "Not a winning ticket",
-				"esi": "ok, not a winner",
-				"result": "LOSER",
-				"code": "2201",
-				"communitymsg": true
-			},
-			{
-				"name": "Host Response 4",
-				"mobile": "This ticket has already been claimed",
-				"esi": "ok, previously paid by other",
-				"result": "OTHER",
-				"code": "1203"
-			},
-			{
-				"name": "Host Response 5",
-				"mobile": "This ticket has already been claimed",
-				"esi": "ok, previously paid by you",
-				"result": "OTHER",
-				"code": "1204"
-			},
-			{
-				"name": "Host Response 6",
-				"mobile": "This ticket has already been claimed",
-				"esi": "ok, Previously claimed by other",
-				"result": "OTHER",
-				"code": "1205"
-			},
-			{
-				"name": "Host Response 7",
-				"mobile": "This ticket has already been claimed",
-				"esi": "Previously claimed by you",
-				"result": "OTHER",
-				"code": "1206"
-			},
-			{
-				"name": "Host Response 16",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Rejected-Record not found",
-				"result": "OTHER",
-				"code": "3201"
-			},
-			{
-				"name": "Host Response 17",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Rejected - Invalid prize level",
-				"result": "OTHER",
-				"code": "3202"
-			},
-			{
-				"name": "Host response 18",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Rejected - Invalid prize amount",
-				"result": "OTHER",
-				"code": "3203"
-			},
-			{
-				"name": "Host Response 19",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Rejected - Cashing limit exceeded",
-				"result": "OTHER",
-				"code": "3204"
-			},
-			{
-				"name": "Host Response 20",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Rejected - Function not found",
-				"result": "OTHER",
-				"code": "3205"
-			},
-			{
-				"name": "Host Response 21",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Rejected - No memory updated",
-				"result": "OTHER",
-				"code": "3206"
-			},
-			{
-				"name": "Host Response 22",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Rejected - File claim at lottery",
-				"result": "OTHER",
-				"code": "3207"
-			},
-			{
-				"name": "Host Response 23",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Rejected - Invalid GVT prize level",
-				"result": "OTHER",
-				"code": "3208"
-			},
-			{
-				"name": "Host Response 24",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Rejected - Pack not confirmed",
-				"result": "OTHER",
-				"code": "3209"
-			},
-			{
-				"name": "Host response 25",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "keyless entry threshold exceeded",
-				"result": "OTHER",
-				"code": "3210"
-			},
-			{
-				"name": "Host Response 32",
-				"mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
-				"esi": "Rejected - Pay confirmation required",
-				"result": "OTHER",
-				"code": "1207"
-			},
-			{
-				"name": "Host Response 33",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Rejected - Claim at Online Terminal",
-				"result": "OTHER",
-				"code": "3211"
-			},
-			{
-				"name": "Host Response 34",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Invalid Check Digit for Book",
-				"result": "OTHER",
-				"code": "3212"
-			},
-			{
-				"name": "Host Response 36",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Invalid Pin threshold exceeded for inquiries",
-				"result": "OTHER",
-				"code": "3214"
-			},
-			{
-				"name": "Host Response 41",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Rejected - Ivalid Attempt",
-				"result": "OTHER",
-				"code": "3216"
-			},
-			{
-				"name": "Host Response 42",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Pending PIN request",
-				"result": "OTHER",
-				"code": "3217"
-			},
-			{
-				"name": "Free Ticket Winner",
-				"mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
-				"esi": "ok, pay the winner",
-				"result": "WINNER",
-				"code": "3242"
-			},
-			{
-				"name": "Invalid Pack Status",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "ok, Rejected- Invalid pack status",
-				"result": "OTHER",
-				"code": "3244"
-			},
-			{
-				"name": "FREEZE_CLAIM",
-				"mobile": "Please take your ticket to the nearest Lotto store to claim your prize",
-				"esi": "Freeze the terminal, file claim",
-				"result": "WINNER",
-				"code": "3245",
-				"claimmsg": "Please take your ticket to the nearest Lotto store to claim your prize",
-				"majorprizemsg": "A MAJOR PRIZE"
-			},
-			{
-				"name": "FILE_CLAIM",
-				"mobile": "Please take your ticket to the nearest Lotto store to claim your prize",
-				"esi": "ok, file claim",
-				"result": "WINNER",
-				"code": "3248",
-				"claimmsg": "Please take your ticket to the nearest Lotto store to claim your prize",
-				"majorprizemsg": "A MAJOR PRIZE"
-			},
-			{
-				"name": "Stolen Pack Status",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "ok, Rejected - Ticket in stolen range",
-				"result": "OTHER",
-				"code": "3240"
-			},
-			{
-				"name": "BAD_UNIT_CHECK_DIGIT",
-				"mobile": "Incorrect serial number entered, please try again",
-				"esi": "ok, Rejected - Bad check digits",
-				"result": "OTHER",
-				"code": "9001"
-			},
-			{
-				"name": "GAME_NOT_ACTIVE",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "ok, Rejected- Game not active",
-				"result": "OTHER",
-				"code": "3239"
-			},
-			{
-				"name": "PACK_ALREADY_HAS_STATUS",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[PACK_ALREADY_HAS_STATUS]",
-				"result": "OTHER",
-				"code": "3241"
-			},
-			{
-				"name": "FUNCTION_SUPRESSED",
-				"mobile": "Sorry, results are not available yet. Please check back soon.",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[FUNCTION_SUPRESSED]",
-				"result": "OTHER",
-				"code": "3218"
-			},
-			{
-				"name": "NOT_ALLOWED_THIS_FUNCTION",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[NOT_ALLOWED_THIS_FUNCTION]",
-				"result": "OTHER",
-				"code": "3219"
-			},
-			{
-				"name": "BAD_PASS_NUMBER",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[BAD_PASS_NUMBER]",
-				"result": "OTHER",
-				"code": "3220"
-			},
-			{
-				"name": "INCORRECT_TERM_AGENT",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[INCORRECT_TERM_AGENT]",
-				"result": "OTHER",
-				"code": "3221"
-			},
-			{
-				"name": "INVALID_ATTEMPT",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[INVALID_ATTEMPT]",
-				"result": "OTHER",
-				"code": "3222"
-			},
-			{
-				"name": "DB_TRANSACTION_FAILURE",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[DB_TRANSACTION_FAILURE]",
-				"result": "OTHER",
-				"code": "3223"
-			},
-			{
-				"name": "LOCATION_CHANGE_NOT_ALLOWED",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[LOCATION_CHANGE_NOT_ALLOWED]",
-				"result": "OTHER",
-				"code": "3224"
-			},
-			{
-				"name": "UNIT_NOT_AT_LOCATION",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[UNIT_NOT_AT_LOCATION]",
-				"result": "OTHER",
-				"code": "3225"
-			},
-			{
-				"name": "INVALID_LOCATION_TRANSFER",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[INVALID_LOCATION_TRANSFER]",
-				"result": "OTHER",
-				"code": "3226"
-			},
-			{
-				"name": "NOT_ENOUGH_INVENTORY_AVAILABLE",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[NOT_ENOUGH_INVENTORY_AVAILABLE]",
-				"result": "OTHER",
-				"code": "3227"
-			},
-			{
-				"name": "DESTINATION_LOC_NOT_ACTIVE",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[DESTINATION_LOC_NOT_ACTIVE]",
-				"result": "OTHER",
-				"code": "3228"
-			},
-			{
-				"name": "FROM_LOC_NOT_ACTIVE",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[FROM_LOC_NOT_ACTIVE]",
-				"result": "OTHER",
-				"code": "3229"
-			},
-			{
-				"name": "SPLITS_NOT_ALLOWED",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[SPLITS_NOT_ALLOWED]",
-				"result": "OTHER",
-				"code": "3230"
-			},
-			{
-				"name": "INVALID_TEST_CONDITION_FOR_TRANS",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[INVALID_TEST_CONDITION_FOR_TRANS]",
-				"result": "OTHER",
-				"code": "3231"
-			},
-			{
-				"name": "INVALID_SIDE_EFFECT_FOR_TRANS",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[INVALID_SIDE_EFFECT_FOR_TRANS]",
-				"result": "OTHER",
-				"code": "3232"
-			},
-			{
-				"name": "NO_UNITS_FOUND",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[NO_UNITS_FOUND]",
-				"result": "OTHER",
-				"code": "3233"
-			},
-			{
-				"name": "NO_AVAILABLE_UNITS",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[NO_AVAILABLE_UNITS]",
-				"result": "OTHER",
-				"code": "3234"
-			},
-			{
-				"name": "INVALID_REFERENCE_NUMBER",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[INVALID_REFERENCE_NUMBER]",
-				"result": "OTHER",
-				"code": "3235"
-			},
-			{
-				"name": "MESSES_TO_IDIS_FAILED",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[MESSES_TO_IDIS_FAILED]",
-				"result": "OTHER",
-				"code": "3236"
-			},
-			{
-				"name": "INVALID_PRODUCT_NUMBER",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[INVALID_PRODUCT_NUMBER]",
-				"result": "OTHER",
-				"code": "3237"
-			},
-			{
-				"name": "BAD_UNIT_CHECK_DIGIT",
-				"mobile": "Invalid ticket number",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[BAD_UNIT_CHECK_DIGIT]",
-				"result": "OTHER",
-				"code": "9001"
-			},
-			{
-				"name": "GAME_NOT_ACTIVE",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[GAME_NOT_ACTIVE]",
-				"result": "OTHER",
-				"code": "3246"
-			}
-		]
-	},
-	"online": {
-		"faultResults": [{
-				"name": "TICKET_ON_HOLD",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[PLEASE_RETRY]",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "3101"
-			},
-			{
-				"name": "NOT_WINNING_TICKET",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[TICKET_NOT_FOUND]",
-				"mobile": "Not a winning ticket",
-				"result": "LOSER",
-				"communitymsg": true,
-				"code": "2101"
-			},
-			{
-				"name": "PRIOR_DRAW",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[RESULTS_NOT_IN]",
-				"mobile": "Results not in yet, please try again later",
-				"result": "OTHER",
-				"code": "3102"
-			},
-			{
-				"name": "TICKET_CANCELLED",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[TICKET_PREVIOUSLY_CANCELLED]",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "3103"
-			},
-			{
-				"name": "NEED_CONFIRMATION>",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[NEED_CONFIRMATION]",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "3104"
-			},
-			{
-				"name": "PAID_ALREADY",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[PAID_ALREADY]",
-				"mobile": "This ticket has already been claimed",
-				"result": "OTHER",
-				"code": "3105"
-			},
-			{
-				"name": "COMPLETELY_EXPIRED",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[COMPLETELY_EXPIRED]",
-				"mobile": "This ticket has expired. For more information visit your nearest Lotto store",
-				"result": "OTHER",
-				"code": "3106"
-			},
-			{
-				"name": "AMOUNT_TOO_LARGE_SMALL",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[AMOUNT_TOO_LARGE_SMALL]",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "1101"
-			},
-			{
-				"name": "NOT_ABLE_PAY",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[NOT_ABLE_PAY]",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "1102"
-			},
-			{
-				"name": "ALREADY_CLAIMED",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[ALREADY_CLAIMED]",
-				"mobile": "This ticket has already been claimed",
-				"result": "OTHER",
-				"code": "3107"
-			},
-			{
-				"name": "REJECTED_CALL_HOTLINE",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[REJECTED_CALL_HOTLINE]",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "3108"
-			},
-			{
-				"name": "PAYMENT_DEFERRED",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[PAYMENT_DEFERRED]",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "3109"
-			},
-			{
-				"name": "TERMINAL_IN_TRAINING_MODE",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[TERMINAL_IN_TRAINING_MODE]",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "3111"
-			},
-			{
-				"name": "PRIZE_EXCEEDED",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[PRIZE_EXCEEDED]",
-				"mobile": "Please take yout ticket to the nearest Lotto store to collect your prize",
-				"result": "OTHER",
-				"code": "1103"
-			},
-			{
-				"name": "TICKET_TOO_OLD",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[TICKET_TOO_OLD]",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "3112"
-			},
-			{
-				"name": "EXPIRED",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[EXPIRED]",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "3113"
-			},
-			{
-				"name": "DRAW_NOT_CLOSED",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[DRAW_NOT_CLOSED]",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "3114"
-			},
-			{
-				"name": "VALIDATE_MANUALLY",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[VALIDATE_MANUALLY]",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "3115"
-			},
-			{
-				"name": "HIGH_TIER_WINNER",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[HIGH_TIER_WINNER]",
-				"mobile": "Please take your ticket to the nearest Lotto store to claim your prize",
-				"result": "WINNER",
-				"code": "1104",
-				"majorprizemsg": "A MAJOR PRIZE",
-				"winningwheelmsg": "A MAJOR PRIZE"
-			},
-			{
-				"name": "MID_TIER_WINNER",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[MID_TIER_WINNER]",
-				"mobile": "Please take your ticket to the nearest Lotto store to claim your prize",
-				"result": "WINNER",
-				"code": "1105",
-				"majorprizemsg": "A MAJOR PRIZE",
-				"winningwheelmsg": "A MAJOR PRIZE"
-			},
-			{
-				"name": "HIGH_WITH_NO_EXCHANGE",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[HIGH_WITH_NO_EXCHANGE]",
-				"mobile": "Please take yout ticket to the nearest Lotto store to collect your prize",
-				"result": "OTHER",
-				"code": "1106"
-			},
-			{
-				"name": "REJECTED_FREE_TICKETS_STILL",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[REJECTED_FREE_TICKETS_STILL]",
-				"mobile": "Please take yout ticket to the nearest Lotto store to collect your prize",
-				"result": "OTHER",
-				"code": "1107"
-			},
-			{
-				"name": "DEVICE_UNABLE_TO_PAY",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[DEVICE_UNABLE_TO_PAY]",
-				"mobile": "Please take yout ticket to the nearest Lotto store to collect your prize",
-				"result": "WINNER",
-				"code": "1108"
-			},
-			{
-				"name": "FUNCTION_SUPRESSED",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[FUNCTION_SUPRESSED]",
-				"mobile": "Sorry, results are not available yet. Please check back soon.",
-				"result": "OTHER",
-				"code": "3247"
-			},
-			{
-				"name": "SERVICE_DISABLED",
-				"esi": "Ticket sent to host is invalid. Error type : HostErrorType[SERVICE_DISABLED]",
-				"mobile": "Service is unavailable at the moment. Please try again later.",
-				"result": "OTHER",
-				"code": "3249"
-			}
-		],
-		"okResults": [{
-				"name": "INVALID_TICKET_NUMBER",
-				"esi": "Ticket Serial Number Incorrect.",
-				"mobile": "Ticket Serial Number Incorrect",
-				"result": "OTHER",
-				"code": "9001"
-			},
-			{
-				"name": "DIVISION_WINNER",
-				"esi": "okValidationApproved",
-				"mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
-				"result": "WINNER",
-				"code": "1109",
-				"claimmsg": "Please take your ticket to the nearest Lotto store to claim your prize",
-				"majorprizemsg": "A MAJOR PRIZE",
-				"winningwheelmsg": "A MAJOR PRIZE"
-			},
-			{
-				"name": "WINNING_CASH_BONUS",
-				"esi": "okInquiry",
-				"mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
-				"claimmsg": "Please take your ticket to the nearest Lotto store to claim your prize",
-				"majorprizemsg": "A MAJOR PRIZE",
-				"result": "WINNER",
-				"code": "1110"
-			},
-			{
-				"name": "NOT_WINNING_MULTIDRAW",
-				"esi": "errorNotWinnerButMore",
-				"mobile": "You have draws remaining for this ticket",
-				"result": "LOSER",
-				"code": "2102",
-				"communitymsg": true
-			},
-			{
-				"name": "WINNING_ALREADY_PAID",
-				"esi": "null",
-				"mobile": "This ticket has already been claimed",
-				"result": "OTHER",
-				"code": "1111"
-			},
-			{
-				"name": "PLEASE_SEE_RETAILER",
-				"esi": "ok, Rejected - Invalid pack status",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "3116"
-			},
-			{
-				"name": "WINNING_MAJOR",
-				"esi": "ok, pay the winner",
-				"mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
-				"result": "WINNER",
-				"code": "1112",
-				"claimmsg": "Please take your ticket to the nearest Lotto store to claim your prize",
-				"majorprizemsg": "A MAJOR PRIZE",
-				"winningwheelmsg": "A MAJOR PRIZE"
-			},
-			{
-				"name": "PAID_BY_EFT",
-				"esi": "errorEft",
-				"mobile": "This ticket has already been paid",
-				"result": "OTHER",
-				"code": "3117"
-			},
-			{
-				"name": "WINNING_FREE_TICKET",
-				"esi": "ok, pay the winner 111",
-				"mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
-				"result": "WINNER",
-				"code": "1113"
-			},
-			{
-				"name": "VALIDATION_OK",
-				"esi": "ok",
-				"mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
-				"result": "OTHER",
-				"code": "3118"
-			},
-			{
-				"name": "ERROR_NOT_WINNER",
-				"esi": "errorNotWinner",
-				"mobile": "Not a winning ticket",
-				"result": "LOSER",
-				"code": "2103",
-				"communitymsg": true
-			}
-		]
-	}
+  "instant": {
+    "results": [
+      {
+        "name": "Host Response 1",
+        "mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
+        "esi": "pay the winner",
+        "result": "WINNER",
+        "code": "1201"
+      },
+      {
+        "name": "Host Response 2",
+        "mobile": "Please take your ticket to the nearest Lotto store to claim your prize",
+        "esi": "Invalid Check Digit for Book, file claim",
+        "result": "WINNER",
+        "code": "1202",
+        "claimmsg": "Please take your ticket to the nearest Lotto store to claim your prize",
+        "majorprizemsg": "A MAJOR PRIZE"
+      },
+      {
+        "name": "Host Response 3",
+        "mobile": "Not a winning ticket",
+        "esi": "ok, not a winner",
+        "result": "LOSER",
+        "code": "2201",
+        "communitymsg": true
+      },
+      {
+        "name": "Host Response 4",
+        "mobile": "This ticket has already been claimed",
+        "esi": "ok, previously paid by other",
+        "result": "OTHER",
+        "code": "1203"
+      },
+      {
+        "name": "Host Response 5",
+        "mobile": "This ticket has already been claimed",
+        "esi": "ok, previously paid by you",
+        "result": "OTHER",
+        "code": "1204"
+      },
+      {
+        "name": "Host Response 6",
+        "mobile": "This ticket has already been claimed",
+        "esi": "ok, Previously claimed by other",
+        "result": "OTHER",
+        "code": "1205"
+      },
+      {
+        "name": "Host Response 7",
+        "mobile": "This ticket has already been claimed",
+        "esi": "Previously claimed by you",
+        "result": "OTHER",
+        "code": "1206"
+      },
+      {
+        "name": "Host Response 16",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Rejected-Record not found",
+        "result": "OTHER",
+        "code": "3201"
+      },
+      {
+        "name": "Host Response 17",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Rejected - Invalid prize level",
+        "result": "OTHER",
+        "code": "3202"
+      },
+      {
+        "name": "Host response 18",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Rejected - Invalid prize amount",
+        "result": "OTHER",
+        "code": "3203"
+      },
+      {
+        "name": "Host Response 19",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Rejected - Cashing limit exceeded",
+        "result": "OTHER",
+        "code": "3204"
+      },
+      {
+        "name": "Host Response 20",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Rejected - Function not found",
+        "result": "OTHER",
+        "code": "3205"
+      },
+      {
+        "name": "Host Response 21",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Rejected - No memory updated",
+        "result": "OTHER",
+        "code": "3206"
+      },
+      {
+        "name": "Host Response 22",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Rejected - File claim at lottery",
+        "result": "OTHER",
+        "code": "3207"
+      },
+      {
+        "name": "Host Response 23",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Rejected - Invalid GVT prize level",
+        "result": "OTHER",
+        "code": "3208"
+      },
+      {
+        "name": "Host Response 24",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Rejected - Pack not confirmed",
+        "result": "OTHER",
+        "code": "3209"
+      },
+      {
+        "name": "Host response 25",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "keyless entry threshold exceeded",
+        "result": "OTHER",
+        "code": "3210"
+      },
+      {
+        "name": "Host Response 32",
+        "mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
+        "esi": "Rejected - Pay confirmation required",
+        "result": "OTHER",
+        "code": "1207"
+      },
+      {
+        "name": "Host Response 33",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Rejected - Claim at Online Terminal",
+        "result": "OTHER",
+        "code": "3211"
+      },
+      {
+        "name": "Host Response 34",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Invalid Check Digit for Book",
+        "result": "OTHER",
+        "code": "3212"
+      },
+      {
+        "name": "Host Response 36",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Invalid Pin threshold exceeded for inquiries",
+        "result": "OTHER",
+        "code": "3214"
+      },
+      {
+        "name": "Host Response 41",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Rejected - Ivalid Attempt",
+        "result": "OTHER",
+        "code": "3216"
+      },
+      {
+        "name": "Host Response 42",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Pending PIN request",
+        "result": "OTHER",
+        "code": "3217"
+      },
+      {
+        "name": "Free Ticket Winner",
+        "mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
+        "esi": "ok, pay the winner",
+        "result": "WINNER",
+        "code": "3242"
+      },
+      {
+        "name": "Invalid Pack Status",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "ok, Rejected- Invalid pack status",
+        "result": "OTHER",
+        "code": "3244"
+      },
+      {
+        "name": "FREEZE_CLAIM",
+        "mobile": "Please take your ticket to the nearest Lotto store to claim your prize",
+        "esi": "Freeze the terminal, file claim",
+        "result": "WINNER",
+        "code": "3245",
+        "claimmsg": "Please take your ticket to the nearest Lotto store to claim your prize",
+        "majorprizemsg": "A MAJOR PRIZE"
+      },
+      {
+        "name": "FILE_CLAIM",
+        "mobile": "Please take your ticket to the nearest Lotto store to claim your prize",
+        "esi": "ok, file claim",
+        "result": "WINNER",
+        "code": "3248",
+        "claimmsg": "Please take your ticket to the nearest Lotto store to claim your prize",
+        "majorprizemsg": "A MAJOR PRIZE"
+      },
+      {
+        "name": "Stolen Pack Status",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "ok, Rejected - Ticket in stolen range",
+        "result": "OTHER",
+        "code": "3240"
+      },
+      {
+        "name": "BAD_UNIT_CHECK_DIGIT",
+        "mobile": "Incorrect serial number entered, please try again",
+        "esi": "ok, Rejected - Bad check digits",
+        "result": "OTHER",
+        "code": "9001"
+      },
+      {
+        "name": "GAME_NOT_ACTIVE",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "ok, Rejected- Game not active",
+        "result": "OTHER",
+        "code": "3239"
+      },
+      {
+        "name": "PACK_ALREADY_HAS_STATUS",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[PACK_ALREADY_HAS_STATUS]",
+        "result": "OTHER",
+        "code": "3241"
+      },
+      {
+        "name": "FUNCTION_SUPRESSED",
+        "mobile": "Sorry, results are not available yet. Please check back soon.",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[FUNCTION_SUPRESSED]",
+        "result": "OTHER",
+        "code": "3218"
+      },
+      {
+        "name": "NOT_ALLOWED_THIS_FUNCTION",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[NOT_ALLOWED_THIS_FUNCTION]",
+        "result": "OTHER",
+        "code": "3219"
+      },
+      {
+        "name": "BAD_PASS_NUMBER",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[BAD_PASS_NUMBER]",
+        "result": "OTHER",
+        "code": "3220"
+      },
+      {
+        "name": "INCORRECT_TERM_AGENT",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[INCORRECT_TERM_AGENT]",
+        "result": "OTHER",
+        "code": "3221"
+      },
+      {
+        "name": "INVALID_ATTEMPT",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[INVALID_ATTEMPT]",
+        "result": "OTHER",
+        "code": "3222"
+      },
+      {
+        "name": "DB_TRANSACTION_FAILURE",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[DB_TRANSACTION_FAILURE]",
+        "result": "OTHER",
+        "code": "3223"
+      },
+      {
+        "name": "LOCATION_CHANGE_NOT_ALLOWED",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[LOCATION_CHANGE_NOT_ALLOWED]",
+        "result": "OTHER",
+        "code": "3224"
+      },
+      {
+        "name": "UNIT_NOT_AT_LOCATION",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[UNIT_NOT_AT_LOCATION]",
+        "result": "OTHER",
+        "code": "3225"
+      },
+      {
+        "name": "INVALID_LOCATION_TRANSFER",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[INVALID_LOCATION_TRANSFER]",
+        "result": "OTHER",
+        "code": "3226"
+      },
+      {
+        "name": "NOT_ENOUGH_INVENTORY_AVAILABLE",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[NOT_ENOUGH_INVENTORY_AVAILABLE]",
+        "result": "OTHER",
+        "code": "3227"
+      },
+      {
+        "name": "DESTINATION_LOC_NOT_ACTIVE",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[DESTINATION_LOC_NOT_ACTIVE]",
+        "result": "OTHER",
+        "code": "3228"
+      },
+      {
+        "name": "FROM_LOC_NOT_ACTIVE",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[FROM_LOC_NOT_ACTIVE]",
+        "result": "OTHER",
+        "code": "3229"
+      },
+      {
+        "name": "SPLITS_NOT_ALLOWED",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[SPLITS_NOT_ALLOWED]",
+        "result": "OTHER",
+        "code": "3230"
+      },
+      {
+        "name": "INVALID_TEST_CONDITION_FOR_TRANS",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[INVALID_TEST_CONDITION_FOR_TRANS]",
+        "result": "OTHER",
+        "code": "3231"
+      },
+      {
+        "name": "INVALID_SIDE_EFFECT_FOR_TRANS",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[INVALID_SIDE_EFFECT_FOR_TRANS]",
+        "result": "OTHER",
+        "code": "3232"
+      },
+      {
+        "name": "NO_UNITS_FOUND",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[NO_UNITS_FOUND]",
+        "result": "OTHER",
+        "code": "3233"
+      },
+      {
+        "name": "NO_AVAILABLE_UNITS",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[NO_AVAILABLE_UNITS]",
+        "result": "OTHER",
+        "code": "3234"
+      },
+      {
+        "name": "INVALID_REFERENCE_NUMBER",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[INVALID_REFERENCE_NUMBER]",
+        "result": "OTHER",
+        "code": "3235"
+      },
+      {
+        "name": "MESSES_TO_IDIS_FAILED",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[MESSES_TO_IDIS_FAILED]",
+        "result": "OTHER",
+        "code": "3236"
+      },
+      {
+        "name": "INVALID_PRODUCT_NUMBER",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[INVALID_PRODUCT_NUMBER]",
+        "result": "OTHER",
+        "code": "3237"
+      },
+      {
+        "name": "BAD_UNIT_CHECK_DIGIT",
+        "mobile": "Invalid ticket number",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[BAD_UNIT_CHECK_DIGIT]",
+        "result": "OTHER",
+        "code": "9001"
+      },
+      {
+        "name": "GAME_NOT_ACTIVE",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[GAME_NOT_ACTIVE]",
+        "result": "OTHER",
+        "code": "3246"
+      }
+    ]
+  },
+  "online": {
+    "faultResults": [
+      {
+        "name": "TICKET_ON_HOLD",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[PLEASE_RETRY]",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "3101"
+      },
+      {
+        "name": "NOT_WINNING_TICKET",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[TICKET_NOT_FOUND]",
+        "mobile": "Not a winning ticket",
+        "result": "LOSER",
+        "communitymsg": true,
+        "code": "2101"
+      },
+      {
+        "name": "PRIOR_DRAW",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[RESULTS_NOT_IN]",
+        "mobile": "Results not in yet, please try again later",
+        "result": "OTHER",
+        "code": "3102"
+      },
+      {
+        "name": "TICKET_CANCELLED",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[TICKET_PREVIOUSLY_CANCELLED]",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "3103"
+      },
+      {
+        "name": "NEED_CONFIRMATION>",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[NEED_CONFIRMATION]",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "3104"
+      },
+      {
+        "name": "PAID_ALREADY",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[PAID_ALREADY]",
+        "mobile": "This ticket has already been claimed",
+        "result": "OTHER",
+        "code": "3105"
+      },
+      {
+        "name": "COMPLETELY_EXPIRED",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[COMPLETELY_EXPIRED]",
+        "mobile": "This ticket has expired. For more information visit your nearest Lotto store",
+        "result": "OTHER",
+        "code": "3106"
+      },
+      {
+        "name": "AMOUNT_TOO_LARGE_SMALL",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[AMOUNT_TOO_LARGE_SMALL]",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "1101"
+      },
+      {
+        "name": "NOT_ABLE_PAY",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[NOT_ABLE_PAY]",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "1102"
+      },
+      {
+        "name": "ALREADY_CLAIMED",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[ALREADY_CLAIMED]",
+        "mobile": "This ticket has already been claimed",
+        "result": "OTHER",
+        "code": "3107"
+      },
+      {
+        "name": "REJECTED_CALL_HOTLINE",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[REJECTED_CALL_HOTLINE]",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "3108"
+      },
+      {
+        "name": "PAYMENT_DEFERRED",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[PAYMENT_DEFERRED]",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "3109"
+      },
+      {
+        "name": "TERMINAL_IN_TRAINING_MODE",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[TERMINAL_IN_TRAINING_MODE]",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "3111"
+      },
+      {
+        "name": "PRIZE_EXCEEDED",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[PRIZE_EXCEEDED]",
+        "mobile": "Please take yout ticket to the nearest Lotto store to collect your prize",
+        "result": "OTHER",
+        "code": "1103"
+      },
+      {
+        "name": "TICKET_TOO_OLD",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[TICKET_TOO_OLD]",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "3112"
+      },
+      {
+        "name": "EXPIRED",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[EXPIRED]",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "3113"
+      },
+      {
+        "name": "DRAW_NOT_CLOSED",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[DRAW_NOT_CLOSED]",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "3114"
+      },
+      {
+        "name": "VALIDATE_MANUALLY",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[VALIDATE_MANUALLY]",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "3115"
+      },
+      {
+        "name": "HIGH_TIER_WINNER",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[HIGH_TIER_WINNER]",
+        "mobile": "Please take your ticket to the nearest Lotto store to claim your prize",
+        "result": "WINNER",
+        "code": "1104",
+        "majorprizemsg": "A MAJOR PRIZE",
+        "winningwheelmsg": "A MAJOR PRIZE"
+      },
+      {
+        "name": "MID_TIER_WINNER",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[MID_TIER_WINNER]",
+        "mobile": "Please take your ticket to the nearest Lotto store to claim your prize",
+        "result": "WINNER",
+        "code": "1105",
+        "majorprizemsg": "A MAJOR PRIZE",
+        "winningwheelmsg": "A MAJOR PRIZE"
+      },
+      {
+        "name": "HIGH_WITH_NO_EXCHANGE",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[HIGH_WITH_NO_EXCHANGE]",
+        "mobile": "Please take yout ticket to the nearest Lotto store to collect your prize",
+        "result": "OTHER",
+        "code": "1106"
+      },
+      {
+        "name": "REJECTED_FREE_TICKETS_STILL",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[REJECTED_FREE_TICKETS_STILL]",
+        "mobile": "Please take yout ticket to the nearest Lotto store to collect your prize",
+        "result": "OTHER",
+        "code": "1107"
+      },
+      {
+        "name": "DEVICE_UNABLE_TO_PAY",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[DEVICE_UNABLE_TO_PAY]",
+        "mobile": "Please take yout ticket to the nearest Lotto store to collect your prize",
+        "result": "WINNER",
+        "code": "1108"
+      },
+      {
+        "name": "FUNCTION_SUPRESSED",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[FUNCTION_SUPRESSED]",
+        "mobile": "Sorry, results are not available yet. Please check back soon.",
+        "result": "OTHER",
+        "code": "3247"
+      },
+      {
+        "name": "SERVICE_DISABLED",
+        "esi": "Ticket sent to host is invalid. Error type : HostErrorType[SERVICE_DISABLED]",
+        "mobile": "Service is unavailable at the moment. Please try again later.",
+        "result": "OTHER",
+        "code": "3249"
+      }
+    ],
+    "okResults": [
+      {
+        "name": "INVALID_TICKET_NUMBER",
+        "esi": "Ticket Serial Number Incorrect.",
+        "mobile": "Ticket Serial Number Incorrect",
+        "result": "OTHER",
+        "code": "9001"
+      },
+      {
+        "name": "DIVISION_WINNER",
+        "esi": "okValidationApproved",
+        "mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
+        "result": "WINNER",
+        "code": "1109",
+        "claimmsg": "Please take your ticket to the nearest Lotto store to claim your prize",
+        "majorprizemsg": "A MAJOR PRIZE",
+        "winningwheelmsg": "A MAJOR PRIZE"
+      },
+      {
+        "name": "WINNING_CASH_BONUS",
+        "esi": "okInquiry",
+        "mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
+        "claimmsg": "Please take your ticket to the nearest Lotto store to claim your prize",
+        "majorprizemsg": "A MAJOR PRIZE",
+        "result": "WINNER",
+        "code": "1110"
+      },
+      {
+        "name": "NOT_WINNING_MULTIDRAW",
+        "esi": "errorNotWinnerButMore",
+        "mobile": "You have draws remaining for this ticket",
+        "result": "LOSER",
+        "code": "2102",
+        "communitymsg": true
+      },
+      {
+        "name": "WINNING_ALREADY_PAID",
+        "esi": "null",
+        "mobile": "This ticket has already been claimed",
+        "result": "OTHER",
+        "code": "1111"
+      },
+      {
+        "name": "PLEASE_SEE_RETAILER",
+        "esi": "ok, Rejected - Invalid pack status",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "3116"
+      },
+      {
+        "name": "WINNING_MAJOR",
+        "esi": "ok, pay the winner",
+        "mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
+        "result": "WINNER",
+        "code": "1112",
+        "claimmsg": "Please take your ticket to the nearest Lotto store to claim your prize",
+        "majorprizemsg": "A MAJOR PRIZE",
+        "winningwheelmsg": "A MAJOR PRIZE"
+      },
+      {
+        "name": "PAID_BY_EFT",
+        "esi": "errorEft",
+        "mobile": "This ticket has already been paid",
+        "result": "OTHER",
+        "code": "3117"
+      },
+      {
+        "name": "WINNING_FREE_TICKET",
+        "esi": "ok, pay the winner 111",
+        "mobile": "Please take your ticket to the nearest Lotto store to collect your prize",
+        "result": "WINNER",
+        "code": "1113"
+      },
+      {
+        "name": "VALIDATION_OK",
+        "esi": "ok",
+        "mobile": "Unable to determine ticket outcome, please take your ticket to the nearest Lotto store",
+        "result": "OTHER",
+        "code": "3118"
+      },
+      {
+        "name": "ERROR_NOT_WINNER",
+        "esi": "errorNotWinner",
+        "mobile": "Not a winning ticket",
+        "result": "LOSER",
+        "code": "2103",
+        "communitymsg": true
+      }
+    ]
+  }
 }
