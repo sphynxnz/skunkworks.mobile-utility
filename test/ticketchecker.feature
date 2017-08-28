@@ -579,6 +579,7 @@ Feature: Ticket checker examples
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "1112"
+    And The response property "validationResult.majorPrizeMessage" should be "A MAJOR PRIZE"        
 
   Scenario: OL TICKET - WINNING_FREE_TICKET
     Given The json request data
@@ -1357,6 +1358,7 @@ Feature: Ticket checker examples
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "3245"
+    And The response property "validationResult.majorPrizeMessage" should be "A MAJOR PRIZE"
 
   Scenario: IK TICKET - FREEZE_CLAIM
     Given The json request data
@@ -1375,6 +1377,7 @@ Feature: Ticket checker examples
     Then The response property "response.status" should be "success"
     And The response property "validationResult.resultType" should be "WINNER"
     And The response property "validationResult.resultCode" should be "3245"
+    And The response property "validationResult.majorPrizeMessage" should be "A MAJOR PRIZE"
 
   Scenario: IK TICKET - FILE_CLAIM
     Given The json request data
