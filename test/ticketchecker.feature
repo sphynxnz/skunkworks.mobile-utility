@@ -683,7 +683,7 @@ Feature: Ticket checker examples
     And The response property "validationResult.resultType" should be "OTHER"
     And The response property "validationResult.resultCode" should be "3117"
 
-  Scenario: OL TICKET - PAID_BY_EFT - Using SoapUI mock, simulates timeout
+  Scenario: OL TIMEOUT - Using SoapUI mock, simulates timeout
     Given The json request data
     """json
     {
