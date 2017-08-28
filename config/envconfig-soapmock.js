@@ -23,7 +23,7 @@ module.exports = {
       }
     ]
   },
-  port: 8888,
+  port: 8000,
   timeout: 5000,
   esiTimeout: 5000,
   emulation: true
